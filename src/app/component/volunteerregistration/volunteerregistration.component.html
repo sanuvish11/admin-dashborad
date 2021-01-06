@@ -1,0 +1,307 @@
+<div class="volunteer-panel-wrapper" id="volunteer-panel-wrapper">
+    <div class="volunteer-panel-header" ondblclick="$('#volunteer-panel-body').toggle()" style="width: 100%;">
+        <div class="volunteer-panel-header-left tab1">
+            <img src="/assets/dist/img/icons/user-group.png">
+            <span>Burden Bearer Volunteer Registration</span>
+        </div>
+        <div class="volunteer-panel-header-left tab2" style="display:none;">
+            <img src="/assets/dist/img/icons/disposition.png">
+            <span>Disposition</span>
+        </div>
+        <div class="volunteer-panel-header-left tab3" style="display:none;">
+            <img src="/assets/dist/img/icons/user.png">
+            <span>Choose Avatar</span>
+        </div>
+        <div class="volunteer-panel-header-right">
+            <a href="javascript:void(0)" onclick="$('#volunteer-panel-body').toggle()" id="pdf-panel-collapse-btn"><i
+                    class="fa fa-angle-down"></i></a>
+            <a href="javascript:void(0)" (click)="toggleclosebtn()" id="volunteer-panel-close-btn"><i
+                    class="fa fa-close"></i></a>
+        </div>
+    </div>
+
+
+
+    <div class="volunteer-panel-body " style="overflow-y:scroll;" id="volunteer-panel-body">
+        <div class="tab tab1">
+            <form *ngIf="!isSuccessful" name="form" (ngSubmit)="onSubmit()" #f="ngForm" novalidate>
+
+                <!-- <form *ngIf="!isSuccessful" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate> -->
+                <div class="top-part">
+                    <div class="links">
+                        <a class="active" href="javascript:void(0)">All Users</a>
+                        <!-- <a href="javascript:void(0)">Users Group</a> -->
+                    </div>
+                    <span><span>*</span> (Required)</span>
+                </div>
+                <div class="main-part gridster-item-content" *ngIf="currentPage == 0">
+
+                    <div class="form-group">
+                        <label>*Username</label>
+                        <input type="text" name="username" [(ngModel)]="form.username" required minlength="3" maxlength="20" #username="ngModel">
+                        <div class="alert-danger" *ngIf="f.submitted && username.invalid">
+                            <div *ngIf="username.errors.required">Username is required</div>
+                            <div *ngIf="username.errors.minlength">
+                                Username must be at least 3 characters
+                            </div>
+                            <div *ngIf="username.errors.maxlength">
+                                Username must be at most 20 characters
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>*Password<span>(8 Characters or more including 1 numeric and 1 Special
+                                Character)</span></label>
+                        <input type="password" name="password" [(ngModel)]="form.password" required minlength="8" #password="ngModel" />
+                        <div class="alert-danger" *ngIf="f.submitted && password.invalid">
+                            <div *ngIf="password.errors.required">Password is required</div>
+                            <div *ngIf="password.errors.minlength">
+                                Password must be at least 8 characters
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="form-group">
+                        <label>*Verify Password</label>
+                        <input type="password" name="confirmPassword" [(ngModel)]="form.confirmPassword">
+                        <div *ngIf="confirmPassword.errors.required">Password is required</div>
+                        <div *ngIf="confirmPassword==confirmPassword">
+                            Confirm Password Not Match
+                        </div>
+                    </div> -->
+                    <br>
+                    <br>
+                    <div class="form-multi-group">
+                        <div class="form-group">
+                            <label>*Name</label>
+                            <input type="text" name="first_name" [(ngModel)]="form.first_name" required minlength="6" #first_name="ngModel">
+                            <div class="alert-danger" *ngIf="f.submitted && first_name.invalid">
+                                <div *ngIf="first_name.errors.required">Name is required</div>
+                                <div *ngIf="first_name.errors.minlength">
+                                    Enter Your First Name
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group fixed-small-width">
+                            <label>&nbsp;Middle Init</label>
+                            <input type="text" name="middle_name" [(ngModel)]="form.middle_name">
+                        </div>
+                        <div class="form-group">
+                            <label>*Last</label>
+                            <input type="text" name="last_name" [(ngModel)]="form.last_name" required #last_name="ngModel" minlength="3">
+                            <div class="alert-danger" *ngIf="f.submitted && last_name.invalid">
+                                <div *ngIf="last_name.errors.required">Last Name is required</div>
+                                <div *ngIf="last_name.errors.minlength">
+                                    Enter Your Last Name
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group fixed-small-width">
+                            <label>*Gender</label>
+                            <select name="gender" id="gender" class="form-control" [(ngModel)]="form.gender" #gender="ngModel" required>
+                                <option value="m">male</option>
+                                <option value="f">female</option>
+                            </select>
+                            <div class="alert-danger" *ngIf="f.submitted && gender.invalid">
+                                <div *ngIf="gender.errors.required">Gender is required</div>
+                                <div *ngIf="gender.errors.minlength">
+                                    Please Select Gender
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>*Email</label>
+                        <input type="email" name="email" [(ngModel)]="form.email" required #email="ngModel" />
+                        <div class="alert-danger" *ngIf="f.submitted && email.invalid">
+                            <div *ngIf="email.errors.required">Email is required</div>
+                            <div *ngIf="email.errors.email">
+                                Email must be a valid email address
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-multi-group1">
+                        <div class="form-group fixed-small-width">
+                            <label>Country</label>
+                            <select name="Country" id="country" (change)="seletcountry(form.country)" [(ngModel)]="form.country" #Country="ngModel" required>
+                                <option *ngFor="let country of list" value="{{country.id}}">{{country.country_name}}</option>
+                            </select>
+                            <div class="alert-danger" *ngIf="f.submitted && Country.invalid">
+                                <div *ngIf="Country.errors.required">Country is required</div>
+                                <div *ngIf="Country.errors.Country">
+                                    Please Select Country
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group fixed-small-width">
+                            <label>*State</label>
+                            <select name="state" id="state" (change)="selectstate(form.state)" [(ngModel)]="form.state" required #state="ngModel">
+                                <option  *ngFor="let state of stateList" value="{{state.id}}" >{{state.state_name}}</option>
+                            </select>
+
+                            <div class="alert-danger" *ngIf="f.submitted && state.invalid">
+                                <div *ngIf="state.errors.required">State is required</div>
+                                <div *ngIf="state.errors.state">
+                                    Please Select State
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>*City</label>
+
+                            <select name="city" [(ngModel)]="form.city" required #city="ngModel">
+                                <option *ngFor="let city of citylist" value="{{city.id}}">{{city.city_name}}</option>
+                            </select>
+                            <div class="alert-danger" *ngIf="f.submitted && city.invalid">
+                                <div *ngIf="city.errors.required">City is required</div>
+                                <div *ngIf="city.errors.city">
+                                    Please Select City
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group fixed-small-width">
+                            <label>YOB</label>
+                            <select name="yob" [(ngModel)]="form.yob" required #yob="ngModel">
+                                <option *ngFor="let year of years" value="{{year.year}}">{{year.year}}</option>
+                            </select>
+                            <div class="alert-danger" *ngIf="f.submitted && yob.invalid">
+                                <div *ngIf="yob.errors.required">Year Of Birth is required</div>
+                                <div *ngIf="yob.errors.yob">
+                                    Please Select Year Of Birth
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group fixed-small-width">
+                            <label>*TMZ</label>
+                            <select name="time_zone" [(ngModel)]="form.time_zone" required #time_zone="ngModel">
+
+                                <option *ngFor="let item of Timezone" value="{{item.value}}">{{item.text}}</option>
+                            </select>
+                            <div class="alert-danger" *ngIf="f.submitted && time_zone.invalid">
+                                <div *ngIf="time_zone.errors.required">Time Zone is required</div>
+                                <div *ngIf="time_zone.errors.time_zone">
+                                    Please Select Time Zone
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="main-part1">
+                        <div class="form-group">
+                            <label>*Church Name</label>
+                            <input type="text" name="church_name" [(ngModel)]="form.church_name" required #church_name1="ngModel">
+                            <div class="alert-danger" *ngIf="f.submitted && church_name1.invalid">
+                                <div *ngIf="church_name1.errors.required">Church Name is required</div>
+                                <div *ngIf="church_name1.errors.church_name1">
+                                    Please Enter Church Name
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-multi-group2">
+                            <div class="form-group">
+                                <label>*Pastor Name</label>
+                                <input type="text" name="paster_name" [(ngModel)]="form.paster_name" required #paster_name="ngModel" minlength="2">
+                                <div class="alert-danger" *ngIf="f.submitted && paster_name.invalid">
+                                    <div *ngIf="paster_name.errors.required">Paster Name is required</div>
+                                    <div *ngIf="paster_name.errors.minlength">
+                                        Please Enter Paster Name
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group fixed-small-width">
+                                <label>*Phone</label>
+                                <input type="number" name="phone_no" [(ngModel)]="form.phone_no" required #phone_no="ngModel" minlength="10">
+                                <div class="alert-danger" *ngIf="f.submitted && phone_no.invalid">
+                                    <div *ngIf="phone_no.errors.required">Phone Number is required</div>
+                                    <div *ngIf="phone_no.errors.minlength">
+                                        Please Enter Phone Number
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-multi-group3">
+                            <div class="form-group">
+                                <label>*City</label>
+                                <select name="church_city" [(ngModel)]="form.church_city" required #church_city="ngModel">
+                                    <option *ngFor="let city of citylist" value="city.id">{{city.city_name}}</option>
+                                </select>
+
+                                <div class="alert-danger" *ngIf="f.submitted && church_city.invalid">
+                                    <div *ngIf="church_city.errors.required">City is required</div>
+                                    <div *ngIf="church_city.errors.minlength">
+                                        Please Select Church City
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group fixed-small-width">
+                                <label>*State</label>
+                                <select name="church_state" id="church_state" (change)="selectstate(form.church_state)" [(ngModel)]="form.church_state" required #church_state="ngModel">
+                                    <option  *ngFor="let state of stateList" value="{{state.id}}" >{{state.state_name}}</option>
+                                </select>
+
+
+                                <div class="alert-danger" *ngIf="f.submitted && church_state.invalid">
+                                    <div *ngIf="church_state.errors.required">State is required</div>
+                                    <div *ngIf="church_state.errors.minlength">
+                                        Please Select Church State
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="tab tab2">
+                    <div class="details">
+                        <p>Please review these behaviors and heart issues and if you have any preferences, please make the appropriate selections.</p>
+                    </div>
+                    <div class="comfort">
+                        <div class="yes">
+                            <img src="/assets/dist/img/icons/yes.png"><span>Comfortable</span>
+                        </div>
+                        <div class="no">
+                            <img src="/assets/dist/img/icons/no.png"><span>Least Comfortable</span>
+                        </div>
+                    </div>
+                    <div class="data">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td><img src="/assets/dist/img/icons/yes.png"></td>
+                                    <td><img src="/assets/dist/img/icons/no.png"></td>
+                                </tr>
+                                <tr>
+                                    <td>Anxiety, Fear</td>
+
+                                    <td><input type="radio" value="male1" name="vikas" ngModel></td>
+                                    <td> <input type="radio" value="female1" name="vikas" ngModel> </td>
+
+                                </tr>
+                                <tr>
+                                    <td>Anxiety, Fear</td>
+                                    <td><input type="radio" value="male" name="saona" ngModel></td>
+                                    <td> <input type="radio" value="female" name="saona" ngModel> </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="button-wrapper">
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+</div>

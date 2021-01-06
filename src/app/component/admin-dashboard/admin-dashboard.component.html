@@ -1,0 +1,424 @@
+<div style="width: 100%;">
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="border-radius: 0;">
+        <a class="navbar-brand" href="#"><img style="position: -webkit-sticky; margin-top: -40px;" src="/assets/dist/img/logo.png" alt="brand"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link " href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="user_wrap">
+                            <img id="user-auth" src="/assets/dist/img/user_icon.png" alt="user_auth" class="custom_icon img-circle" />
+                            <div class="user_box">
+                                <h3>&nbsp; {{adminname1}}</h3>
+                                <h5> &nbsp;&nbsp;Thomas Fuller</h5>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"><input type="checkbox" hidden [(ngModel)]="cal" data-md-icheck id="cb_calendar-panel-grid" id="cb_navbar-cal-grid" (change)="toggleVisibility('calendar',$event)" />
+                        <label class="menusub" for="cb_navbar-cal-grid"><i
+                                class="fa fa-calendar txt-primary"></i></label></a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="notification_Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-bell-o"></i> <span id="red-dot"></span> </a>
+                    <div class="dropdown-menu" style="background-color: #f2c373; font-size: 14px;
+                    font-weight: 600" aria-labelledby="notification_Dropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <div id='date_time'><span style="color: white; font-size: 16px;">{{timeNow | date:'h:mm a'
+                                }}<span class="line-gold"> - </span>{{ timeNow |date: 'dd MMM yyyy'}} </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"> <i (click)="logout()" class="fa fa-sign-out"></i></a>
+                </li>
+            </ul>
+            <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
+                <li class="nav-item">
+                    <a class="dropdown-item">
+                        <span class="image"><img src="" alt="Profile Image"></span>
+                        <span>
+                            <span>John Smith</span>
+                        <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                            Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="dropdown-item">
+                        <span class="image"><img src="" alt="Profile Image"></span>
+                        <span>
+                            <span>John Smith</span>
+                        <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                            Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="dropdown-item">
+                        <span class="image"><img src="" alt="Profile Image"></span>
+                        <span>
+                            <span>John Smith</span>
+                        <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                            Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="dropdown-item">
+                        <span class="image"><img src="" alt="Profile Image"></span>
+                        <span>
+                            <span>John Smith</span>
+                        <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                            Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <div class="text-center">
+                        <a class="dropdown-item">
+                            <strong>See All Alerts</strong>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- navbar close -->
+</div>
+<div class="container-fuild">
+    <div class="row">
+
+
+        <!-- Sidenav Bar Start -->
+
+        <div class="col-2">
+
+
+            <div id="sidebar-container" class="sidebar-expanded d-none d-md-block bg-light">
+                <ul class="list-group">
+
+                    <a data-toggle="sidebar-colapse" onclick="$('#menu-collepse').toggle()" style="background-color: #f2c373; min-width: 100%; width: 100%;" class=" text-dark list-group-item list-group-item-action d-flex align-items-center">
+                        <div class="d-flex w-99 justify-content-start align-items-center">
+                            <span id="collapse-icon" class="fa fa-2x mr-3"></span>
+                            <span id="collapse-text" class="menu-collapsed">Collapse</span>
+                        </div>
+                    </a>
+                    <div *ngFor="let item of data;let i = index;" id="cb_navbar-panel-panel-grid">
+
+                        <button type="input" class="accordion" (click)="toggleAccordian($event, i)">
+                            <img src="/assets/dist/img/icons/sidebar-icons/panel-navigation-icon.png">
+                            <span id="collapse-text" class="menu-collapsed">Navigation Panel <i class="fa fa-chevron-down"></i> </span>
+                        </button>
+                        <div class="panel" hide="!item.isActive" id="menu-collepse">
+                            <ul>
+                                <a class="list-group-item list-group-item-action bg-dark1 text-dark">
+                                    <span class="menu-collapsed"><input [(ngModel)]="chatque" type="checkbox"
+                                            name="Chat Queue" data-md-icheck id="cb_chat-queue-panel-grid"
+                                            (change)="toggleVisibility('chatqueue',$event)"></span>
+                                    <span>
+                                        <label class="menusub" for="cb_chat-queue-panel-grid">Chat Queue</label>
+                                    </span>
+                                </a>
+
+
+                                <a class="list-group-item list-group-item-action bg-dark1 text-dark">
+                                    <span class="menu-collapsed"><input type="checkbox" [(ngModel)]="work"
+                                            data-md-icheck (change)="toggleVisibility('workarea',$event)"
+                                            id="cb_work-area-grid" /></span>
+                                    <span> <label class="menusub" for="cb_work-area-grid"> Work Area </label> </span>
+                                </a>
+
+                                <a class="list-group-item list-group-item-action bg-dark1 text-dark">
+                                    <span class="menu-collapsed"><input type="checkbox" [(ngModel)]="workareano"
+                                            data-md-icheck (change)="toggleVisibility('WorkAreaNotes',$event)"
+                                            id="cb_work-area-notes-grid" /> </span>
+                                    <span>
+                                        <label class="menusub" for="cb_work-area-notes-grid">Work Area Notes</label>
+                                    </span>
+                                </a>
+
+                                <a class="list-group-item list-group-item-action bg-dark1 text-dark">
+                                    <span class="menu-collapsed"><input type="checkbox" [(ngModel)]="biblec"
+                                            data-md-icheck id="cb_bible-grid"
+                                            (change)="toggleVisibility('bible',$event)" /> </span>
+                                    <span>
+                                        <label class="menusub" for="cb_bible-grid">Bible</label>
+                                    </span>
+                                </a>
+
+
+
+                                <a class="list-group-item list-group-item-action bg-dark1 text-dark">
+                                    <span class="menu-collapsed"><input type="checkbox" [(ngModel)]="strong"
+                                            id="cb_strong-verses-grid" data-md-icheck id="cb_strong-verses-grid"
+                                            (change)="toggleVisibility('strongs',$event)"> </span>
+                                    <span> <label class="menusub" for="cb_strong-verses-grid">Strongs</label></span>
+                                </a>
+
+                                <a class="list-group-item list-group-item-action bg-dark1 text-dark">
+                                    <span class="menu-collapsed"><input type="checkbox" [(ngModel)]="crossref"
+                                            data-md-icheck id="cb_cross-reference-grid"
+                                            (change)="toggleVisibility('crossreference',$event)"> </span>
+                                    <span> <label class="menusub" for="cb_cross-reference-grid">Cross Reference</label>
+                                    </span>
+                                </a>
+
+                                <a class="list-group-item list-group-item-action bg-dark1 text-dark">
+                                    <span class="menu-collapsed"><input type="checkbox" [(ngModel)]="personal"
+                                            data-md-icheck id="cb_personal-favs-grid"
+                                            (change)="toggleVisibility('personalfavs',$event)" /> </span>
+                                    <span>
+                                        <label class="menusub" for="cb_personal-favs-grid"> Personal Favs </label>
+                                    </span>
+                                </a>
+
+                                <a class="list-group-item list-group-item-action bg-dark1 text-dark">
+                                    <span #pdf class="menu-collapsed"><input type="checkbox" [(ngModel)]="chathis"
+                                            data-md-icheck id="cb_chat-history-panel-grid"
+                                            (change)="toggleVisibility('chathistory',$event)" /></span>
+                                    <span>
+                                        <label class="menusub" for="cb_chat-history-panel-grid">Chat-History</label>
+                                    </span>
+                                </a>
+
+                                <a class="list-group-item list-group-item-action bg-dark1 text-dark">
+                                    <span class="menu-collapsed"><input type="checkbox" [(ngModel)]="cal" data-md-icheck
+                                            id="cb_calendar-panel-grid"
+                                            (change)="toggleVisibility('calendar',$event)" /></span>
+                                    <span>
+                                        <label class="menusub" for="cb_calendar-panel-grid">Calendar</label>
+                                    </span>
+                                </a>
+
+                                <a class="list-group-item list-group-item-action bg-dark1 text-dark">
+                                    <span class="menu-collapsed"><input type="checkbox" [(ngModel)]="mp3" data-md-icheck
+                                            id="cb_mp3-grid" (change)="toggleVisibility('mp3clips',$event)" /></span>
+                                    <span> <label class="menusub" for="cb_mp3-grid">Mp3’s, Clips</label></span>
+                                </a>
+
+                                <a class="list-group-item list-group-item-action bg-dark1 text-dark">
+                                    <span class="menu-collapsed"><input type="checkbox" [(ngModel)]="pdfqu"
+                                            data-md-icheck id="cb_pdf-grid"
+                                            (change)="toggleVisibility('pdfquotes',$event)" /> </span>
+                                    <span> <label class="menusub" for="cb_pdf-grid">PDF’s, Quotes</label></span>
+                                </a>
+
+                                <a class="list-group-item list-group-item-action bg-dark1 text-dark">
+                                    <span class="menu-collapsed"> <input type="checkbox" [(ngModel)]="barnastatic"
+                                            data-md-icheck id="cb_barna-panel-grid"
+                                            (change)="toggleVisibility('barnastatistics',$event)" /></span>
+                                    <span>
+                                        <label class="menusub" for="cb_barna-panel-grid">Barna Statistics</label>
+                                    </span>
+                                </a>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <a data-toggle="collapse" aria-expanded="false" class="text-dark bg-dark2  list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+                            <span><img src="/assets/dist/img/icons/sidebar-icons/dashboard-icon.png"></span>
+                            <span class="menu-collapsed">Dashboard</span>
+
+                        </div>
+                    </a>
+
+                    <a data-toggle="collapse" aria-expanded="false" (click)="toggelejourney()" class="bg-dark2 text-dark list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+                            <span><img src="/assets/dist/img/icons/sidebar-icons/journey-icon.png"></span>
+                            <span class="menu-collapsed">Journey</span>
+
+                        </div>
+                    </a>
+
+                    <a data-toggle="collapse" aria-expanded="false" (click)="toggelechatpanel()" class="bg-dark2 text-dark list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+                            <span><img src="/assets/dist/img/icons/sidebar-icons/chat-icon.png"></span>
+                            <span class="menu-collapsed">Chat</span>
+                        </div>
+                    </a>
+                    <a data-toggle="collapse" aria-expanded="false" (click)="toggelereport()" class="btn-change bg-dark2 text-dark list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+                            <span><img src="/assets/dist/img/icons/sidebar-icons/reports-icon.png"></span>
+                            <span class="menu-collapsed">Reports and Metrics</span>
+
+                        </div>
+                    </a>
+                    <!-- <a data-toggle="collapse" aria-expanded="false" (click)="toggelemp3pdfect()" class="btn-change bg-dark2 text-dark list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+                            <span><img src="/assets/dist/img/icons/sidebar-icons/reports-icon.png"></span>
+                            <span class="menu-collapsed"> toggelelustde</span>
+
+                        </div>
+                    </a> -->
+
+                    <a data-toggle="collapse" aria-expanded="false" (click)="toggeleflag()" class=" btn-1 sidebar_item_title bg-dark2 text-dark list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+                            <span><img src="/assets/dist/img/icons/sidebar-icons/flag-icon.png"></span>
+                            <span class="menu-collapsed">Flags</span>
+
+                        </div>
+                    </a>
+                    <a data-toggle="collapse" aria-expanded="false" (click)="toggelevolunteer()" class="bg-dark2 text-dark list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+                            <span><img src="/assets/dist/img/icons/sidebar-icons/volunteer-icon.png"></span>
+                            <span class="menu-collapsed">Volunteer Registration</span>
+
+                        </div>
+                    </a>
+                </ul>
+            </div>
+
+
+        </div>
+        <!-- side nav bar close -->
+
+        <!-- center division start -->
+        <div class="col-10">
+            <!-- -->
+
+            <gridster [options]="options " *ngIf="loaded " style="background: #fff; ">
+
+                <gridster-item *ngIf="lustdecent " [item]="{cols: 3, rows: 2.2, y: 0, x: 0} " class="gridster-item-content " style="padding: 1px; margin-left: 10px; margin-right: 10px; padding-top: 5px;" [ngClass]="collapselustdecent ? 'chatcomponentclosed':'chatcomponentexpanded'">
+                    <ndc-dynamic [ndcDynamicOutputs]="lustTab " [ndcDynamicComponent]="LustDeceitCoverComponent ">
+                    </ndc-dynamic>
+                </gridster-item>
+
+                <gridster-item *ngIf="mp3pdfetc " [item]="{cols: 3, rows: 2.2, y: 0, x: 0} " class="gridster-item-content" style="padding: 1px; margin-left: 10px; margin-right: 10px; padding-top: 5px;" [ngClass]="collapsemp3pdf ? 'chatcomponentclosed':'chatcomponentexpanded'">
+                    <ndc-dynamic [ndcDynamicOutputs]="mp3pdfetcthis " [ndcDynamicComponent]="Mp3pdfetcComponent ">
+                    </ndc-dynamic>
+                </gridster-item>
+
+                <gridster-item *ngIf="chatqueue " [item]="{cols: 3.5, rows: 3, y: 0, x: 0} " class="gridster-item-content" style="padding: 1px; margin-left: 10px; margin-right: 10px; padding-top: 5px;" [ngClass]="collapschatqueue ? 'chatcomponentclosed':'chatcomponentexpanded'">
+                    <ndc-dynamic [ndcDynamicOutputs]="chatquee " [ndcDynamicComponent]="component1 ">
+                    </ndc-dynamic>
+                </gridster-item>
+
+
+
+                <gridster-item *ngIf="chat " [item]="{cols: 4, rows: 4, y: 0, x: 0} " class="gridster-item-content " style="padding: 1px; margin-left: 10px; margin-right: 10px; padding-top: 5px;" [ngClass]="collapsechat ? 'chatcomponentclosed':'chatcomponentexpanded'">
+                    <ndc-dynamic [ndcDynamicOutputs]="chatthis " [ndcDynamicComponent]="component2 "></ndc-dynamic>
+                </gridster-item>
+
+                <gridster-item *ngIf="journry " [item]="{cols:3, rows: 3, y: 0, x: 0} " class="gridster-item-content " style="padding: 1px; margin-left: 10px; margin-right: 10px; padding-top: 5px;" [ngClass]="collapseJourney ? 'chatcomponentclosed':'chatcomponentexpanded'">
+                    <ndc-dynamic [ndcDynamicOutputs]="Journeythis " [ndcDynamicComponent]="component14 "></ndc-dynamic>
+                </gridster-item>
+
+
+                <gridster-item *ngIf="flag" [item]="{cols: 8, rows: 4, y: 0, x: 0} " class="gridster-item-content " style="padding: 1px; margin-left: 10px; margin-right: 10px; padding-top: 5px;" [ngClass]="collapseFlag ? 'chatcomponentclosed':'chatcomponentexpanded'">
+                    <ndc-dynamic [ndcDynamicOutputs]="flagTab " [ndcDynamicComponent]="component16 "></ndc-dynamic>
+                </gridster-item>
+
+                <gridster-item *ngIf="reportmatric " [item]="{cols: 3, rows: 3, y: 0, x: 0} " class="gridster-item-content " style="padding: 1px; margin-left: 10px; margin-right: 10px; padding-top: 5px;" [ngClass]="collapsereportmatric ? 'chatcomponentclosed':'chatcomponentexpanded'">
+                    <ndc-dynamic [ndcDynamicOutputs]="reportab " [ndcDynamicComponent]="component15 "></ndc-dynamic>
+                </gridster-item>
+
+                <gridster-item *ngIf="volunteer " [item]="{cols: 5, rows: 7, y: 0, x: 0} " class="gridster-item-content " style="padding: 1px; margin-left: 10px; margin-right: 10px; padding-top: 5px;" [ngClass]="collapsevolunteer ? 'chatcomponentclosed':'chatcomponentexpanded'">
+                    <ndc-dynamic [ndcDynamicOutputs]="volunteerTab " [ndcDynamicComponent]="component17 "></ndc-dynamic>
+                </gridster-item>
+
+
+                <div>
+                    <gridster-item *ngIf="chathistory " [item]="{cols: 4, rows: 3.5, y: 0, x: 0} " class="gridster-item-content " style="padding: 1px; margin-left: 10px; margin-right: 10px; padding-top: 5px;" [ngClass]="collapsechathistory ? 'chatcomponentclosed':'chatcomponentexpanded'">
+                        <ndc-dynamic [ndcDynamicOutputs]="chathist " [ndcDynamicComponent]="component3 "></ndc-dynamic>
+                    </gridster-item>
+                </div>
+                <!-- <div class="col-3 "> -->
+                <gridster-item *ngIf="bible " [item]="{cols: 4, rows: 5.3, y: 0, x: 0} " class="gridster-item-content " style="padding: 1px; margin-left: 10px; margin-right: 10px; padding-top: 5px;" [ngClass]="collapseBible ? 'chatcomponentclosed':'chatcomponentexpanded'">
+                    <ndc-dynamic (isbiblecom)='biblecom($event)' [ndcDynamicOutputs]="biblethis " [ndcDynamicComponent]="component4 "></ndc-dynamic>
+                </gridster-item>
+                <!-- </div> -->
+
+                <!-- <div class="col-3 "> -->
+                <gridster-item *ngIf="crossreference " [item]="{cols: 3.5, rows: 7, y: 0, x: 0} " class="gridster-item-content " style="padding: 1px; margin-left: 10px; margin-right: 10px; padding-top: 5px;" [ngClass]="collapsecrossreference ? 'chatcomponentclosed':'chatcomponentexpanded'">
+                    <ndc-dynamic [ndcDynamicOutputs]="corssref " [ndcDynamicComponent]="component5 "></ndc-dynamic>
+                </gridster-item>
+                <!-- </div> -->
+
+                <!-- <div class="col-3 "> -->
+                <gridster-item *ngIf="strongs " [item]="{cols: 4, rows: 7, y: 0, x: 0} " class="gridster-item-content " style="padding: 1px; margin-left: 10px; margin-right: 10px; padding-top: 5px;">
+                    <ndc-dynamic [ndcDynamicOutputs]="strongsthis " [ndcDynamicComponent]="component6 "></ndc-dynamic>
+                </gridster-item>
+                <!-- </div> -->
+
+                <!-- <div class="col-3 "> -->
+                <gridster-item *ngIf="workarea " [item]="{cols: 4, rows: 4.5, y: 0, x: 0} " class="gridster-item-content  " style="padding: 1px; margin-left: 10px; margin-right: 10px; padding-top: 5px;">
+                    <ndc-dynamic [ndcDynamicOutputs]="workareathis " [ndcDynamicComponent]="component8 "></ndc-dynamic>
+                </gridster-item>
+                <!-- </div> -->
+                <!-- <app-pdfupload></app-pdfupload> -->
+                <!-- <div class="col-3 "> -->
+                <gridster-item *ngIf="WorkAreaNotes " [item]="{cols: 4, rows: 4.5, y: 0, x: 0} " class="gridster-item-content " style="padding: 1px; margin-left: 10px; margin-right: 10px; padding-top: 5px;" [ngClass]="collapseWorkAreaNotes ? 'chatcomponentclosed':'chatcomponentexpanded'">
+                    <ndc-dynamic [ndcDynamicOutputs]="workareanotethis " [ndcDynamicComponent]="component9 ">
+                    </ndc-dynamic>
+                </gridster-item>
+                <!-- </div> -->
+
+                <!-- <div class="col-3 "> -->
+                <gridster-item *ngIf="calendar " [item]="{cols: 5, rows: 3.8 , y: 0, x: 0} " class="gridster-item-content " style="padding: 1px; margin-left: 10px; margin-right: 10px; padding-top: 5px;" [ngClass]="collapsecalendar ? 'chatcomponentclosed':'chatcomponentexpanded'">
+                    <ndc-dynamic [ndcDynamicComponent]="component11 " [ndcDynamicOutputs]="calenderthis "></ndc-dynamic>
+                </gridster-item>
+                <!-- </div> -->
+                <!-- <div class="col-3 "> -->
+                <gridster-item *ngIf="mp3clips " [item]="{cols: 4, rows: 4, y: 0, x: 0} " class="gridster-item-content ">
+                    <ndc-dynamic (thismp3)='mp3com($event)' [ndcDynamicComponent]="component7 " [ndcDynamicOutputs]="mp3this " style="padding: 1px; margin-left: 10px; margin-right: 10px; padding-top: 5px;">
+                    </ndc-dynamic>
+                </gridster-item>
+                <!-- </div> -->
+                <!-- <div class="col-3 "> -->
+                <gridster-item *ngIf="pdfquotes " [item]="{cols: 4, rows: 4.5, y: 0, x: 0} " class="gridster-item-content " style="padding: 1px; margin-left: 10px; margin-right: 10px; padding-top: 5px;" [ngClass]="collapsepdfquotes ? 'chatcomponentclosed':'chatcomponentexpanded'">
+                    <ndc-dynamic [ndcDynamicComponent]="component12 " [ndcDynamicOutputs]="pdfthis ">
+                    </ndc-dynamic>
+                </gridster-item>
+                <!-- </div> -->
+                <!-- <div class="col-3 "> -->
+                <gridster-item *ngIf="personalfavs " [item]="{cols: 7, rows: 6, y: 0, x: 0} " class="gridster-item-content " style="border: 2px solid;" [ngClass]="collapsepersonalfavs ? 'chatcomponentclosed':'chatcomponentexpanded'">
+                    <ndc-dynamic [ndcDynamicOutputs]="psersonafavthis " [ndcDynamicComponent]="component13 ">
+                    </ndc-dynamic>
+                </gridster-item>
+                <!-- </div> -->
+                <!-- <div class="col-3 "> -->
+                <gridster-item *ngIf="barnastatistics " [item]="{cols: 3, rows: 3, y: 0, x: 0} " class="gridster-item-content " style="padding: 1px; margin-left: 10px; margin-right: 10px; padding-top: 5px;" [ngClass]="collapsebarnastatistics ? 'chatcomponentclosed':'chatcomponentexpanded'">
+                    <ndc-dynamic [ndcDynamicOutputs]="barnastaticsthis " [ndcDynamicComponent]="component10 ">
+                    </ndc-dynamic>
+                </gridster-item>
+                <!-- </div> -->
+            </gridster>
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+<router-outlet></router-outlet>
+
+<script src="/assets/js/custom.js "></script>

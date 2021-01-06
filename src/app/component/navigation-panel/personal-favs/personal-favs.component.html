@@ -1,0 +1,583 @@
+<!-- <div class="grid-stack grid-stack-instance-3166" data-gs-current-height="9" style="height: 200px;"> -->
+<!-- <div class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide" id="personal-favs-grid" data-gs-x="0" data-gs-y="0" data-gs-width="5" data-gs-height="9" data-gs-auto-position="yes" data-gs-id="personal-favs-grid"> -->
+
+<div class="row" style="margin-left: 0px !important;margin-right: 0px !important;">
+    <div class="col">
+        <div class="grid-stack-item-content ui-draggable-handle">
+
+
+            <!-- Personal Verse Favs Master Div -->
+            <div class="personal-favs-wrapper" id="personal-favs-wrapper">
+
+                <!-- Personal Favs Header-->
+                <div class="personal-favs-header" ondblclick="$('#personal-favs').toggle()">
+                    <div class="personal-favs-header-left">
+                        <img src="/assets/dist/img/icons/personal-favs-head-icon.png">
+                        <span>Personal Favs</span>
+                    </div>
+                    <div class="personal-favs-header-right">
+                        <a class="fav-dot-menu" href="javascript:void(0)" onclick="$('#personal-favs-Spirit').toggle()"><i class="fa fa-ellipsis-v"
+                                aria-hidden="true"></i></a>
+                        <a href="javascript:void(0)" (click)="toggleclose()" id="personal-favs-close-btn"><i
+                                class="fa fa-close"></i></a>
+                    </div>
+                </div>
+
+                <!-- Personal Favs Favorites List-->
+                <div class="personal-favs-favorite-list gridster-item-content">
+                    <div class="personal-favs-favorite-list-left">
+
+                        <i class="fa fa-list"></i>
+                        <span> Favorites List </span>
+                        <i class="fa fa-arrow-right personalFavsDropbtn" (click)="toggleDisplayDiv()"></i>
+                        <span class="addToTopic" href="#">Add to Topic</span>
+                    </div>
+                </div>
+                <!-- <div class="col">
+                    
+                    <div class="personal-favs-topics" *ngIf="isShowDiv">
+                        <div class="personal-favs-topics-header">
+                            <h5 class="gridster-item-content">Favorites List</h5>
+                            <i class="fa fa-close"></i>
+                        </div>
+                        <div class="personal-favs-topics-body gridster-item-content">
+                            <a href="#"> (1) Desire <i class="fa fa-trash hide"></i> </a>
+                            <a href="#"> (2) Lusts <i class="fa fa-trash hide"></i> </a>
+                            <a href="#"> (3) Affection <i class="fa fa-trash hide"></i> </a>
+                            <a href="#"> (4) Flesh <i class="fa fa-trash hide"></i> </a>
+                            <a href="#"> (5) Passion <i class="fa fa-trash hide"></i> </a>
+                            <a href="#"> (6) Crucifed <i class="fa fa-trash hide"></i> </a>
+                            <a href="#"> (7) Belong to Jesus <i class="fa fa-trash hide"></i> </a>
+                            <a href="#"> (8) Union with Christ <i class="fa fa-trash hide"></i> </a>
+                            <a href="#"> (9) Lusts <i class="fa fa-trash hide"></i> </a>
+                            <a href="#"> (10) Affection <i class="fa fa-trash hide"></i> </a>
+                            <a href="#"> (11) Flesh <i class="fa fa-trash hide"></i> </a>
+                            <a href="#"> (12) Passion <i class="fa fa-trash hide"></i> </a>
+                            <a href="#"> (13) Crucifed <i class="fa fa-trash hide"></i> </a>
+                            <a href="#"> (14) Belong to Jesus <i class="fa fa-trash hide"></i> </a>
+                            <a href="#"> (15) Union with Christ <i class="fa fa-trash hide"></i> </a>
+                            <a href="#"> (16) Lusts <i class="fa fa-trash hide"></i> </a>
+                            <a href="#"> (17) Affection <i class="fa fa-trash hide"></i> </a>
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+
+            <!-- Personal Favs Body-->
+            <div class="personal-favs-body gridster-item-content" id="personal-favs">
+
+                <!-- Personal Favs Searchbar -->
+                <div class="personal-favs-searchbar gridster-item-content">
+                    <input width="100%" type="text" placeholder="Search...">
+                    <i href="#" class="fa fa-search"></i>
+                </div>
+
+                <!-- Personal Favs Slidebar -->
+                <div class="personal-favs-slider">
+                    <div class="slideshow-container">
+
+                        <!-- Slide 01 -->
+                        <div class="mySlides  " style="display: block;">
+                            <div class="numbertext">1 / 3</div>
+
+                            <!-- Personal Favs Body Header -->
+                            <div class="personal-favs-body-header">
+                                <h5 style="font-weight:500; font-size: 12px; color: #78500c">Main Terms </h5>
+                                <div class="personal-favs-body-heading-contents">
+                                    <span class="personalFavsHeading"> Desire </span>
+                                    <span class="addToVerse" href="#">Add to Verse</span>
+
+
+                                    <!-- Slider Buttons -->
+                                    <div class="personal-favs-slider-buttons">
+                                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                                        <a class="next" onclick="plusSlides(1)">❯</a>
+                                    </div>
+                                </div>
+
+                                <!-- Related Terms -->
+                                <div class="personal-favs-related-terms">
+                                    <h5 style="color: #78500c">Related Terms</h5>
+                                    <h6 style="font-family: 'Montserrat Medium'; color: #6e6e6e">
+                                        Lusts - Affections - Flesh - Passions - Devotions - Lusts - Affections - Flesh
+                                    </h6>
+                                </div>
+                            </div>
+
+                            <!-- Personal Favs Count -->
+                            <div class="personal-favs-count">
+
+                                <!-- Personal Favs Count Header-->
+                                <div class="personal-favs-count-header">
+                                    <span class="personal-favs-count-time">
+                                        11 Times
+                                    </span>
+                                    <span class="personal-favs-count-number">
+                                        7 Faves
+                                    </span>
+                                </div>
+
+                                <!-- Personal Favs Count Buttons -->
+                                <!--  <div class="personal-favs-count-buttons">
+                                        <button class="oldTreatments">
+                                            <h5> Old Testament (10) </h5>
+                                        </button>
+                                        <button class="newTreatments">
+                                            <h5> New Testament (15) </h5>
+                                        </button>
+                                    </div>
+
+                                    <div class="personal-favs-count-books">
+                                        <button type="submit"  class="personal-favs-single-book"><h5> Mat(2)</h5></button>
+                                        <button type="submit"  class="personal-favs-single-book"><h5> Mar(2)</h5></button>
+                                        <button type="submit"  class="personal-favs-single-book"><h5> Luk(2)</h5></button>
+                                        <button type="submit"  class="personal-favs-single-book"><h5> Jhn(2)</h5></button>
+                                        <button type="submit"  class="personal-favs-single-book"><h5> Act(2)</h5></button>
+                                        <button type="submit"  class="personal-favs-single-book"><h5> Rom(2)</h5></button>
+                                        <button type="submit"  class="personal-favs-single-book"><h5> 1Co(2)</h5></button>
+                                        <button type="submit"  class="personal-favs-single-book"><h5> 2Co(2)</h5></button>
+                                        <button type="submit"  class="personal-favs-single-book"><h5> Gal(2)</h5></button>
+                                        <button type="submit"  class="personal-favs-single-book"><h5> Eph(2)</h5></button>
+                                         <button type
+                    ="submit"  class="personal-favs-single-book"><h5> Phl(2)</h5></button>
+                                         <button type
+                    ="submit"  class="personal-favs-single-book"><h5> Col(2)</h5></button>
+                                        <button type
+
+                                    </div> -->
+
+                            </div>
+                            <style>
+                                .div1 {
+                                    overflow-y: scroll;
+                                    height: 300px;
+                                }
+                            </style>
+                            <!-- Personal Favs Contents -->
+                            <div class="personal-favs-contents div1">
+                                <!--                                                        work-area-pdf-content-->
+                                <!-- Table for Contents -->
+                                <table class="table-responsive">
+                                    <tbody>
+
+                                        <!-- Content 1 -->
+                                        <tr>
+                                            <td class="personal-favs-table-time">
+                                                <h5 class="personal-favs-time">Gen 4:7</h5>
+                                                <button type="submit"><i class="fa fa-trash-o" id="personal-favs-Spirit"
+                                                        aria-hidden="true"></i></button>
+                                            </td>
+                                            <td class="personal-favs-table-paragraph">
+                                                <a onclick="copyMe(this);">
+                                                    <p>
+                                                        “If you do well, will not your countenance be lifted up? And if you do not do well, sin is crouching at the door; and its <span class="blue">desire</span> is for you, but you must master it.”
+                                                    </p>
+                                                    <hr class="work-area-hr-small">
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+                                        <!-- Content 2 -->
+                                        <tr>
+                                            <td class="personal-favs-table-time">
+                                                <h5>Mar 4:19 </h5>
+                                                <button type="submit"><i class="fa fa-trash-o" id="personal-favs-Spirit"
+                                                        aria-hidden="true"></i></button>
+                                            </td>
+                                            <td class="personal-favs-table-paragraph">
+                                                <a onclick="copyMe(this);">
+                                                    <p>
+
+                                                        but the worries of the world, and the deceitfulness of riches, and the <span class="blue">desires</span> for other things enter in and choke the word, and it becomes unfruitful.
+                                                    </p>
+                                                    <hr class="work-area-hr-small">
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <!-- Content 3 -->
+                                        <tr>
+                                            <td class="personal-favs-table-time">
+                                                <h5>Jhn 8:44 </h5>
+                                                <button type="submit"><i class="fa fa-trash-o"
+                                                        aria-hidden="true"></i></button>
+                                            </td>
+                                            <td class="personal-favs-table-paragraph">
+                                                <a onclick="copyMe(this);">
+                                                    <p>
+                                                        “You are of your father the devil, and you want to do the <span class="blue">desires</span> of your father. He was a murderer from the beginning, and does not stand in the truth because there is
+                                                        no truth in him. Whenever he speaks a lie, he speaks from his own nature, for he is a liar and the father of lies.
+
+                                                    </p>
+                                                    <hr class="work-area-hr-small">
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <!-- Content 4 -->
+                                        <tr>
+                                            <td class="personal-favs-table-time">
+                                                <h5>Rom 1:24 </h5>
+                                                <button type="submit"><i class="fa fa-trash-o"
+                                                        aria-hidden="true"></i></button>
+                                            </td>
+                                            <td class="personal-favs-table-paragraph">
+                                                <a onclick="copyMe(this);">
+                                                    <p>
+                                                        Therefore God gave them over in the <span class="blue">lusts</span> of their hearts to impurity, so that their bodies would be dishonored among them.
+
+                                                    </p>
+                                                    <hr class="work-area-hr-small">
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <!-- Content 5 -->
+                                        <tr>
+                                            <td class="personal-favs-table-time">
+                                                <h5>Gal 5:17 </h5>
+                                                <button type="submit"><i class="fa fa-trash-o"
+                                                        aria-hidden="true"></i></button>
+                                            </td>
+                                            <td class="personal-favs-table-paragraph">
+                                                <a onclick="copyMe(this);">
+                                                    <p>
+                                                        For the flesh sets its <span class="blue">desire</span> against the Spirit, and the Spirit against the flesh; for these are in opposition to one another, so that you may not do the things that you
+                                                        please.
+                                                    </p>
+                                                    <hr class="work-area-hr-small">
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <!-- Content 6 -->
+                                        <tr>
+                                            <td class="personal-favs-table-time">
+                                                <h5>Eph 2:3 </h5>
+                                                <button type="submit"><i class="fa fa-trash-o"
+                                                        aria-hidden="true"></i></button>
+                                            </td>
+                                            <td class="personal-favs-table-paragraph">
+                                                <a onclick="copyMe(this);">
+                                                    <p>
+                                                        Among them we too all formerly lived in the <span class="blue">lusts</span> of our flesh, indulging the desires of the flesh and of the mind, and were by nature children of wrath, even as the rest.
+                                                    </p>
+                                                    <hr class="work-area-hr-small">
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <!-- Content 7 -->
+                                        <tr>
+                                            <td class="personal-favs-table-time">
+                                                <h5>Jas 1:14 </h5>
+                                                <button type="submit"><i class="fa fa-trash-o"
+                                                        aria-hidden="true"></i></button>
+                                            </td>
+                                            <td class="personal-favs-table-paragraph">
+                                                <a onclick="copyMe(this);">
+                                                    <p>
+                                                        But each one is tempted when he is carried away and enticed by his own <span class="blue">lust</span>.
+                                                    </p>
+                                                    <hr class="work-area-hr-small">
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Slide 02 -->
+                        <div class="mySlides  " style="display: none;">
+                            <div class="numbertext">2 / 3</div>
+
+                            <!-- Personal Favs Body Header -->
+                            <div class="personal-favs-body-header">
+                                <h5 style="font-weight:500; font-size: 12px; color: #78500c">Main Terms </h5>
+                                <div class="personal-favs-body-heading-contents">
+                                    <span class="personalFavsHeading"> Lusts </span>
+                                    <span class="addToVerse" href="#">Add to Verse</span>
+
+                                    <!-- Slider Buttons -->
+                                    <div class="personal-favs-slider-buttons">
+                                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                                        <a class="next" onclick="plusSlides(1)">❯</a>
+                                    </div>
+                                </div>
+
+                                <h5 style="color: #78500c">Related Terms</h5>
+                                <h6 style="font-family: 'Montserrat Medium'; color: #6e6e6e">
+                                    Lusts - Affections - Flesh - Passions - Devotions
+                                </h6>
+                            </div>
+
+                            <!-- Personal Favs Count -->
+                            <div class="personal-favs-count">
+
+                                <!-- Personal Favs Count Header-->
+                                <div class="personal-favs-count-header">
+                                    <span class="personal-favs-count-time">
+                                        11 Times
+                                    </span>
+                                    <span class="personal-favs-count-number">
+                                        7 Favs.
+                                    </span>
+                                </div>
+
+                                <!-- Personal Favs Count Buttons -->
+                                <!-- <div class="personal-favs-count-buttons">
+                                        <button class="oldTreatments">
+                                            <h5> Old Testament (10) </h5>
+                                        </button>
+                                        <button class="newTreatments">
+                                            <h5> New Testament (15) </h5>
+                                        </button>
+                                    </div>
+
+                                    <div class="personal-favs-count-books">
+                                        <button type="submit"  class="personal-favs-single-book"><h5> Mat(2)</h5></button>
+                                        <button type="submit"  class="personal-favs-single-book"><h5> Mar(2)</h5></button>
+                                        <button type="submit"  class="personal-favs-single-book"><h5> Luk(2)</h5></button>
+                                        <button type="submit"  class="personal-favs-single-book"><h5> Jhn(2)</h5></button>
+                                        <button type="submit"  class="personal-favs-single-book"><h5> Act(2)</h5></button>
+                                        <button type="submit"  class="personal-favs-single-book"><h5> Rom(2)</h5></button>
+                                        <button type="submit"  class="personal-favs-single-book"><h5> 1Co(2)</h5></button>
+                                        <button type="submit"  class="personal-favs-single-book"><h5> 2Co(2)</h5></button>
+                                        <button type="submit"  class="personal-favs-single-book"><h5> Gal(2)</h5></button>
+                                        <button type="submit"  class="personal-favs-single-book"><h5> Eph(2)</h5></button>
+
+                                    </div> -->
+
+                            </div>
+
+                            <!-- Personal Favs Contents -->
+                            <div class="personal-favs-contents">
+
+                                <!-- Table for Contents -->
+                                <table class="table-responsive">
+                                    <tbody>
+
+                                        <!-- Content 1 -->
+                                        <tr>
+                                            <td class="personal-favs-table-time">
+                                                <h5>Mar 4:19 </h5>
+                                                <button type="submit"><i class="fa fa-trash-o"
+                                                        aria-hidden="true"></i></button>
+                                            </td>
+                                            <td class="personal-favs-table-paragraph">
+                                                Vivamus ac congue nulla. Donec gravida vehicula lorem. Phasellus tempor, eros nec placerat iaculis, lacus est faucibus nunc, eu vehicula urna nisl vitae eros.
+                                            </td>
+                                        </tr>
+
+                                        <!-- Content 2 -->
+                                        <tr>
+                                            <td class="personal-favs-table-time">
+                                                <h5>Mar 4:20 </h5>
+                                                <button type="submit"><i class="fa fa-trash-o"
+                                                        aria-hidden="true"></i></button>
+                                            </td>
+                                            <td class="personal-favs-table-paragraph">
+                                                Phasellus tempor, eros nec placerat iaculis,
+                                            </td>
+                                        </tr>
+
+                                        <!-- Content 3 -->
+                                        <tr>
+                                            <td class="personal-favs-table-time">
+                                                <h5>Mar 4:21 </h5>
+                                                <button type="submit"><i class="fa fa-trash-o"
+                                                        aria-hidden="true"></i></button>
+                                            </td>
+                                            <td class="personal-favs-table-paragraph">consectetur adipiscing elit. Morbi finibus rhoncus est accumsan interdum. Vivamus ac congue nulla. Donec gravida vehicula lorem.
+                                            </td>
+                                        </tr>
+
+                                        <!-- Content 4 -->
+                                        <tr>
+                                            <td class="personal-favs-table-time">
+                                                <h5>Mar 4:22 </h5>
+                                                <button type="submit"><i class="fa fa-trash-o"
+                                                        aria-hidden="true"></i></button>
+                                            </td>
+                                            <td class="personal-favs-table-paragraph">
+                                                Vivamus ac congue nulla. Donec gravida vehicula lorem. Phasellus tempor, eros nec placerat iaculis, lacus est faucibus nunc, eu vehicula urna nisl vitae eros.
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Slide 03 -->
+                        <div class="mySlides  " style="display: none;">
+                            <div class="numbertext">3 / 3</div>
+
+                            <!-- Personal Favs Body Header -->
+                            <div class="personal-favs-body-header">
+                                <h5 style="font-weight:500; font-size: 12px; color: #78500c">Main Terms </h5>
+                                <div class="personal-favs-body-heading-contents">
+                                    <span class="personalFavsHeading"> Affection </span>
+                                    <span class="addToVerse" href="#">Add to Verse</span>
+
+                                    <!-- Slider Buttons -->
+                                    <div class="personal-favs-slider-buttons">
+                                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                                        <a class="next" onclick="plusSlides(1)">❯</a>
+                                    </div>
+                                </div>
+
+                                <h5 style="color: #78500c">Related Terms</h5>
+                                <h6 style="font-family: 'Montserrat Medium'; color: #6e6e6e">
+                                    Lusts - Affections - Flesh - Passions - Devotions
+                                </h6>
+                            </div>
+
+                            <!-- Personal Favs Count -->
+                            <div class="personal-favs-count">
+
+                                <!-- Personal Favs Count Header-->
+                                <div class="personal-favs-count-header">
+                                    <span class="personal-favs-count-time">
+                                        11 Times
+                                    </span>
+                                    <span class="personal-favs-count-number">
+                                        7 Personal Files.
+                                    </span>
+                                </div>
+
+                                <!-- Personal Favs Count Buttons -->
+                                <!-- <div class="personal-favs-count-buttons">
+                                        <button class="oldTreatments">
+                                            <h5> Old Testament (10) </h5>
+                                        </button>
+                                        <button class="newTreatments">
+                                            <h5> New Testament (15) </h5>
+                                        </button>
+                                    </div>
+
+                                    <div class="personal-favs-count-books">
+                                        <button type="submit"  class="personal-favs-single-book"><h5> Mat(2)</h5></button>
+                                        <button type="submit"  class="personal-favs-single-book"><h5> Mat(2)</h5></button>
+                                        <button type="submit"  class="personal-favs-single-book"><h5> Mat(2)</h5></button>
+                                        <button type="submit"  class="personal-favs-single-book"><h5> Mat(2)</h5></button>
+                                        <button type="submit"  class="personal-favs-single-book"><h5> Mat(2)</h5></button>
+                                        <button type="submit"  class="personal-favs-single-book"><h5> Mat(2)</h5></button>
+                                        <button type="submit"  class="personal-favs-single-book"><h5> Mat(2)</h5></button>
+                                        <button type="submit"  class="personal-favs-single-book"><h5> Mat(2)</h5></button>
+                                        <button type="submit"  class="personal-favs-single-book"><h5> Mat(2)</h5></button>
+                                        <button type="submit"  class="personal-favs-single-book"><h5> Mat(2)</h5></button>
+
+                                    </div> -->
+
+                            </div>
+
+                            <!-- Personal Favs Contents -->
+                            <div class="personal-favs-contents">
+
+                                <!-- Table for Contents -->
+                                <table class="table-responsive">
+                                    <tbody>
+
+                                        <!-- Content 1 -->
+                                        <tr>
+                                            <td class="personal-favs-table-time">
+                                                <h5>Mar 4:19 </h5>
+                                                <button type="submit"><i class="fa fa-trash-o"
+                                                        aria-hidden="true"></i></button>
+                                            </td>
+                                            <td class="personal-favs-table-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi finibus rhoncus est accumsan interdum.
+
+                                            </td>
+                                        </tr>
+
+                                        <!-- Content 2 -->
+                                        <tr>
+                                            <td class="personal-favs-table-time">
+                                                <h5>Mar 4:20 </h5>
+                                                <button type="submit"><i class="fa fa-trash-o"
+                                                        aria-hidden="true"></i></button>
+                                            </td>
+                                            <td class="personal-favs-table-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi finibus rhoncus est accumsan interdum.
+
+                                            </td>
+                                        </tr>
+
+                                        <!-- Content 3 -->
+                                        <tr>
+                                            <td class="personal-favs-table-time">
+                                                <h5>Mar 4:21 </h5>
+                                                <button type="submit"><i class="fa fa-trash-o"
+                                                        aria-hidden="true"></i></button>
+                                            </td>
+                                            <td class="personal-favs-table-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi finibus rhoncus est accumsan interdum.
+
+                                            </td>
+                                        </tr>
+
+                                        <!-- Content 4 -->
+                                        <tr>
+                                            <td class="personal-favs-table-time">
+                                                <h5>Mar 4:22 </h5>
+                                                <button type="submit"><i class="fa fa-trash-o"
+                                                        aria-hidden="true"></i></button>
+                                            </td>
+                                            <td class="personal-favs-table-paragraph">
+                                                Vivamus ac congue nulla. Donec gravida vehicula lorem. Phasellus tempor, eros nec placerat iaculis, lacus est faucibus nunc, eu vehicula urna nisl vitae eros.
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-2" *ngIf="isShowDiv">
+        <!-- Personal Favs Topics -->
+        <div class="personal-favs-topics" style="position: initial !important;margin-left:-30px">
+            <div class="personal-favs-topics-header">
+                <h5 class="gridster-item-content">Favorites List</h5>
+                <i class="fa fa-close"></i>
+            </div>
+            <div class="personal-favs-topics-body gridster-item-content">
+                <a href="#"> (1) Desire <i class="fa fa-trash hide"></i> </a>
+                <a href="#"> (2) Lusts <i class="fa fa-trash hide"></i> </a>
+                <a href="#"> (3) Affection <i class="fa fa-trash hide"></i> </a>
+                <a href="#"> (4) Flesh <i class="fa fa-trash hide"></i> </a>
+                <a href="#"> (5) Passion <i class="fa fa-trash hide"></i> </a>
+                <a href="#"> (6) Crucifed <i class="fa fa-trash hide"></i> </a>
+                <a href="#"> (7) Belong to Jesus <i class="fa fa-trash hide"></i> </a>
+                <a href="#"> (8) Union with Christ <i class="fa fa-trash hide"></i> </a>
+                <a href="#"> (9) Lusts <i class="fa fa-trash hide"></i> </a>
+                <a href="#"> (10) Affection <i class="fa fa-trash hide"></i> </a>
+                <a href="#"> (11) Flesh <i class="fa fa-trash hide"></i> </a>
+                <a href="#"> (12) Passion <i class="fa fa-trash hide"></i> </a>
+                <a href="#"> (13) Crucifed <i class="fa fa-trash hide"></i> </a>
+                <a href="#"> (14) Belong to Jesus <i class="fa fa-trash hide"></i> </a>
+                <a href="#"> (15) Union with Christ <i class="fa fa-trash hide"></i> </a>
+                <a href="#"> (16) Lusts <i class="fa fa-trash hide"></i> </a>
+                <a href="#"> (17) Affection <i class="fa fa-trash hide"></i> </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- </div> -->
+<!-- <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: none;"></div></div></div> -->

@@ -1,0 +1,86 @@
+<!-- <div class="grid-stack-item cross-reference-grid" id="cross-reference-grid" data-gs-height="11" data-gs-min-height="3" data-gs-min-width="2" data-gs-width="4" data-gs-x="5" data-gs-y="5"> -->
+<div class="grid-stack-item-content">
+
+
+    <!-- Cross Reference master Div -->
+    <div class="cross-reference-wrapper" id="cross-reference-wrapper">
+
+
+        <!-- Cross Reference Header-->
+        <div class="cross-reference-header" ondblclick="$('#cross-reference-body').toggle()">
+            <div class="cross-reference-header-left">
+                <img src="/assets/dist/img/icons/cross-reference-head-icon.png">
+                <span>Cross Reference</span>
+            </div>
+
+            <div class="cross-reference-header-right">
+                <a href="javascript:void(0)" onclick="$('#cross-reference-body').toggle()" id="cross-reference-collapse-btn"><i class="fa fa-angle-down"></i></a>
+                <a href="javascript:void(0)" (click)="toggleclose()" id="cross-reference-close-btn"><i class="fa fa-close"></i></a>
+            </div>
+
+        </div>
+
+
+        <!-- Cross Reference panel Body-->
+        <div class="cross-reference-body" id="cross-reference-body">
+            <div class="action-wrapper">
+                <div class="arrows-wrapper" id="cross-reference-body">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </div>
+                <a class="cross-reference-dot-menu" (click)="toggleShow()" type="checkbox"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
+            </div>
+            <div class="cross-reference-body-inner">
+                <!-- Walk -->
+                <div class="CR-heading">
+                    <h5>{{value}}</h5>
+                    <hr>
+                </div>
+                <div class="table-responsive">
+                    <table>
+                        <tbody *ngFor="let ss of optResults">
+
+                            <!-- content 01 -->
+                            <tr class="gridster-item-content gridster-item-content">
+                                <td class="CR-tableLeft">
+                                    <h5>{{ss.key}}</h5>
+                                    <button type="submit" *ngIf="isShown" id="divshow">
+                                        <span onclick="$('#cross-add').toggle()">  Add </span>
+                                    </button>
+                                    <div class="cross-reference-action-list " id="cross-add">
+                                        <div class="cross-reference-action-list-head">
+                                            <h5>Add To<i class="fa fa-close"></i></h5>
+                                        </div>
+                                        <div class="cross-reference-action-list-body">
+                                            <span>Work Area</span>
+                                            <span>Journey</span>
+                                            <span>Personal Favs</span>
+                                        </div>
+                                    </div>
+                                </td>
+
+
+                                <td class="CR-tableRight ">
+                                    <p>
+                                        {{ ss.preview}}
+                                    </p>
+                                </td>
+                            </tr>
+
+                            <!-- content 02 -->
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

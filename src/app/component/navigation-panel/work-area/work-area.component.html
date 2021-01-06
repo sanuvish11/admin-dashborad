@@ -1,0 +1,247 @@
+<!-- Work Area Div -->
+<!-- <div class="grid-stack-item work-area-grid" id="work-area-grid" data-gs-x="0" data-gs-y="12" data-gs-width="4" data-gs-height="7" data-gs-max-width="12" data-gs-max-height="12" data-gs-min-width="2" data-gs-min-height="2"> -->
+<div class="grid-stack-item-content" style="height: 500px;">
+
+    <!-- Work Area Master Div -->
+    <div class="work-area-wrapper" id="work-area-wrapper">
+
+        <style>
+            .div1 {
+                overflow-y: scroll;
+                height: 420px;
+            }
+        </style>
+        <!-- Work Area Header-->
+        <div class="work-area-header" ondblclick="$('#work-area-body-area').toggle()">
+            <div class="work-area-header-left">
+                <img src="/assets/dist/img/icons/chat-head-icon.png">
+                <span>Work Area</span>
+            </div>
+
+            <div class="work-area-header-right">
+                <a onclick="$('#work-area-Spirit').toggle()" style="font-size: 12px" title="Clear Area"><img src="/assets/dist/img/icons/work-area-clear-icon.png"></a>
+                <script>
+                    function clearBox() {
+                        document.getElementById('work-area-pdf-content').innerHTML = "";
+                        document.getElementById('work-area-mp3-contents').innerHTML = "";
+                        document.getElementById('work-area-psalms-contents').innerHTML = "";
+                    }
+                </script>
+
+
+                <a class="work-area-dot-menu" onclick="$('#work-area-body').toggle()" href="javascript:void(0)"><i
+                        class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
+                <div class="workarea-header-list enable" id="workarea-header-list-dropdown">
+                    <div class="workarea-list-head">
+                        <h5>Add To <span style="color: #ff0000">Journey</span> as:<i onclick="toggleGarbageButton('work-area-body')" class="fa fa-close"></i></h5>
+                    </div>
+
+                    <div class="workarea-list-body">
+                        <span> The Flesh Lusts Against the Spirit</span>
+                    </div>
+                </div>
+
+
+                <a href="javascript:void(0)" (click)="toggleclose()" id="work-area-close-btn"><i
+                        class="fa fa-close"></i></a>
+            </div>
+
+        </div>
+
+
+
+        <!-- Work Area Body-->
+        <div class="work-area-body" id="work-area-body-area">
+            <div class="save-journey" id="work-area-body">
+                <input type="text" placeholder="Journey 1">
+                <h5>Save Journey</h5>
+            </div>
+            <div class="work-area-body-wrapper div1">
+                <!-- Work Area PDF-->
+                <div class="work-area-pdf">
+
+                    <h4>PDF's, URL's, Doc's<a onclick="toggleWorkAreaPDFList();"><i class="fa fa-angle-down"
+                                onclick="$('#work-area-pdf-content').toggle()"></i></a></h4>
+
+                    <!-- content 01 -->
+                    <div class="work-area-pdf-content enable" id="work-area-pdf-content">
+
+                        <!-- Content 01 -->
+                        <div id="work-area-pdf-content-1">
+                            <div class="workarea-left">
+                                <i class="fa fa-file-pdf-o"></i>
+                            </div>
+                            <div class="workarea-right">
+                                <span>Galatians 5; 16:25 - Live by the Spirit </span>
+                                <span class="garbage" style="float: right; cursor:pointer;">
+                                    <i class="fa fa-trash-o" aria-hidden="true"
+                                        onclick="RemoveWorkAreaDiv('work-area-pdf-content-1')"></i></span>
+                                <p>Kim Riddlebarger</p>
+                            </div>
+                        </div>
+
+                        <!-- Content 01 -->
+                        <div id="work-area-pdf-content-2">
+                            <div class="workarea-left">
+                                <i class="fa fa-file-pdf-o"></i>
+                            </div>
+                            <div class="workarea-right">
+                                <span>Galatians 5; 16:26 - Live by the Spirit </span>
+                                <span class="garbage" style="float: right; cursor:pointer;">
+                                    <i class="fa fa-trash-o" aria-hidden="true"
+                                        onclick="RemoveWorkAreaDiv('work-area-pdf-content-2')"></i>
+                                </span>
+                                <p>Kim Riddlebarger </p>
+                            </div>
+
+                        </div>
+                        <div id="work-area-pdf-content-2">
+                            <div class="workarea-left">
+                                <i class="fa fa-file-pdf-o"></i>
+                            </div>
+                            <div class="workarea-right">
+                                <span>Galatians 5; 16:26 - Live by the Spirit </span>
+                                <span class="garbage" style="float: right; cursor:pointer;">
+                                    <i class="fa fa-trash-o" aria-hidden="true"
+                                        onclick="RemoveWorkAreaDiv('work-area-pdf-content-2')"></i>
+                                </span>
+                                <p>Kim Riddlebarger </p>
+                            </div>
+
+                        </div>
+                        <div id="work-area-pdf-content-2">
+                            <div class="workarea-left">
+                                <i class="fa fa-file-pdf-o"></i>
+                            </div>
+                            <div class="workarea-right">
+                                <span>Galatians 5; 16:26 - Live by the Spirit </span>
+                                <span class="garbage" style="float: right; cursor:pointer;">
+                                    <i class="fa fa-trash-o" aria-hidden="true"
+                                        onclick="RemoveWorkAreaDiv('work-area-pdf-content-2')"></i>
+                                </span>
+                                <p>Kim Riddlebarger </p>
+                            </div>
+
+                        </div>
+                        <div id="work-area-pdf-content-2">
+                            <div class="workarea-left">
+                                <i class="fa fa-file-pdf-o"></i>
+                            </div>
+                            <div class="workarea-right">
+                                <span>Galatians 5; 16:26 - Live by the Spirit </span>
+                                <span class="garbage" style="float: right; cursor:pointer;">
+                                    <i class="fa fa-trash-o" aria-hidden="true"
+                                        onclick="RemoveWorkAreaDiv('work-area-pdf-content-2')"></i>
+                                </span>
+                                <p>Kim Riddlebarger </p>
+                            </div>
+
+                        </div>
+
+                        <div id="work-area-pdf-content-2">
+                            <div class="workarea-left">
+                                <i class="fa fa-file-pdf-o"></i>
+                            </div>
+                            <div class="workarea-right">
+                                <span>Galatians 5; 16:26 - Live by the Spirit </span>
+                                <span class="garbage" style="float: right; cursor:pointer;">
+                                    <i class="fa fa-trash-o" aria-hidden="true"
+                                        onclick="RemoveWorkAreaDiv('work-area-pdf-content-2')"></i>
+                                </span>
+                                <p>Kim Riddlebarger </p>
+                            </div>
+
+                        </div>
+
+                        <div id="work-area-pdf-content-2">
+                            <div class="workarea-left">
+                                <i class="fa fa-file-pdf-o"></i>
+                            </div>
+                            <div class="workarea-right">
+                                <span>Galatians 5; 16:26 - Live by the Spirit </span>
+                                <span class="garbage" style="float: right; cursor:pointer;">
+                                    <i class="fa fa-trash-o" aria-hidden="true"
+                                        onclick="RemoveWorkAreaDiv('work-area-pdf-content-2')"></i>
+                                </span>
+                                <p>Kim Riddlebarger </p>
+                            </div>
+
+                        </div>
+                        <div id="work-area-pdf-content-2">
+                            <div class="workarea-left">
+                                <i class="fa fa-file-pdf-o"></i>
+                            </div>
+                            <div class="workarea-right">
+                                <span>Galatians 5; 16:26 - Live by the Spirit </span>
+                                <span class="garbage" style="float: right; cursor:pointer;">
+                                    <i class="fa fa-trash-o" aria-hidden="true"
+                                        onclick="RemoveWorkAreaDiv('work-area-pdf-content-2')"></i>
+                                </span>
+                                <p>Kim Riddlebarger </p>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+                </div>
+                <hr class="work-area-hr">
+
+                <!-- Work Area MP3-->
+                <div class="work-area-mp3">
+                    <h6>Media Files<a href="javascript:void(0)" onclick="$('#work-area-mp3').toggle()"><i
+                                class="fa fa-angle-down"></i></a></h6>
+
+                    <div id="work-area-mp3-contents" class="work-area-mp3-contents enable" id="work-area-mp3">
+
+                        <!-- Mp3 content 1 -->
+                        <div id="work-area-mp3-content-1">
+                            <div class="work-area-mp3-content">
+
+                                <div class="workarea-left" style="float: left">
+                                    <img class="workarea-images" src="/assets/dist/img/icons/workarea-sound-icon.png">
+                                </div>
+                                <div class="workarea-right">
+                                    Luke 11:4 - Forgiven and Forgiving
+                                    <span class="garbage" style="float: right; cursor:pointer;">
+                                        <i class="fa fa-trash-o" aria-hidden="true"
+                                            onclick="RemoveWorkAreaDiv('work-area-mp3-content-1')"></i>
+                                    </span>
+                                    <br>
+                                    <span style="font:500 12px 'Montserrat Regular'; color: #7e7e7e" href="#">
+                                        Alistair Begg
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Mp3 content 2 -->
+                        <div id="work-area-mp3-content-2">
+                            <div class="work-area-mp3-content">
+
+                                <div class="workarea-left" style="float: left">
+                                    <img class="workarea-images" src="/assets/dist/img/icons/workarea-sound-icon.png">
+                                </div>
+                                <div class="workarea-right">
+                                    1 John 1:9 - Do You Confess?
+                                    <span class="garbage" style="float: right; cursor:pointer;">
+                                        <i class="fa fa-trash-o" aria-hidden="true"
+                                            onclick="RemoveWorkAreaDiv('work-area-mp3-content-2')"></i>
+                                    </span>
+                                    <br>
+                                    <span style="font:500 12px 'Montserrat Regular'; color: #7e7e7e" href="#">
+                                        JC Ryle
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>

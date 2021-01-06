@@ -1,0 +1,304 @@
+<div class="grid-stack-item-content ui-draggable-handle">
+    <!-- Chat Master Div -->
+    <div id="chat-panel-wrapper" class="chat-panel-wrapper" data-id="chat-panel-wrapper">
+        <!-- Chat Header-->
+        <div class="chat-panel-header" ondblclick="expandCollapse('chat-panel');">
+            <div class="chat-panel-header-left">
+                <img src="/assets/dist/img/icons/chat-head-icon.png">
+                <span>Chat</span>
+            </div>
+
+
+            <div class="chat-panel-header-right gridster-item-content" ondblclick="$('#chat-panel-body').toggle()">
+
+                <!--Chat List -->
+                <a href="javascript:void(0)" onclick="$('#chat-panel-list-btn').toggle()"><i class="fa fa-list"></i></a>
+
+                <div id="chat-panel-list-btn" class="chat-panel-list-btn-list">
+                    <div class="chat-list-header">
+                        Please Select <i href="" (click)="toggleclosebtn()" class="fa fa-close gridster-item-content"></i>
+                    </div>
+                    <div class="chat-list-items">
+
+                        <div class="custom-checkbox-chatpanel">
+                            <input type="checkbox" id="cb_chatpanel-burden">
+                            <label for="cb_chatpanel-burden"> Burden Bearing</label>
+                        </div>
+
+                        <div class="custom-checkbox-chatpanel">
+                            <input type="checkbox" id="cb_chatpanel-spiritual">
+                            <label for="cb_chatpanel-spiritual"> Ad-hoc spiritual conversation </label>
+                        </div>
+
+                        <div class="custom-checkbox-chatpanel">
+                            <input type="checkbox" id="cb_chatpanel-Gospel">
+                            <label for="cb_chatpanel-Gospel"> Gospel presentation </label>
+                        </div>
+
+                        <div class="custom-checkbox-chatpanel">
+                            <input type="checkbox" id="cb_chatpanel-assurance">
+                            <label for="cb_chatpanel-assurance"> Assurance of salvation </label>
+                        </div>
+
+                        <div class="custom-checkbox-chatpanel">
+                            <input type="checkbox" id="cb_chatpanel-responsive">
+                            <label for="cb_chatpanel-responsive"> Non -responsive/Bounce </label>
+                        </div>
+
+                        <div class="custom-checkbox-chatpanel">
+                            <input type="checkbox" id="cb_chatpanel-other">
+                            <label for="cb_chatpanel-other"> Other </label>
+                        </div>
+
+                        <br>
+                        <div class="custom-checkbox-chatpanel">
+                            <input type="checkbox" id="cb_chatpanel-flag">
+                            <label for="cb_chatpanel-flag"> Flag this Chat </label>
+                            <input style="margin-left: 20px" type="text" placeholder="term or phrase...">
+                        </div>
+
+                    </div>
+                    <button type="submit">Submit</button>
+
+                </div>
+
+                <script>
+                    function chatPanelListBtn() {
+                        document.getElementById("chat-panel-list-btn").classList.toggle("show");
+                    }
+
+                    function CloseChatButtonList(panelID) {
+                        var dataID = document.getElementById(panelID);
+                        dataID.classList.remove("show");
+                    }
+                </script>
+
+                <!--Chat Collapse-->
+                <a id="chat-panel-collapse-btn" (click)="onSelect()"><i class="fa fa-calendar"
+                        aria-hidden="true"></i></a>
+
+                <!--Chat Close-->
+                <a href="javascript:void(0)" (click)="toggleclosebtn()"><i class="fa fa-close"></i></a>
+            </div>
+
+        </div>
+
+
+        <!-- Chat Body-->
+        <!-- Chat Body-->
+        <div class="chat-panel-body gridster-item-content" id="chat-panel-body">
+
+
+            <!-- Text Area -->
+            <div class="chat-panel-text-area">
+                <div class="chat-panel-text-area-body">
+                    <textarea placeholder="Overview..."></textarea>
+                </div>
+
+            </div>
+
+            <!-- Text Messages -->
+            <div class="chat-panel-messages gridster-item-content">
+                <!-- Text Messages Heading-->
+                <div class="chat-panel-messages-heading">
+                    <img src="/assets/dist/img/icons/live-chat-icon.png">
+                    <span>Live Chat - &nbsp;</span> {{confessorName}}
+                </div>
+
+                <style>
+                    .div1 {
+                        overflow-y: scroll;
+                        min-height: 100px;
+                    }
+                </style>
+                <!-- Text Messages Body -->
+                <!-- <div class="chat-panel-messages-left"> -->
+                <div class="chat-panel-messages-body div1 gridster-item-content ">
+                    <div *ngFor="let message of singleChatData">
+                        <ng-template [ngIf]="message.sender_id===name" [ngIfElse]="to">
+                            <div class="chat-panel-messages-right">
+                                <div class="chat-panel-header-right-body ">
+                                    <p> {{ message.message }}</p>
+                                    <span> {{message.createdAt | date:'shortTime'}} </span>
+
+                                </div>
+                            </div>
+                        </ng-template>
+
+                        <ng-template #to>
+
+
+                            <div class="chat-panel-messages-left overflow-auto">
+                                <div class="chat-panel-header-left-body ">
+                                    <h6 style="font-family: 'Montserrat Bold' "> {{message.sender_id}} </h6>
+                                    <p> {{ message.message }}</p>
+                                </div>
+                                <span> {{message.createdAt | date:'shortTime'}} </span>
+                            </div>
+                        </ng-template>
+                    </div>
+                    <!-- </div> -->
+
+                    <div *ngFor="let message of messageList " [ngClass]="message.data.sender===name ? 'chat-panel-messages-right' : 'chat-panel-messages-left' ">
+                        <ng-template [ngIf]="message.data.sender===name " [ngIfElse]="to ">
+                            <p> {{ message.data.msg }}</p>
+                            <span> {{message.data.time | date:'shortTime'}} </span>
+                        </ng-template>
+                        <ng-template #to>
+
+
+                            <div class="chat-panel-messages-left ">
+                                <div class="chat-panel-header-left-body ">
+                                    <h6 style="font-family: 'Montserrat Bold' "> {{message.data.sender}} </h6>
+                                    <p> {{ message.data.msg }}</p>
+                                </div>
+                                <span> {{message.data.time | date:'shortTime'}} </span>
+                            </div>
+                        </ng-template>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="typing " class="chat-body clearfix ">
+                <p style="margin:auto ">{{typingUser.username}} is typing </p>
+            </div>
+            <!-- Text Sending -->
+            <div class="chat-panel-send ">
+                <input width="100% " type="text " [(ngModel)]="newMessage " (input)="update() " (blur)="stopTyping()" (keyup.enter)="sendMessage()" placeholder="Type your message... ">
+                <img id="msgsender " (click)="sendMessage() " src="/assets/dist/img/icons/live-chat-send-icon.png ">
+            </div>
+
+        </div>
+        <!-- Chat Master Div End -->
+
+    </div>
+
+    <!-- </gridster-item> -->
+
+
+    <!-- <gridster-item [item]="{cols: 3, rows: 2, y: 0, x: 0} " class="gridster-item-content "> -->
+    <div id="chat-schedule-panel-wrapper " class="chat-schedule-panel-wrapper " data-id="chat-schedule-panel-wrapper " [hidden]="isShowDiv ">
+        <div class="chat-schedule-panel-header " ondblclick="expandCollapse( 'chat-schedule-panel'); ">
+            <div class="chat-schedule-panel-header-left ">
+                <img src="/assets/dist/img/icons/chat-queue-head-icon.png ">
+                <span>Calendar</span>
+            </div>
+
+            <div class="chat-schedule-panel-header-right gridster-item-content gridster-item-content ">
+                <a href="javascript:expandCollapse( 'chat-schedule-panel') " id="chat-schedule-panel-collapse-btn "><i
+                        class="fa fa-angle-right "></i></a>
+                <a href="javascript:void(0) " (click)="toggleclosebtn() "><i class="fa fa-close "></i></a>
+            </div>
+        </div>
+        <div class="chat-schedule-panel-body " id="chat-schedule-panel-body ">
+            <div class="schedule-calender ">
+                <ejs-calendar id="firstcalendar " #ejCalendar [(value)]='selecteddate' (change)="ScheeduleDate($event) "></ejs-calendar>
+
+                <div class="mark ">
+                    <h5 class="current "><span></span> Current Date</h5>
+                    <h5 class="chat-1 "><span></span> 1 Chat</h5>
+                    <h5 class="appointment "><span></span>2 or more Chats</h5>
+
+                </div>
+            </div>
+            <div class="schedule-appointment gridster-item-content ">
+                <h5><i class="fa fa-arrow-left " aria-hidden="true "></i> Set an Appointment:</h5>
+                <div class="appointment ">
+                    <div class="left ">
+                        <select id="month ">
+                            <option value="1 ">January</option>
+                            <option value="2 ">February</option>
+                            <option value="3 ">March</option>
+                            <option value="4 ">April</option>
+                            <option value="5 ">May</option>
+                            <option value="6 ">June</option>
+                            <option value="7 ">July</option>
+                            <option value="8 ">August</option>
+                            <option value="9 ">September</option>
+                            <option value="10 ">October</option>
+                            <option value="11 ">November</option>
+                            <option value="12 ">December</option>
+                        </select>
+                        <select id="day ">
+                            <option value="1 ">Sunday</option>
+                            <option value="2 ">Monday</option>
+                            <option value="3 ">Tuesday</option>
+                            <option value="4 ">Wednesday</option>
+                            <option value="5 ">Thursday</option>
+                            <option value="6 ">Friday</option>
+                            <option value="7 ">Saturday</option>
+                        </select>
+                        <div class="time ">
+                            <select id="time ">
+                                <option value="1 ">1:00</option>
+                                <option value="2 ">2:00</option>
+                                <option value="3 ">3:00</option>
+                                <option value="4 ">4:00</option>
+                                <option value="5 ">5:00</option>
+                                <option value="6 ">6:00</option>
+                                <option value="7 ">7:00</option>
+                                <option value="8 ">8:00</option>
+                                <option value="9 ">9:00</option>
+                                <option value="10 ">10:00</option>
+                                <option value="11 ">11:00</option>
+                                <option value="12 ">12:00</option>
+                            </select>
+                            <select id="ampm ">
+                                <option value="am ">AM</option>
+                                <option value="pm ">PM</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="right ">
+                        <button class="confirm ">Confirm</button>
+                    </div>
+
+                </div>
+
+                <div class="final-appointment ">
+                    <h5 class="date ">{{todayString | date:'dd MMM yyyy'}}</h5>
+                    <h3 class="time ">{{todayString | date:'h a'}}</h3>
+                </div>
+                <div class="prefer gridster-item-content ">
+                    <div class="name-block ">
+                        <label>Name:</label>
+                        <input type="text " name=" " placeholder="Brent21777 ">
+                    </div>
+                    <div class="email-block ">
+                        <label>Email:</label>
+                        <input type="text " name=" " placeholder="BrentF@gmail.com ">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <!-- </gridster-item> -->
+
+    <!-- </gridster> -->
+
+
+
+
+
+    <!-- <div class="grid-stack grid-stack-instance-2530 " data-gs-current-height="9 " style="height: 700px; width: 300px; " >
+        
+      
+        <div class="grid-stack-item ui-draggable ui-resizable " >
+       
+     </div> -
+                  
+    
+          
+        <div   class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se " style="z-index: 90; display: block; "></div></div><div ></div>
+            <div style="margin-left: 20em; " class="grid-stack-item-content ui-draggable-handle ">
+               
+             
+          
+        <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se " style="z-index: 90; display: none; "></div></div></div>
+    
+    
+      -->

@@ -1,0 +1,241 @@
+<!-- <style>
+    #myDIV {
+        width: 100%;
+        padding: 50px 0;
+        text-align: center;
+        background-color: lightblue;
+        margin-top: 20px;
+    }
+</style>
+<button onclick="myFunction()">Try it</button>
+<div id="myDIV">
+    This is my DIV element.
+</div>
+<script>
+    function myFunction() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script> -->
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="grid-stack-item-content ui-draggable-handle" style="height: 450px; width: 400px;">
+                <div class="analytics-panel-wrapper" id="analytics-panel-wrapper">
+                    <div class="analytics-panel-header" ondblclick="$('#analytics-panel-body').toggle()">
+                        <div class="analytics-panel-header-left">
+                            <img src="/assets/dist/img/icons/flag.png">
+                            <span>Chats and Flags</span>
+                        </div>
+                    </div>
+                    <div class="flag-panel-body gridster-item-content" id="analytics-panel-body">
+                        <div class="search-area">
+                            <div>
+                                <div class="form-group">
+                                    <label>Volunteer</label>
+                                    <select></select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Status</label>
+                                    <select></select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Country</label>
+                                    <select></select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Volunteer</label>
+                                    <select></select>
+                                </div>
+                                <div class="form-group">
+                                    <label>State</label>
+                                    <select></select>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="form-group">
+                                    <label>Time Zone</label>
+                                    <select></select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Month</label>
+                                    <select></select>
+                                </div>
+                                <div class="form-group">
+                                    <label>&nbsp;</label>
+                                    <select></select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Time: From</label><select></select>
+                                </div>
+                                <div class="form-group">
+                                    <label>&nbsp;</label>
+                                    <span>To: <select></select></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="result">
+                            <div class="key-terms">
+                                <h6>Key Terms and Times:</h6><span class="time">00:05:47</span>
+                                <div class="bible-searchbar-wrapper">
+                                    <div class="bible-searchbar">
+                                        <input width="100%" type="text" placeholder="Search...">
+                                        <i href="#" class="fa fa-search"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th>User ID</th>
+                                        <th>Admin ID</th>
+                                        <th>Duration</th>
+                                        <th>Started At:</th>
+                                        <th>Last Message At:</th>
+                                        <th>Status</th>
+                                        <th>Time Zone</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="light"><img src="/assets/dist/img/icons/flagged-color.png">Rico</td>
+                                        <td>JH</td>
+                                        <td class="dark">01:05:07</td>
+                                        <td class="dark">October 07/2020 - 9:05am</td>
+                                        <td class="dark">October 07/2020 - 9:05am</td>
+                                        <td class="light">Opened</td>
+                                        <td class="light">CST</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="light">Rico</td>
+                                        <td>JH</td>
+                                        <td class="dark">01:05:07</td>
+                                        <td class="dark">October 07/2020 - 9:05am</td>
+                                        <td class="dark">October 07/2020 - 9:05am</td>
+                                        <td class="light">Opened</td>
+                                        <td class="light">CST</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="light">Rico</td>
+                                        <td>JH</td>
+                                        <td class="dark">01:05:07</td>
+                                        <td class="dark">October 07/2020 - 9:05am</td>
+                                        <td class="dark">October 07/2020 - 9:05am</td>
+                                        <td class="light">Opened</td>
+                                        <td class="light">CST</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="light">Rico</td>
+                                        <td>JH</td>
+                                        <td class="dark">01:05:07</td>
+                                        <td class="dark">October 07/2020 - 9:05am</td>
+                                        <td class="dark">October 07/2020 - 9:05am</td>
+                                        <td class="light">Opened</td>
+                                        <td class="light">CST</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col" (resized)="onResized($event)">
+            <div style="width: 150px; height: 100px;" class="grid-stack-item flag-chat-history-panel-grid ui-draggable ui-resizable ui-resizable-autohide" id="flag-chat-history-panel-grid" data-gs-height="5" data-gs-min-height="3" data-gs-min-width="2" data-gs-width="4"
+                data-gs-x="7" data-gs-y="0">
+                <div class="grid-stack-item-content ui-draggable-handle">
+                    <div id="flag-chat-history-panel-wrapper" class="flag-chat-history-panel-wrapper" data-id="chat-history-panel-wrapper" style="height: 100%; min-height: 100%;">
+                        <div class="flag-chat-history-panel-header" ondblclick="$('#flag-chat-history-panel').toggle()">
+                            <div class="flag-chat-history-panel-header-left">
+                                <img src="/assets/dist/img/icons/live-chat-icon.png">
+                                <span>Rico</span>
+                                <!-- <img src="dist/img/icons/user.png">
+                                        <span>Brent2117</span> -->
+                            </div>
+                            <div class="flag-chat-history-panel-header-right">
+                                <a href="javascript:void(0)"><img src="/assets/dist/img/icons/block.png"></a>
+                                <a href="javascript:void(0)"><img src="/assets/dist/img/icons/setting.png"></a>
+                                <a href="javascript:void(0)" (click)="toggleclosebtn()" id="chat-history-panel-close-btn"><i class="fa fa-close"></i></a>
+                            </div>
+                        </div>
+                        <div class="flag-chat-history-panel-body" id="flag-chat-history-panel" style="display: block;">
+                            <div class="result">
+                                <h6><span>Lust - </span>8 Results Found</h6>
+                                <div class="icon">
+                                    <i class="fa fa-angle-left"></i><i class="fa fa-angle-right"></i>
+                                </div>
+                            </div>
+                            <div class="notes">
+
+                                <div class="chat-panel-messages-body">
+                                    <!-- Text Left Message -->
+                                    <div class="chat-panel-messages-left">
+                                        <div class="chat-panel-header-left-body">
+                                            <h6 style="font-family: 'Montserrat Bold'"> Brent2117: </h6>
+                                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna lust. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus
+                                                vel facilisis.
+                                            </p>
+                                        </div>
+                                        <span> 10:56am </span>
+                                    </div>
+
+                                    <!-- Text Right Message -->
+                                    <div class="chat-panel-messages-right">
+                                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab. </p>
+                                        <span> 10:57am </span>
+                                    </div>
+
+
+                                    <!-- Text Left Message -->
+                                    <div class="chat-panel-messages-left">
+                                        <div class="chat-panel-header-left-body">
+                                            <h6> Brent2117: </h6>
+                                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna lust. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus
+                                                vel facilisis.
+                                            </p>
+                                        </div>
+                                        <span> 10:56am </span>
+                                    </div>
+
+                                    <!-- Text Right Message -->
+                                    <div class="chat-panel-messages-right">
+                                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab. </p>
+                                        <span> 10:57am </span>
+                                    </div>
+
+
+                                    <!-- Text Left Message -->
+                                    <div class="chat-panel-messages-left">
+                                        <div class="chat-panel-header-left-body">
+                                            <h6> Brent2117: </h6>
+                                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna lust. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus
+                                                vel facilisis.
+                                            </p>
+                                        </div>
+                                        <span> 10:56am </span>
+                                    </div>
+
+                                    <!-- Text Right Message -->
+                                    <div class="chat-panel-messages-right">
+                                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab. </p>
+                                        <span> 10:57am </span>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: none;"></div></div> -->
+                <!-- </div> -->
+
+            </div>
+        </div>
+    </div>
+</div>

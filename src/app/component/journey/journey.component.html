@@ -1,0 +1,99 @@
+<div class="grid-stack-item journey-grid" id="journey-grid">
+    <div class="grid-stack-item-content">
+
+        <!-- Journey Master Div -->
+        <div class="journey-wrapper" id="journey-wrapper">
+
+
+            <!-- Journey Header-->
+            <div class="journey-header" ondblclick="expandCollapse('journey');">
+                <div class="journey-header-left">
+                    <img src="/assets/dist/img/icons/journey-head-icon.png">
+                    <span style="padding-right: 5px">Journey</span>
+                    <span id="journey-head-user">Brent 2117</span>
+                </div>
+
+                <div class="journey-header-right">
+                    <a href="javascript:void(0)" id="journey-close-btn">
+                        <i (click)="toggleclosebtn()" style="padding-left: 5px; border-left:1px solid #78500c" class="fa fa-close"></i></a>
+                </div>
+
+            </div>
+
+            <!-- Journey Body-->
+            <div class="journey-body" id="journey-body" (click)="onSelect()">
+
+                <div class="jb-header">
+
+                    <div class="jb-header-headingText">
+                        <span id="jb-header-text">Lust, Deceit, Cover-up </span>
+                        <span>
+                            <img id="jb-header-trash" 
+                                href="javascript:void(0)" src="/assets/dist/img/icons/trash-icon.png">
+                        </span>
+                    </div>
+
+                    <div class="hidden" id="jb-header-text-edit">
+                        <input type="text" value="Lust, Deceit, Cover-up">
+                        <span><img href="javascript:void(0)" src="/assets/dist/img/icons/trash-icon.png"></span>
+                    </div>
+                </div>
+
+                <div class="jb-action">
+                    <span id="jb-rename" onclick="jbEdit()">Rename</span>
+                    <span id="jb-duplicate">Duplicate</span>
+                    <span id="jb-wa" onclick="openWorkArea()">WA</span>
+                </div>
+
+                <div class="jb-table">
+                    <table id="jb-table" (click)="toggleDisplayDiv()">
+                        <thead>
+                            <tr>
+                                <th style="padding: 0 10px; height: 33px ">Title</th>
+                                <th class="tb-center">Verses</th>
+                                <th class="tb-center">Mp3s</th>
+                                <th class="tb-center">Pdfs</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <!-- row 1 -->
+                            <tr onclick="JbTrSelected('jb-td-1');showjourneySub();">
+                                <td id="jb-td-1" style="text-align: left; height: 30px; padding-left: 10px; font: 500 12px 'Montserrat Regular'">
+                                    Lust, Deceit, Cover-up table</td>
+                                <td>7</td>
+                                <td>3</td>
+                                <td>1</td>
+                            </tr>
+
+                            <!-- row 2 -->
+                            <tr onclick="JbTrSelected('jb-td-2');showjourneySub()">
+                                <td id="jb-td-2" style="text-align: left; height: 30px; padding-left: 10px; font: 500 12px 'Montserrat Regular'">
+                                    Lust, Deceit, Cover-up 2nd Row</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>4</td>
+                            </tr>
+
+                            <!-- row 3 -->
+                            <tr onclick="JbTrSelected('jb-td-3');showjourneySub()">
+                                <td id="jb-td-3" style="text-align: left; height: 30px; padding-left: 10px; font: 500 12px 'Montserrat Regular'">
+                                    Lust, Deceit, Row3</td>
+                                <td>9</td>
+                                <td>3</td>
+                                <td>1</td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

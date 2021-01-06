@@ -1,0 +1,4332 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a:hover,
+a:focus {
+    background: none;
+    cursor: pointer;
+}
+
+.navbar-dark .navbar-brand:focus,
+.navbar-dark .navbar-brand:hover {
+    color: #fff;
+    background: none;
+}
+
+.button {
+    background-color: #f2c373;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button1 {
+    width: 20px;
+}
+
+body {
+    background: #F7F7F7;
+}
+
+
+/*User Account Icon*/
+
+#user-auth {
+    background: #000;
+    width: 44px;
+}
+
+
+/*******
+/*Fonts Included*/
+
+@font-face {
+    src: url("../fonts/Montserrat/Montserrat-Medium.ttf");
+    font-family: "Montserrat Medium";
+}
+
+@font-face {
+    src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
+    font-family: "Montserrat Bold";
+}
+
+@font-face {
+    src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
+    font-family: "Montserrat Regular";
+}
+
+@font-face {
+    src: url("../fonts/Montserrat/Montserrat-SemiBold.ttf");
+    font-family: "Montserrat SemiBold";
+}
+
+@font-face {
+    src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
+    font-family: "Montserrat Bold";
+}
+
+@font-face {
+    src: url("../fonts/Montserrat/Montserrat-Italic.ttf");
+    font-family: "Montserrat Italic";
+}
+
+
+/*Headings Modified*/
+
+h1 {}
+
+h2 {}
+
+h3 {
+    font-family: "Montserrat Regular";
+    font-size: 16px;
+    text-transform: inherit;
+}
+
+h4 {
+    font-family: "Montserrat SemiBold";
+    font-size: 16px;
+    text-transform: inherit;
+}
+
+h5 {
+    font-family: "Montserrat Medium";
+    font-size: 14px;
+    text-transform: inherit;
+}
+
+h6 {
+    font-family: "Montserrat Regular";
+    font-size: 12px;
+    text-transform: inherit;
+}
+
+p {}
+
+
+/*********************/
+
+
+/* Body  */
+
+
+/********************/
+
+.body {
+    background: unset;
+}
+
+
+/*********************/
+
+
+/* Navbar  */
+
+
+/********************/
+
+.user_wrap {
+    position: relative;
+}
+
+#date_time {
+    border-left: 1px solid #ffd58d;
+    border-right: 1px solid #ffd58d;
+    color: white;
+    padding: 0 18px;
+}
+
+body nav ul li {
+    position: relative;
+    float: left;
+    color: white;
+    font-size: 20px;
+    margin: 0;
+}
+
+.navbar .dropdown-menu {
+    top: 117px;
+    background-color: #ffce79;
+    box-shadow: 1px 1px 2px lightgrey;
+}
+
+.dropdown-divider {
+    border-top: 1px solid #000;
+}
+
+
+/*********************/
+
+
+/* Logo Navbar  */
+
+
+/********************/
+
+.navbar-brand img {
+    width: 100%;
+}
+
+@media only screen and (max-width: 1920px) and (min-width: 1080px) {
+    .navbar-brand img {
+        width: 100%;
+    }
+    .bg-dark {
+        height: 100px;
+    }
+}
+
+@media only screen and (max-width: 1366px) and (min-width: 768px) {
+    .navbar-brand img {
+        width: 80%;
+    }
+    .bg-dark {
+        height: 100px;
+    }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 300px) {
+    .navbar-brand img {
+        width: 60%;
+    }
+    .bg-dark {
+        height: 100px;
+    }
+}
+
+
+/*********************/
+
+
+/* Menu Toggle  */
+
+
+/********************/
+
+#menu_toggle a i {}
+
+.nav-link:focus,
+.nav-link:hover {
+    text-decoration: none;
+    background: none;
+}
+
+.nav-md ul.nav.child_menu li:before {
+    background: unset;
+    bottom: unset;
+    content: unset;
+    height: 0;
+    left: 0;
+    margin-top: 0;
+    position: unset;
+    right: unset;
+    width: unset;
+    z-index: 0;
+    border-radius: unset;
+}
+
+.nav.side-menu>li.current-page,
+.nav.side-menu>li.active {
+    border-right: unset;
+}
+
+.nav_menu {
+    float: left;
+    background: unset;
+    border-bottom: unset;
+    margin-bottom: 10px;
+    width: 100%;
+    position: relative;
+}
+
+
+/*********************/
+
+
+/**** Side Bar *****/
+
+
+/******************/
+
+.left_col {
+    background: white;
+    width: 100%;
+    box-shadow: 0px 0.1px 6px #ccc9c9;
+}
+
+.menu_section>ul {
+    margin-top: 0;
+    display: block;
+}
+
+.nav.side-menu>li>a,
+.nav.child_menu>li>a {
+    color: black;
+    font-weight: 500;
+    font-family: "Montserrat Medium";
+    font-size: 14px;
+}
+
+
+/*Nav Panel Items*/
+
+.custom-control-label {
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 0;
+    vertical-align: center;
+    font-family: "Montserrat Regular";
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+    line-height: 25px;
+}
+
+.main_menu span.fa {
+    color: #000;
+}
+
+.nav-sm .col-md-3.left_col .sidebar_item_title {
+    display: none;
+}
+
+.nav-md .col-md-3.left_col .sidebar_item_title {
+    display: unset;
+}
+
+
+/*Nav Panel Items Left side*/
+
+.nav-md ul.nav.child_menu li:after {
+    border-left: unset;
+    bottom: 0;
+    content: "";
+    left: 27px;
+    position: absolute;
+    top: 0;
+}
+
+.nav.child_menu li {
+    padding: 5px 0 5px 36px;
+}
+
+.nav.side-menu>li {
+    cursor: unset;
+}
+
+
+/*active*/
+
+.nav.side-menu>li.active>a {
+    text-shadow: unset;
+    background: #cee6f2;
+    /* background: linear-gradient(#334556, #2C4257),#2A3F54; */
+    -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 1px 0, inset rgba(255, 255, 255, 0.16) 0 1px 0;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 1px 0, inset rgba(255, 255, 255, 0.16) 0 1px 0;
+    color: black;
+    margin: 0;
+}
+
+.nav.side-menu>li>a:hover,
+.nav>li>a:focus {
+    text-decoration: #cee6f2;
+    ;
+    background: skyblue;
+    cursor: pointer;
+}
+
+.nav.side-menu>li>a:hover {
+    color: black !important;
+    cursor: pointer;
+}
+
+
+/*********************/
+
+
+/**** Main Page *****/
+
+
+/******************/
+
+.show {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/*********************/
+
+
+/* Chat Box */
+
+
+/********************/
+
+.chat-panel-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 356px;
+    border: 2px solid #78500c;
+    min-width: 339px;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.chat-panel-header {
+    position: relative;
+    background-color: #ffce7a;
+    width: 100%;
+    border-bottom: 2px solid #78500c;
+}
+
+.chat-panel-header:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.chat-panel-header-left {
+    position: relative;
+    padding: 10px 10px;
+    font-size: 16px;
+    font-family: "Montserrat SemiBold";
+    color: black;
+    float: left;
+    left: 0;
+}
+
+.chat-panel-header-right {
+    position: relative;
+    padding: 10px 10px;
+    font-size: 16px;
+    font-family: "Montserrat SemiBold";
+    color: black;
+    float: right;
+    right: 0;
+}
+
+.chat-panel-header-right a {
+    padding: 0 10px;
+}
+
+#chat-panel-collapse-btn {
+    border-right: 1px solid #78500c;
+    border-left: 1px solid #78500c;
+}
+
+
+/* Chat Body Starts */
+
+.chat-panel-body {
+    position: relative;
+    height: calc(100% - 212px);
+    /*border-bottom: 2px solid #78500c;*/
+}
+
+.chat-panel-list-btn-list {
+    display: none;
+    position: absolute;
+    margin: 15px 0 0 25px;
+    margin-left: -10em;
+    border-radius: 10px;
+    background: #ffce7a;
+    z-index: 170;
+    min-width: 268px;
+    min-height: 270px;
+    padding: 0 10px;
+}
+
+.chat-list-header {
+    position: relative;
+    padding: 10px 0;
+}
+
+.chat-list-header i {
+    margin-left: 120px;
+    cursor: pointer;
+}
+
+.chat-list-items {
+    font: 550 12px "Montserrat Regular";
+}
+
+.custom-checkbox-chatpanel label {
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.chat-panel-list-btn-list button {
+    margin-top: 10px;
+    background-color: #78500c;
+    font: 600 14px "Montserrat SemiBold";
+    color: white;
+    min-width: 100px;
+    min-height: 24px;
+    border-radius: 4px;
+}
+
+.chat-panel-text-area {
+    position: relative;
+    min-height: 100px;
+    margin: 0 10px;
+    padding: 10px 0;
+    border-bottom: 2px solid #78500c;
+    font-family: "Montserrat Regular";
+    font-size: 14px;
+}
+
+.chat-panel-text-area-body textarea {
+    position: relative;
+    width: 100%;
+    min-height: 90px;
+    background-color: transparent;
+    border: 1px solid #ffce79;
+    border-radius: 5px;
+}
+
+
+/* Chat Panel Messages Start*/
+
+.chat-panel-messages {
+    position: relative;
+    margin: 0 10px;
+    padding: 10px 0;
+    height: 100%;
+    border-bottom: 2px solid #78500c;
+}
+
+.chat-panel-messages-heading {
+    padding: 0 0 10px 0;
+    border-bottom: 2px solid #78500c;
+    color: #78500c;
+    font-family: "Montserrat Medium";
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.chat-panel-messages-heading span {
+    color: black;
+}
+
+.chat-panel-messages-body {
+    overflow: sc;
+    height: calc(100% - 34px);
+    position: relative;
+    display: grid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+/*Floating Problems Solving*/
+
+.chat-panel-messages-body:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.chat-panel-messages-left {
+    position: relative;
+    margin-right: 100px;
+    display: inline-block;
+}
+
+
+/*Left side Time*/
+
+.chat-panel-messages-leff span {
+    display: block;
+    text-align: left;
+    font-family: "Montserrat Medium";
+    font-size: 12px;
+}
+
+.chat-panel-header-left-body {
+    background-color: #79500c;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+}
+
+.chat-panel-header-left-body p {
+    margin-bottom: 0;
+    font-family: "Montserrat Regular";
+    font-size: 12px;
+}
+
+.chat-panel-messages-right {
+    position: relative;
+    float: right;
+    margin-left: 100px;
+}
+
+.chat-panel-messages-right p {
+    font-family: "Montserrat Regular";
+    font-size: 12px;
+    color: black;
+    background-color: #ffd68f;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 0;
+}
+
+
+/*Right Side TIme*/
+
+.chat-panel-messages-right span {
+    font-family: "Montserrat Medium";
+    font-size: 12px;
+    display: block;
+    text-align: right;
+}
+
+.chat-panel-send {
+    position: relative;
+    padding: 5px 10px;
+    margin: 10px 10px;
+    border: 1px solid #ffce79;
+    border-radius: 20px;
+}
+
+.chat-panel-send input {
+    position: relative;
+    color: black;
+    text-align: start;
+    background-color: transparent;
+    cursor: text;
+    font: 400 14px "Montserrat Italic";
+    padding: 1px 2px;
+    border: 0;
+    width: calc(100% - 30px);
+}
+
+
+/**** **********************
+   3- Navbar
+ ***************************/
+
+.navbar.navbar-inverse.navbar-fixed-top .nav .user_wrap {
+    position: relative;
+}
+
+.user_box {
+    display: inline-block;
+    color: white;
+    vertical-align: middle;
+}
+
+.user_box h3,
+.user_box h5 {
+    color: white;
+    font-weight: 600;
+}
+
+.user_box h5 {
+    color: #ffd58d;
+    line-height: 16px;
+}
+
+.navbar li h3 {
+    line-height: 21px;
+    margin-bottom: 0px;
+}
+
+.navbar li i {
+    font-size: 24px;
+    color: #ffd58d !important;
+    padding-top: 18px;
+}
+
+.navbar li {
+    font-size: 24px;
+    color: #ffd58d !important;
+    padding: 35px 6px;
+}
+
+#date_time {
+    border-left: 1px solid #ffd58d;
+    border-right: 1px solid #ffd58d;
+    color: white;
+    line-height: 30px;
+    margin-top: 10px;
+    font-family: "Montserrat SemiBold";
+    font-size: 16px;
+    font-weight: 600;
+    width: 260px;
+    padding: 4px 18px 4px 18px;
+    text-align: center;
+}
+
+#date_time .line-gold {
+    color: #ffd58d !important;
+}
+
+.nav #user-auth {
+    width: 44px;
+}
+
+
+/*notification bill dot*/
+
+#red-dot {
+    background-color: red;
+    border-radius: 50px;
+    height: 8px;
+    width: 8px;
+    z-index: 200;
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    display: block;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.nav.side-menu>li>a {
+    margin-bottom: 0px;
+}
+
+
+/*chat enable and disable*/
+
+.enable {
+    display: block;
+}
+
+.disable {
+    display: none;
+}
+
+#panel_chatbox {}
+
+.dropdown-menu a {
+    cursor: pointer;
+    font-size: 14px;
+    font-family: "Montserrat Regular";
+    font-weight: 600;
+}
+
+
+/*********************/
+
+
+/* Work Area Panel */
+
+
+/********************/
+
+.work-area-wrapper {
+    position: relative;
+    width: auto;
+    height: 100%;
+    border: 2px solid #78500c;
+    /*min-width: 400px;*/
+    border-radius: 4px;
+    background-color: white;
+}
+
+.work-area-header {
+    position: relative;
+    background-color: #ffce7a;
+    width: 100%;
+    border-bottom: 2px solid #78500c;
+}
+
+.work-area-header:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.work-area-header-left {
+    position: relative;
+    padding: 10px 10px;
+    font-size: 16px;
+    font-family: "Montserrat SemiBold";
+    color: black;
+    float: left;
+    left: 0;
+}
+
+.work-area-header-right {
+    position: relative;
+    font-size: 16px;
+    font-family: "Montserrat SemiBold";
+    color: black;
+    float: right;
+    right: 0;
+}
+
+.work-area-header-right a {
+    padding: 0 10px;
+}
+
+#workarea-header-list {
+    border-left: 1px solid #78500c;
+    border-right: 1px solid #78500c;
+    padding: 0 10px;
+    color: black;
+}
+
+.workarea-header-list {
+    display: none;
+    position: absolute;
+    width: 228px;
+    height: 84px;
+    background: #ffd690;
+    border-radius: 10px;
+    z-index: 200;
+    padding: 10px 10px;
+    margin: 16px 0 0 68px;
+}
+
+.workarea-list-head:before {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.workarea-list-head h5 {
+    font: 600 14px "Montserrat SemiBold";
+    color: black;
+    /*float: left;*/
+}
+
+.workarea-list-head h5 i {
+    float: right;
+}
+
+.workarea-list-head h5 i:hover {
+    cursor: pointer;
+}
+
+.workarea-list-body {
+    position: relative;
+}
+
+.workarea-list-body span {
+    font: 500 12px "Montserrat Medium";
+    color: black;
+}
+
+.workarea-list-body span:hover {
+    background-color: #ffe9c4;
+    cursor: pointer;
+    padding: 7px 2px;
+}
+
+#work-area-collapse-btn {
+    border-right: 1px solid #78500c;
+    border-left: 1px solid #78500c;
+}
+
+
+/* Work Area Body Starts */
+
+.work-area-body {
+    position: relative;
+    height: calc(100% - 45px);
+    //min-height: 418px;
+    /*border-bottom: 2px solid #78500c;*/
+}
+
+.workarea-left {
+    width: 40px;
+}
+
+.workarea-right {}
+
+.work-area-pdf {
+    position: relative;
+    //min-height: 148px;
+    overflow-y: auto;
+    //height: 30%;
+    padding: 10px 10px 0 10px;
+}
+
+.work-area-pdf i:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.work-area-pdf i {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: auto;
+    font-size: 30px;
+    padding: 0 10px 10px 0;
+    color: black;
+}
+
+.work-area-pdf-content {
+    color: #85622c;
+    margin: 2px 0;
+    font-size: 12px;
+    font-family: "Montserrat Medium";
+    display: none;
+}
+
+.work-area-body h4 {
+    font: 600 14px "Montserrat SemiBold";
+    color: black;
+}
+
+.work-area-pdf-content p {
+    color: black;
+}
+
+.work-area-hr {
+    position: relative;
+    border: 1px solid #78500c;
+}
+
+.work-area-mp3 {
+    position: relative;
+    //height: 30%;
+    padding: 0 10px;
+}
+
+.work-area-mp3-content {
+    position: relative;
+    font-family: "Montserrat Medium";
+    font-size: 12px;
+    color: #78500c;
+    padding-bottom: 15px;
+}
+
+.workarea-left:before {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.work-area-mp3 span:hover {
+    cursor: pointer;
+}
+
+.work-area-content {
+    position: relative;
+    min-height: 150px;
+    overflow-y: auto;
+    height: calc(40% - 35px);
+    padding: 0 10px;
+}
+
+
+/* fancy scroll */
+
+.work-area-content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.work-area-content::-webkit-scrollbar-thumb {
+    background: #78500c;
+}
+
+.work-area-content::-webkit-scrollbar-track {
+    background: #ffce7a;
+}
+
+
+/* Handle on hover */
+
+.work-area-content::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* fancy scroll end*/
+
+.work-area-psalms {
+    position: relative;
+    font: 500 12px "Montserrat Medium";
+    color: black;
+    padding-bottom: 15px;
+    float: left;
+    width: calc(100% - 20px);
+}
+
+.work-area-psalms:hover {
+    cursor: pointer;
+}
+
+.work-area-psalms span {
+    position: relative;
+    font: 500 12px "Montserrat Regular";
+    color: #78500c;
+}
+
+.workarea-psalms-details {
+    padding-top: 20px;
+}
+
+
+/*.workarea-psalms-left:before{*/
+
+
+/*    content: '';*/
+
+
+/*    clear: both;*/
+
+
+/*    display: table;*/
+
+
+/*}*/
+
+.workarea-psalms-left {
+    /*float: left;*/
+    width: 70px;
+    font: 500 12px "Montserrat Medium";
+    color: #78500c;
+}
+
+
+/*.workarea-psalms-middle:before{*/
+
+
+/*    content: '';*/
+
+
+/*    clear: both;*/
+
+
+/*    display: table;*/
+
+
+/*}*/
+
+.workarea-psalms-middle {
+    width: calc(100% - 85px);
+    /*float: right;*/
+    font: 500 12px "Montserrat Regular";
+    color: #010101;
+}
+
+.workarea-psalms-right {
+    opacity: 0.2;
+}
+
+.workarea-psalms-right:hover {
+    opacity: 1;
+}
+
+.workarea-psalms-details .row {
+    padding: 0 0 15px 10px;
+}
+
+
+/*********************/
+
+
+/* Personal Verse Favs Panel */
+
+
+/********************/
+
+.personal-favs-wrapper,
+.bible-wrapper,
+.pdf-wrapper,
+.mp3-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #78500c;
+    //min-width: 308px;
+    border-radius: 4px;
+    background-color: white;
+}
+
+#personal-favs-grid {
+    //min-width: 328px;
+}
+
+.personal-favs-header,
+.bible-header,
+.pdf-header,
+.mp3-header {
+    position: relative;
+    background-color: #ffce7a;
+    width: 100%;
+    border-bottom: 2px solid #78500c;
+}
+
+.personal-favs-header:after,
+.bible-header:after,
+.pdf-header:after,
+.mp3-header:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.personal-favs-header-left,
+.bible-header-left,
+.pdf-header-left,
+.mp3-header-left {
+    position: relative;
+    padding: 10px 10px;
+    font-size: 16px;
+    font-family: "Montserrat SemiBold";
+    color: black;
+    float: left;
+    left: 0;
+}
+
+.personal-favs-header-right,
+.bible-header-right,
+.pdf-header-right,
+.mp3-header-right {
+    position: relative;
+    padding: 0 10px;
+    font-size: 16px;
+    font-family: "Montserrat SemiBold";
+    color: black;
+    float: right;
+    right: 0;
+}
+
+.personal-favs-header-right a,
+.bible-header-right a,
+.pdf-header-right a.mp3-header-right a {
+    padding: 0 10px;
+}
+
+#personal-favs-collapse-btn {
+    border-right: 1px solid #78500c;
+    border-left: 1px solid #78500c;
+}
+
+.personal-favs-favorite-list:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.personal-favs-favorite-list {
+    position: relative;
+    background: #6b6b6b;
+    width: 100%;
+}
+
+.personal-favs-favorite-list-left {
+    position: relative;
+    padding: 10px 10px;
+    font-size: 16px;
+    font-family: "Montserrat SemiBold";
+    color: #ffd278;
+    float: left;
+    left: 0;
+    width: 100%;
+}
+
+.personal-favs-favorite-list-left span {
+    font-family: "Montserrat Medium";
+    font-size: 16px;
+    color: white;
+}
+
+
+/* Personal Verse Favs Body Starts */
+
+.personal-favs-body {
+    position: relative;
+    padding: 0 10px;
+    height: calc(100% - 115px);
+    overflow-y: auto;
+    /*border-bottom: 2px solid #78500c;*/
+}
+
+
+/* Personal Fav Searchbar */
+
+.personal-favs-searchbar,
+.bible-searchbar,
+.chat-history-searchbar,
+.filter-searchbar,
+.pdf-searchbar,
+.mp3-searchbar {
+    position: relative;
+    border: 1px solid #fece79;
+    border-radius: 4px;
+    background-color: #fece79;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.personal-favs-searchbar input,
+.bible-searchbar input,
+.chat-history-searchbar input,
+.filter-searchbar input,
+.pdf-searchbar input,
+.mp3-searchbar input {
+    position: relative;
+    /*color: -internal-light-dark(black, white);*/
+    background-color: white;
+    font: 400 14px "Montserrat Regular";
+    padding: 10px 4px;
+    width: calc(100% - 50px);
+    border: 0;
+}
+
+.personal-favs-searchbar i,
+.bible-searchbar i,
+.chat-history-searchbar i,
+.filter-searchbar i,
+.pdf-searchbar i,
+.mp3-searchbar i {
+    position: relative;
+    font-size: 16px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+
+/*Personal Fav Slider*/
+
+.personal-favs-slider-buttons {
+    float: right;
+}
+
+
+/* revious button */
+
+.prev {
+    cursor: pointer;
+    padding-right: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+
+/* Next button */
+
+.next {
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+    color: #818182;
+    font-size: 12px;
+    padding: 0;
+    left: 0;
+    position: relative;
+    top: 0;
+}
+
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}
+
+.personal-favs-body-heading-contents {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.personalFavsHeading {
+    font: 500 20px "Montserrat Medium";
+    padding-right: 5px;
+    color: #000000;
+}
+
+.addToVerse {
+    font: 400 10px 'Montserrat Medium';
+    color: #f19900;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+.addToTopic {
+    font: 400 10px 'Montserrat Medium';
+    color: #78500c;
+    cursor: pointer;
+    padding-left: 5px;
+    float: right;
+    padding-top: 15px;
+}
+
+.personal-favs-body-header {
+    position: relative;
+    padding: 10px 0;
+    border-bottom: 1px solid #7f5a31;
+}
+
+
+/*Perosnal Favs Related Terms*/
+
+.personal-favs-related-terms {
+    position: relative;
+    overflow-x: auto;
+}
+
+.personal-favs-related-terms h6 {
+    font-family: 'Montserrat Medium';
+    color: #6e6e6e;
+    width: max-content;
+}
+
+
+/* Personal Favs Counter */
+
+.personal-favs-count {
+    position: relative;
+    padding: 10px 0;
+    border-bottom: 1px solid #7f5a31;
+}
+
+.personal-favs-count-header {
+    position: relative;
+}
+
+.personal-favs-count-time {
+    border-right: 1px solid #ffce79;
+    font: 500 16px "Montserrat Medium";
+    padding-right: 10px;
+    color: #000000;
+}
+
+.personal-favs-count-number {
+    font: 500 16px "Montserrat Medium";
+    padding-left: 10px;
+    color: #000000;
+}
+
+.personal-favs-count-buttons {
+    position: relative;
+    padding: 10px 0;
+}
+
+.oldTreatments {
+    background-color: #ffce79;
+    padding: 10px 15px;
+    border: 1px solid #ac6d00;
+    border-radius: 8px;
+}
+
+.oldTreatments h5 {
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+}
+
+.newTreatments {
+    background-color: #78500c;
+    padding: 10px 15px;
+    border: 1px solid #422c06;
+    border-radius: 8px;
+}
+
+.newTreatments h5 {
+    color: white;
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+}
+
+.personal-favs-count-books {
+    position: relative;
+}
+
+.personal-favs-single-book {
+    background-color: white;
+    width: 50px;
+    height: 35px;
+    border: 1px solid #ac6d00;
+    border-radius: 8px;
+    padding: 10px 5px;
+}
+
+.personal-favs-single-book:hover {
+    background-color: #ffce79;
+}
+
+.personal-favs-single-book:focus {
+    background-color: #ffce79;
+}
+
+.personal-favs-single-book h5 {
+    font-size: 11px;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Personal Favs Table */
+
+.personal-favs-contents {
+    position: relative;
+    padding: 10px;
+}
+
+.personal-favs-table-time {
+    width: 80px;
+    position: relative;
+    padding: 2px 0;
+    font: 500 14px "Montserrat Bold";
+    color: #5f2e00;
+    text-align: left;
+    vertical-align: top;
+}
+
+.personal-favs-table-time h5 {
+    font-size: 12px;
+}
+
+.personal-favs-table-time button {
+    border: 0;
+    background: none;
+}
+
+.personal-favs-table-time button i {
+    font-size: 20px;
+    color: #969696;
+    padding-right: 0;
+}
+
+.personal-favs-table-time button i:hover {
+    color: #000;
+}
+
+.personal-favs-table-paragraph {
+    position: relative;
+    padding: 0 0 20px 10px;
+    font: 500 14px "Montserrat Regular";
+    color: black;
+    text-align: justify;
+}
+
+.personal-favs-table-paragraph a:hover {
+    cursor: pointer;
+}
+
+
+/****************************/
+
+
+/** Personal Favs Topics **/
+
+
+/*************************/
+
+.personalFavsDropbtn {
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.personalFavsDropbtn:hover,
+.personalFavsDropbtn:focus {
+    background-color: #ffce79;
+    ;
+    color: black;
+}
+
+.personal-favs-topics {
+    position: absolute;
+    background-color: #f1f1f1;
+    /* min-width: 160px; */
+    overflow: auto;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    left: 100%;
+}
+
+.personal-favs-topics a {
+    width: 100%;
+    color: black;
+    padding: 5px 0;
+    text-decoration: none;
+    display: block;
+}
+
+
+/*Trash icon of Topics*/
+
+.personal-favs-topics-body i {
+    float: right;
+}
+
+
+/*Trash Show or Hide*/
+
+.hide {
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.personal-favs-topics a:hover .hide {
+    opacity: 1;
+}
+
+
+/* a:hover, a:focus {
+
+    text-decoration: none;
+
+    background-color: rgba(255,255,255,0.5);
+
+} */
+
+.show {
+    display: block;
+}
+
+.personal-favs-topics {
+    /* min-width:268px; */
+    height: 549px;
+    padding: 10px 0;
+    background-color: #ffce7a;
+}
+
+.personal-favs-topics-header {
+    padding: 0 5px;
+}
+
+.personal-favs-topics-header:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.personal-favs-topics-header h5 {
+    font-family: "Montserrat SemiBold";
+    float: left;
+}
+
+.personal-favs-topics-header i {
+    font-size: 14px;
+    float: right;
+    padding: 5px 0 5px 2px;
+}
+
+.personal-favs-topics-body {
+    padding: 0 5px;
+}
+
+
+/*********************/
+
+
+/* PDF's  Panel */
+
+
+/********************/
+
+.pdf-panel-wrapper,
+.work-area-notes-wrapper,
+.volunteer-panel-wrapper,
+.barna-panel-wrapper,
+.analytics-panel-wrapper,
+.flag-panel-wrapper {
+    position: relative;
+    //min-width: 350px;
+    height: 100%;
+    width: 100%;
+    border: 2px solid #78500c;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.pdf-panel-header,
+.work-area-notes-header,
+.volunteer-panel-header,
+.barna-panel-header,
+.analytics-panel-header,
+.flag-panel-header {
+    position: relative;
+    background-color: #ffce7a;
+    width: 100%;
+    border-bottom: 2px solid #78500c;
+}
+
+.pdf-panel-header:after,
+.work-area-notes-header:after,
+.volunteer-panel-header:after,
+.barna-panel-header:after,
+.analytics-panel-header:after,
+.flag-panel-header:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.pdf-panel-header-left,
+.work-area-notes-header-left,
+.volunteer-panel-header-left,
+.barna-panel-header-left,
+.analytics-panel-header-left,
+.flag-panel-header-left {
+    position: relative;
+    padding: 12px 12px;
+    font-size: 16px;
+    font-family: "Montserrat SemiBold";
+    color: black;
+    float: left;
+    left: 0;
+}
+
+.pdf-panel-header-right,
+.work-area-notes-header-right,
+.volunteer-panel-header-right,
+.barna-panel-header-right,
+.analytics-panel-header-right,
+.flag-panel-header-right {
+    position: relative;
+    padding: 10px 10px;
+    font-size: 16px;
+    font-family: "Montserrat SemiBold";
+    color: black;
+    float: right;
+    right: 0;
+}
+
+.pdf-panel-header-right a,
+.work-area-notes-header-right a,
+.volunteer-panel-header-right a,
+.barna-panel-header-right a,
+.analytics-panel-header-right a,
+.flag-panel-header-right a {
+    padding: 0 10px;
+}
+
+.pdf-panel-collapse-btn,
+.work-area-notes-collapse-btn,
+.volunteer-panel-collapse-btn,
+.barna-panel-collapse-btn,
+.analytics-panel-collapse-btn,
+.flag-panel-collapse-btn {
+    border-right: 1px solid #78500c;
+    border-left: 1px solid #78500c;
+}
+
+
+/* PDF Body Starts */
+
+.pdf-panel-body,
+.work-area-notes-body,
+.volunteer-panel-body,
+.barna-panel-body,
+.analytics-panel-body,
+.flag-panel-body,
+.chart-panel-body,
+.chat-flagged-panel-body,
+.bearer-panel-body,
+.chat-stats-panel-body {
+    position: relative;
+    padding: 0 10px;
+    overflow-y: auto;
+    height: calc(100% - 50px);
+    padding-bottom: 10px;
+}
+
+.pdf-panel-pdf {
+    position: relative;
+    padding: 10px 0 0 0;
+}
+
+.pdf-panel-pdf i:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.pdf-panel-pdf i {
+    float: left;
+    height: 40px;
+    font-size: 30px;
+    padding: 5px 10px 10px 0;
+}
+
+.pdf-panel-pdf-content {
+    color: #85622c;
+    margin: 2px 0;
+    font-size: 14px;
+    font-family: "Montserrat Medium";
+}
+
+.pdf-panel-pdf-content p {
+    color: black;
+}
+
+
+/*****************************/
+
+
+/** Cross Reference Panel **/
+
+
+/*************************/
+
+.cross-reference-wrapper,
+.strong-verses-wrapper {
+    position: relative;
+    //min-width: 345px;
+    height: 100%;
+    width: 100%;
+    border: 2px solid #78500c;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.cross-reference-header,
+.strong-verses-header {
+    position: relative;
+    background-color: #ffce7a;
+    width: 100%;
+    border-bottom: 2px solid #78500c;
+}
+
+.cross-reference-header:after,
+.strong-verses-header:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.cross-reference-header-left,
+.strong-verses-header-left {
+    position: relative;
+    padding: 10px 10px;
+    font-size: 16px;
+    font-family: "Montserrat SemiBold";
+    color: black;
+    float: left;
+    left: 0;
+}
+
+.cross-reference-header-right,
+.strong-verses-header-right {
+    position: relative;
+    padding: 10px 10px;
+    font-size: 16px;
+    font-family: "Montserrat SemiBold";
+    color: black;
+    float: right;
+    right: 0;
+}
+
+.cross-reference-header-right a,
+.strong-verses-header-right a {
+    padding: 0 10px;
+}
+
+.cross-reference-collapse-btn {
+    border-right: 1px solid #78500c;
+    border-left: 1px solid #78500c;
+}
+
+
+/* Cross Reference Body Starts */
+
+.cross-reference-body {}
+
+.CR-heading {
+    position: relative;
+    padding-top: 20px;
+}
+
+.CR-heading h5 {
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+
+.CR-heading hr {
+    margin: 0 0 20px 0;
+    background-color: #78500c;
+}
+
+.CR-tableLeft {
+    vertical-align: top;
+    padding-top: 1px;
+    width: 60px;
+    padding-bottom: 10px;
+}
+
+.CR-tableLeft h5 {
+    font-size: 12px;
+    color: #78500c;
+    font-weight: 600;
+}
+
+.CR-tableLeft button {
+    width: 35px;
+    border: 0;
+    background-color: #ffce79;
+    border-radius: 2px;
+}
+
+.CR-tableLeft button span {
+    font: 600 9px "Montserrat Medium";
+    text-align: center;
+    Color: #010101;
+}
+
+.CR-tableRight {
+    vertical-align: top;
+    padding-bottom: 10px;
+}
+
+.CR-tableRight p {
+    font: 500 12px "Montserrat Regular";
+    color: black;
+    padding: 0 5px;
+    text-align: justify;
+}
+
+
+/*********************/
+
+
+/* Journey Panel */
+
+
+/********************/
+
+.journey-wrapper,
+.journey-sub-wrapper,
+.journey-sub2-wrapper {
+    position: relative;
+    //min-width: 330px;
+    //min-height: 380px;
+    border: 2px solid #78500c;
+    /*min-width: 400px;*/
+    border-radius: 4px;
+    background-color: white;
+    height: 100%;
+}
+
+.journey-header,
+.journey-sub-header,
+.journey-sub2-header {
+    position: relative;
+    background-color: #ffce7a;
+    width: 100%;
+    border-bottom: 2px solid #78500c;
+}
+
+.journey-header:after,
+.journey-sub-header:after,
+.journey-sub2-header:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.journey-header-left,
+.journey-sub-header-left,
+.journey-sub2-header-left {
+    position: relative;
+    padding: 10px 10px;
+    font-size: 16px;
+    font-family: "Montserrat SemiBold";
+    color: black;
+    float: left;
+    left: 0;
+}
+
+#journey-head-user {
+    color: #78500c;
+    font: 500 16px 'Montserrat SemiBold';
+    padding-left: 5px;
+    border-left: 1px solid #78500c;
+}
+
+.journey-header-right,
+.journey-sub-header-right,
+.journey-sub2-header-right {
+    position: relative;
+    padding: 10px 10px;
+    font-size: 16px;
+    font-family: "Montserrat SemiBold";
+    color: black;
+    float: right;
+    right: 0;
+}
+
+.journey-header-right a {
+    padding: 0 10px;
+}
+
+#journey-collapse-btn {
+    border-right: 1px solid #78500c;
+    border-left: 1px solid #78500c;
+}
+
+
+/* journey Body Starts */
+
+.journey-body,
+.journey-sub-body,
+.journey-sub2-body {
+    position: relative;
+    padding: 0 10px;
+    //min-width: 33%;
+    //height: 300px;
+    overflow-y: auto;
+    /*border-bottom: 2px solid #78500c;*/
+}
+
+.jb-header {
+    margin: 10px 0;
+}
+
+.jb-header span {
+    font: 600 18px "Montserrat Regular";
+    color: black;
+}
+
+.jb-header input {
+    background-color: #eaeaea;
+    padding: 5px 3px;
+    border: 1px solid #ffce79;
+    border-radius: 6px;
+}
+
+.jb-header span img {
+    padding-left: 10px;
+    opacity: 0.2;
+}
+
+.jb-header span img:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.jb-action {
+    color: #78500c;
+    font: 600 12px "Montserrat SemiBold";
+    padding-bottom: 15px;
+}
+
+#jb-rename {
+    padding-right: 10px;
+    border-right: 1px solid #78500c;
+}
+
+#jb-rename:hover {
+    cursor: pointer;
+}
+
+#jb-duplicate {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#jb-duplicate:hover {
+    cursor: pointer;
+}
+
+.jb-table {
+    border: 1px solid #78500c;
+}
+
+#jb-table {
+    position: relative;
+    width: 100%;
+    border-color: #78500c;
+}
+
+#jb-table thead {
+    background-color: #ffce79;
+    font: 600 12px "Montserrat SemiBold";
+    color: #78500c;
+}
+
+.tb-center {
+    text-align: center;
+}
+
+#jb-table tbody tr {
+    border-bottom: 1px solid;
+    border-color: #78500c;
+}
+
+#jb-table tbody tr td {
+    text-align: center;
+    font: 500 12px "Montserrat Regular";
+    color: black;
+    padding: 5px 0;
+}
+
+#jb-table tbody tr:hover {
+    background-color: #dbdbdb;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: #ffd386;
+    cursor: pointer;
+}
+
+
+/*********************/
+
+
+/* Chat Queue Box */
+
+
+/********************/
+
+#chat-queue-panel-grid {
+    min-width: 359px;
+}
+
+#chat-queue-panel-grid.grid-stack-item[data-gs-height="2"] {
+    height: 105px;
+}
+
+.chat-queue-panel-wrapper,
+.chat-schedule-panel-wrapper,
+.chat-history-panel-wrapper,
+.calendar-panel-wrapper,
+.schedule-panel-wrapper,
+.flag-chat-history-panel-wrapper {
+    position: relative;
+    width: 100%;
+    border: 2px solid #78500c;
+    min-width: 339px;
+    border-radius: 4px;
+    background-color: white;
+    height: 100%;
+}
+
+.chat-queue-panel-header,
+.chat-schedule-panel-header,
+.chat-history-panel-header,
+.calendar-panel-header,
+.schedule-panel-header,
+.flag-chat-history-panel-header {
+    position: relative;
+    background-color: #ffce7a;
+    width: 100%;
+    border-bottom: 2px solid #78500c;
+}
+
+.chat-queue-panel-header:after,
+.chat-schedule-panel-header:after,
+.chat-history-panel-header:after,
+.calendar-panel-header:after,
+.schedule-panel-header:after,
+.flag-chat-history-panel-header:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.chat-queue-panel-header-left,
+.chat-schedule-panel-header-left,
+.chat-history-panel-header-left,
+.calendar-panel-header-left,
+.schedule-panel-header-left,
+.flag-chat-history-panel-header-left {
+    position: relative;
+    padding: 10px 10px;
+    font-size: 16px;
+    font-family: "Montserrat SemiBold";
+    color: black;
+    float: left;
+    left: 0;
+}
+
+.chat-queue-panel-header-right,
+.chat-schedule-panel-header-right,
+.chat-history-panel-header-right,
+.calendar-panel-header-right,
+.schedule-panel-header-right,
+.flag-chat-history-panel-header-right {
+    position: relative;
+    padding: 10px 10px;
+    font-size: 16px;
+    font-family: "Montserrat SemiBold";
+    color: black;
+    float: right;
+    right: 0;
+}
+
+.chat-queue-panel-header-right a,
+.chat-schedule-panel-header-right a,
+.chat-history-panel-header-right a,
+.calendar-panel-header-right a,
+.schedule-panel-header-right a,
+.flag-chat-history-panel-header-right a {
+    padding: 0 10px;
+}
+
+#chat-queue-panel-collapse-btn,
+#chat-schedule-panel-collapse-btn,
+#chat-history-panel-collapse-btn,
+#calendar-panel-collapse-btn {
+    border-right: 1px solid #78500c;
+    border-left: 1px solid #78500c;
+}
+
+#chat-queue-panel-body {
+    padding: 10px 0;
+    height: calc(100% - 45px);
+    padding-bottom: 0;
+}
+
+#chat-schedule-panel-body {
+    padding: 10px 0;
+    height: calc(100% - 45px);
+    padding-bottom: 0;
+}
+
+#chat-history-panel-body {
+    padding: 10px 10px;
+    height: calc(100% - 45px);
+    padding-bottom: 0;
+    overflow-y: auto;
+}
+
+#flag-chat-history-panel-body {
+    padding: 10px 10px;
+    height: calc(100% - 45px);
+    padding-bottom: 0;
+    overflow-y: auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+
+#calendar-panel-body {
+    padding: 10px 10px;
+    height: calc(100% - 50px);
+    padding-bottom: 0;
+    overflow-y: auto;
+}
+
+#schedule-panel-body {
+    padding: 10px 10px;
+    height: calc(100% - 45px);
+    padding-bottom: 0;
+    overflow-y: auto;
+}
+
+.inQueue-wrapper {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+.inQueue {
+    background-color: #ffffff;
+    padding: 10px 30px;
+    border: 1px solid #ac6d00;
+    border-radius: 8px;
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+.inQueue:hover,
+.inQueue.active {
+    background-color: #ffce79;
+}
+
+.inQueue h5 {
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+}
+
+.inQueue span {
+    color: #78500c;
+    font-weight: bold;
+}
+
+.ActiveLabel-wrapper {
+    width: 50%;
+    float: left;
+    text-align: center;
+    border-left: 1px solid #ffce79;
+    margin-top: 4px;
+    padding-top: 4px;
+}
+
+.ActiveLabel {
+    border: none;
+    background: none;
+    margin-bottom: 0;
+    cursor: initial !important;
+}
+
+.ActiveLabel span {
+    color: #78500c;
+    font-weight: bold;
+}
+
+.body-header-wrapper {
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+.chat-queue-data .title-wrapper .name h5 {
+    color: #3f3f3f;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.chat-queue-data .title-wrapper .time h6 {
+    color: #78500c;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.chat-queue-data .title-wrapper {
+    display: inline-block;
+    width: 100%;
+}
+
+.chat-queue-data .title-wrapper .name {
+    float: left;
+    width: calc(100% - 110px);
+}
+
+.chat-queue-data .title-wrapper .time {
+    width: 110px;
+    float: left;
+    text-align: right;
+}
+
+.chat-queue-data .description h6 {
+    color: #b1b1b1;
+    margin-bottom: 0;
+}
+
+.chat-queue-data {
+    border-bottom: 1px solid #78500c;
+    position: relative;
+    padding: 15px 0;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all 1s;
+}
+
+.chat-queue {
+    border-top: 1px solid #78500c;
+    padding: 0 10px;
+    height: calc(100% - 47px);
+    overflow: auto;
+    display: none;
+}
+
+.chat-queue-data:hover {
+    cursor: pointer;
+}
+
+.chat-queue-data .full-detail {
+    visibility: hidden;
+    background: #ffd690;
+    left: 25%;
+    margin: 2px 25px;
+    width: 67%;
+    position: absolute;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    opacity: 0;
+    z-index: 1;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all 0.5s;
+    top: 0;
+}
+
+.chat-queue-data:hover .full-detail {
+    visibility: visible;
+    opacity: 1;
+    width: 67%;
+    top: 60%;
+}
+
+.chat-queue-data .full-detail::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #ffd690;
+    position: absolute;
+    top: -8px;
+    left: 40px;
+}
+
+.chat-queue-data .full-detail h6 {
+    font-weight: bold;
+    color: #010101;
+}
+
+.chat-queue-data .full-detail span {
+    color: #010101;
+}
+
+.work-area-dot-menu,
+.fav-dot-menu,
+.journey-sub-dot-menu,
+.bible-navigation-dot-menu,
+.pdf-dot-menu,
+.mp3-dot-menu {
+    font-size: 22px;
+    line-height: 2;
+    display: inline-block;
+    position: relative;
+    color: #78500c;
+    padding: 0px 10px;
+    margin: 0;
+    height: 45px;
+}
+
+.work-area-dot-menu i,
+.fav-dot-menu i,
+.journey-sub-dot-menu i,
+.bible-navigation-dot-menu i,
+.pdf-dot-menu i,
+.mp3-dot-menu i {
+    position: relative;
+    top: 4px;
+}
+
+.work-area-dot-menu:hover,
+.fav-dot-menu:hover,
+.journey-sub-dot-menu:hover,
+#bible-body .bible-navigation-dot-menu:hover,
+.pdf-dot-menu:hover,
+.mp3-dot-menu:hover {
+    color: #fff;
+    background: #78500c;
+}
+
+.save-journey {
+    display: none;
+    padding: 10px 10px;
+    background: #e6e6e6;
+}
+
+.save-journey input {
+    width: calc(100% - 116px);
+    border-radius: 6px;
+    border: 1px solid #939393;
+    padding: 6px 9px;
+    font-size: 16px;
+}
+
+.save-journey h5 {
+    display: inline-block;
+    width: 94px;
+    cursor: pointer;
+    color: #78500c;
+    font-weight: bold;
+    margin-left: 12px;
+}
+
+.work-area-body-wrapper {
+    height: calc(100% - 5px);
+    overflow-y: auto;
+}
+
+#work-area-grid .garbage {
+    display: none;
+}
+
+.work-area-pdf-content>div:hover,
+#work-area-mp3-contents>div:hover,
+#work-area-psalms-contents>div>div:hover {
+    background: #ececec;
+    cursor: pointer;
+}
+
+#work-area-grid .garbage i {
+    font-size: 20px;
+    color: #969696;
+    padding-right: 0;
+}
+
+#work-area-grid .garbage i:hover {
+    font-size: 20px;
+    color: #000;
+}
+
+#cross-reference-body .arrows-wrapper i,
+#strong-verses-body .arrows-wrapper i {
+    font-size: 22px;
+    color: #000;
+    font-weight: bold;
+}
+
+#cross-reference-body .arrows-wrapper,
+#strong-verses-body .arrows-wrapper {
+    width: calc(100% - 25px);
+    display: inline-block;
+}
+
+#cross-reference-body .action-wrapper .cross-reference-dot-menu,
+#strong-verses-body .action-wrapper .strong-verses-dot-menu {
+    color: #78500c;
+    font-size: 22px;
+    padding: 0 10px;
+    margin: 0;
+    line-height: 0;
+    padding-bottom: 7px;
+    float: right;
+}
+
+#cross-reference-body .action-wrapper .cross-reference-dot-menu i,
+#strong-verses-body .action-wrapper .strong-verses-dot-menu i {
+    position: relative;
+    top: 4px;
+}
+
+#cross-reference-body .arrows-wrapper,
+#strong-verses-body .arrows-wrapper {
+    display: inline-block;
+    width: calc(100% - 25px);
+    font-size: 20px;
+}
+
+#cross-reference-body .arrows-wrapper i.fa-angle-right,
+#strong-verses-body .arrows-wrapper i.fa-angle-right {
+    margin-left: 15;
+}
+
+#cross-reference-body .action-wrapper,
+#strong-verses-body .action-wrapper {
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #898989;
+    padding-left: 10px;
+}
+
+#cross-reference-body .action-wrapper .cross-reference-dot-menu:hover,
+#strong-verses-body .action-wrapper .strong-verses-dot-menu:hover {
+    background: #78500c;
+    color: #fff;
+}
+
+.cross-reference-body-inner,
+.strong-verses-body-inner {
+    padding: 0 10px;
+    overflow-y: auto;
+    height: calc(100% - 76px);
+}
+
+.cross-reference-body,
+.strong-verses-body {
+    height: 100%;
+}
+
+.workarea-header-list {
+    display: none;
+    position: absolute;
+    width: 228px;
+    height: 84px;
+    background: #ffd690;
+    border-radius: 10px;
+    z-index: 200;
+    padding: 10px 10px;
+    margin: 16px 0 0 68px;
+}
+
+.cross-reference-action-list,
+.bible-verse-action-list,
+.strong-verses-action-list,
+.save-notes-user-id-action-list,
+.save-notes-filter-by-action-list,
+.pdf-verse-action-list,
+.mp3-verse-action-list,
+.chat-history-date-id-action-list {
+    display: none;
+    position: absolute;
+    background: #ffd690;
+    border-radius: 10px;
+    z-index: 200;
+    padding: 10px 10px;
+    margin: 1px 0 0 20px;
+    width: 155px;
+}
+
+.cross-reference-action-list-head h5 i,
+.bible-verse-action-list-head h5 i,
+.strong-verses-action-list-head h5 i,
+.save-notes-user-id-action-list-head h5 i,
+.save-notes-filter-by-action-list-head h5 i,
+.pdf-verse-action-list-head h5 i,
+.mp3-verse-action-list-head h5 i {
+    float: right;
+    cursor: pointer;
+}
+
+.cross-reference-action-list-body span,
+.bible-verse-action-list-body span,
+.strong-verses-action-list-body span,
+.save-notes-user-id-action-list-body span,
+.save-notes-filter-by-action-list-body span,
+.pdf-verse-action-list-body span,
+.mp3-verse-action-list-body span {
+    font: 500 15px "Montserrat Medium";
+    color: black;
+    width: 100%;
+    display: inline-block;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+.schedule-calender {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    padding: 0 10px;
+    height: 100%;
+    overflow-y: auto;
+    padding-top: 10px;
+}
+
+.schedule-appointment {
+    display: inline-block;
+    width: 50%;
+    padding: 0px 10px;
+    border-left: 1px solid #78500b;
+    height: 100%;
+    overflow-y: auto;
+    padding-top: 10px;
+}
+
+.appointment .left {
+    width: 50%;
+    padding-right: 10px;
+}
+
+.appointment .right {
+    width: 50%;
+    float: left;
+    text-align: center;
+    margin-top: 22px;
+}
+
+select#month,
+select#day {
+    border: 1px solid #78500c;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 7px;
+    width: 100%;
+    color: #78500c;
+}
+
+select#time,
+select#ampm {
+    width: calc(50% - 5px);
+    border: 1px solid #78500c;
+    padding: 3px 2px;
+    border-radius: 4px;
+    margin-bottom: 7px;
+    color: #78500c;
+}
+
+select#time {
+    margin-right: 6px;
+}
+
+.appointment .left .time {
+    display: inline-block;
+    width: 100%;
+}
+
+.confirm {
+    padding: 7px 10px;
+    border: 1px solid #ac6d00;
+    border-radius: 8px;
+    margin-bottom: 0;
+    margin-right: 0;
+    background: #ffce7a;
+    font-weight: bold;
+    width: 100%;
+    max-width: 105px;
+    font-size: 14px;
+}
+
+.appointment {
+    display: inline-block;
+}
+
+.final-appointment .time {
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+.name-block {
+    display: inline-block;
+}
+
+.name-block label,
+.email-block label {
+    width: 100%;
+}
+
+.name-block input,
+.email-block input {
+    border: 1px solid #78500c;
+    padding: 3px 2px;
+    border-radius: 4px;
+    margin-bottom: 7px;
+    color: #78500c;
+}
+
+.ui-icon-gripsmall-diagonal-se {
+    text-indent: unset;
+    background-image: none;
+}
+
+.schedule-appointment h5 i {
+    color: #ffce79;
+    margin-right: 4px;
+}
+
+.schedule-appointment h5 {
+    margin-bottom: 8px;
+}
+
+.cross-reference-action-list-body span:hover,
+.bible-verse-action-list-body span:hover,
+.strong-verses-action-list-body span:hover,
+.save-notes-user-id-action-list-body span:hover,
+.save-notes-filter-by-action-list-body span:hover,
+.pdf-verse-action-list-body span:hover,
+.mp3-verse-action-list-body span:hover {
+    background: #ffe9c4;
+}
+
+.schedule-calender .mark {
+    background: none;
+    margin-top: 10px;
+}
+
+.schedule-calender .mark h5 {
+    color: #000;
+}
+
+.schedule-calender .mark h5 span {
+    line-height: 0;
+    clear: both;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    position: relative;
+    top: 1px;
+    margin-right: 7px;
+}
+
+.schedule-calender .mark .appointment span {
+    background: #79500c;
+}
+
+.schedule-calender .mark .current span {
+    border: 1px solid #ffce7a;
+}
+
+.schedule-calender .mark .chat-1 span {
+    background: #ffce7a;
+}
+
+.schedule-calender .highlight a {
+    background-color: #79510c !important;
+    color: #ffffff !important;
+}
+
+.schedule-calender .highlight-chat a {
+    background-color: #fdcd78 !important;
+}
+
+.personal-favs-topics a:hover {
+    background: #ffe9c4;
+}
+
+.cross-reference-action-list-head h5,
+.bible-verse-action-list-head h5,
+.strong-verses-action-list-head h5,
+.save-notes-user-id-action-list-head h5,
+.save-notes-filter-by-action-list-head h5,
+.pdf-verse-action-list-head h5.mp3-verse-action-list-head h5 {
+    font-weight: bold;
+    font-size: 15px;
+    color: #000;
+}
+
+.journey-sub-header-right {
+    padding: 0 10px;
+}
+
+#journey-sub-body,
+#journey-sub2-body {
+    padding: 10px 10px;
+    height: calc(100% - 47px);
+}
+
+#journey-sub-body button[type="submit"],
+#journey-sub2-body button[type="submit"],
+#bible-body button[type="submit"] {
+    background-color: transparent;
+    width: auto;
+    display: none;
+}
+
+#journey-sub-body button[type="submit"] i,
+#journey-sub2-body button[type="submit"] i,
+#bible-body button[type="submit"] i {
+    font-size: 20px;
+    color: #969696;
+    padding-right: 0;
+}
+
+#journey-sub-body button[type="submit"] i:hover,
+#journey-sub2-body button[type="submit"] i:hover,
+#bible-body button[type="submit"] i:hover {
+    color: #000;
+}
+
+#journey-sub2-body .CR-tableLeft {
+    //width: auto;
+    padding-right: 7px;
+}
+
+#journey-sub2-body .CR-tableLeft i {
+    font-size: 25px;
+    color: #78500c;
+}
+
+#journey-sub2-body button[type="submit"] {
+    position: relative;
+    top: -3px;
+    margin-right: 9px;
+}
+
+#journey-sub2-grid {
+    //min-width: 273px;
+}
+
+#journey-sub-grid {
+    //min-width: 320px;
+}
+
+#jb-wa {
+    padding-left: 10px;
+    border-left: 1px solid #78500c;
+    cursor: pointer;
+}
+
+.bible-header-right {
+    padding: 10px 10px;
+}
+
+#bible-body .ot,
+#pdf-body .ot,
+#mp3-body .ot {
+    background-color: #ffce79;
+    padding: 10px 30px;
+    border: 1px solid #ac6d00;
+    border-radius: 8px;
+    margin-bottom: 0;
+    width: calc(50% - 5px);
+    float: left;
+    margin-right: 5px;
+}
+
+#bible-body .nt,
+#pdf-body .nt,
+#mp3-body .nt {
+    background-color: #ffce79;
+    padding: 10px 30px;
+    border: 1px solid #ac6d00;
+    border-radius: 8px;
+    margin-bottom: 0;
+    margin-right: 0;
+    width: calc(50% - 5px);
+    margin-left: 5px;
+}
+
+#bible-body .nt:hover,
+#bible-body .ot:hover,
+#bible-body .nt.active,
+#bible-body .ot.active,
+#pdf-body .nt:hover,
+#pdf-body .ot:hover,
+#pdf-body .nt.active,
+#pdf-body .ot.active,
+#mp3-body .nt:hover,
+#mp3-body .ot:hover,
+#mp3-body .nt.active,
+#mp3-body .ot.active {
+    background-color: #a49683;
+    color: #fff;
+}
+
+#bible-body .buttons,
+#pdf-body .buttons,
+#mp3-body .buttons {
+    margin-right: 0;
+    padding: 10px;
+    border-bottom: 1px solid #898989;
+    padding-top: 0;
+}
+
+#bible-body,
+#pdf-body,
+#mp3-body {
+    padding: 10px 0;
+    height: 100%;
+}
+
+.bible-searchbar-wrapper,
+.pdf-searchbar-wrapper,
+.mp3-searchbar-wrapper {
+    padding: 0px 10px;
+    border-bottom: 1px solid #898989;
+}
+
+#bible-body .table-responsive,
+#pdf-body .table-responsive,
+#mp3-body .table-responsive {
+    padding: 10px;
+}
+
+#bible-body .navigation i {
+    display: inline-block;
+    color: #000;
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+#bible-body .navigation h6 {
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    top: 0px;
+    font-size: 18px;
+    color: #000;
+    margin-left: 7%;
+    margin-right: 7%;
+    font-family: "Montserrat Bold";
+}
+
+#bible-body .navigation {
+    width: calc(100% - 30px);
+    display: inline-block;
+    text-align: center;
+}
+
+#bible-body .navigation-wrapper {
+    border-bottom: 1px solid #898989;
+}
+
+#bible-body .bible-navigation-dot-menu {
+    background: #ffce79;
+    position: relative;
+    right: -1px;
+}
+
+#bible-body .testament,
+#bible-body .chapter,
+#bible-body .bible-verse,
+#bible-body .bible-verse .actionDiv,
+#strong-verses-body .actionDiv {
+    display: ;
+}
+
+#pdf-body .chapter,
+#pdf-body .pdf-verse,
+#mp3-body .chapter,
+#mp3-body .mp3-verse {
+    display: none;
+}
+
+#bible-body .testament h5,
+#bible-body .chapter h5,
+#pdf-body .testament h5,
+#pdf-body .chapter h5,
+#mp3-body .testament h5,
+#mp3-body .chapter h5 {
+    color: #000;
+    font-weight: bold;
+}
+
+#bible-body .testament,
+#bible-body .chapter,
+#pdf-body .testament,
+#pdf-body .chapter,
+#mp3-body .testament,
+#mp3-body .chapter {
+    padding: 10px;
+}
+
+#bible-body .testament table,
+#bible-body .chapter table,
+#pdf-body .testament table,
+#pdf-body .chapter table,
+#mp3-body .testament table,
+#mp3-body .chapter table {
+    width: 100%;
+    border: 1px solid #000;
+}
+
+#bible-body .testament table td,
+#bible-body .chapter table td,
+#pdf-body .testament table td,
+#pdf-body .chapter table td,
+#mp3-body .testament table td,
+#mp3-body .chapter table td {
+    border: 1px solid #000;
+    text-align: center;
+    color: #000;
+}
+
+#bible-body .chapter i,
+#pdf-body .chapter i,
+#mp3-body .chapter i {
+    color: #000;
+    font-weight: bold;
+    font-size: 15px;
+    margin-right: 4px;
+}
+
+#bible-body .bible-verse .actionDiv .s {
+    background: #f19900;
+    color: #fff;
+    padding: 3px 4px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+#bible-body .bible-verse .actionDiv .cr {
+    background: #78500c;
+    color: #fff;
+    padding: 3px 4px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+#bible-body .bible-verse .actionDiv .add,
+#pdf-body .pdf-verse .actionDiv .add,
+#mp3-body .mp3-verse .actionDiv .add {
+    background: #ffce79;
+    color: #000;
+    padding: 3px 4px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+#bible-body .testament table td.active,
+#bible-body .chapter table td.active,
+#pdf-body .testament table td.active,
+#pdf-body .chapter table td.active,
+#mp3-body .testament table td.active,
+#mp3-body .chapter table td.active {
+    background: #a49683;
+    color: #fff;
+}
+
+#bible-body .navigation i.double {
+    margin: 0;
+}
+
+.bible-verse .strong td {
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 15px 7px;
+}
+
+.bible-verse .strong table {
+    width: 100%;
+}
+
+.bible-verse .strong {
+    display: none;
+    border-top: 1px solid #78500c;
+}
+
+.bible-verse .strong tr+tr {
+    border-bottom: 1px solid #cccccc;
+}
+
+.bible-verse .strong .title td {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 19px;
+}
+
+.bible-verse .strong tr+tr td+td {
+    color: #78500c;
+}
+
+.transaltion {
+    display: none;
+    padding: 10px;
+    border-bottom: 1px solid #898989;
+}
+
+.transaltion h6 {
+    color: #000;
+}
+
+.usage {
+    display: none;
+    padding: 10px;
+    border-bottom: 1px solid #898989;
+}
+
+.usage h6 {
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.transaltion label {
+    color: #000;
+}
+
+.usage label {
+    color: #000;
+}
+
+.transaltion label span {
+    color: #78500c;
+}
+
+#strong-verses-body .actionDiv .cr {
+    background: #78500c;
+    color: #fff;
+    padding: 3px 4px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+#strong-verses-body .actionDiv .add {
+    background: #ffce79;
+    color: #000;
+    padding: 3px 4px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+#strong-verses-body .arrows-wrapper {
+    position: relative;
+}
+
+#strong-verses-body .arrows-wrapper h5 {
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 6px;
+}
+
+.strong-verses-body-inner {
+    padding-top: 10px;
+}
+
+.chat-history-panel-header-left span+img {
+    border-left: 1px solid #000;
+    padding-left: 10px;
+    margin-left: 6px;
+}
+
+#chat-history-panel-body .conversion h6 {
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Montserrat Medium';
+}
+
+#chat-history-panel-body .conversion span.total {
+    font-weight: normal;
+    font-family: 'Montserrat Regular';
+}
+
+#chat-history-panel-body .conversion span.date {
+    font-style: italic;
+    color: #a5a5a5;
+    font-size: 16px;
+    font-family: 'Montserrat Regular';
+}
+
+#chat-history-panel-body .conversion table {
+    width: 100%;
+    margin-top: 19px;
+    overflow-y: auto;
+}
+
+#chat-history-panel-body .conversion table td span {
+    line-height: 1;
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 6px;
+    color: #79500c;
+    font-family: 'Montserrat Medium';
+}
+
+#chat-history-panel-body .conversion table td {
+    color: #000;
+    font-family: 'Montserrat Regular';
+    font-size: 12px;
+}
+
+#chat-history-panel-body .conversion {
+    width: 50%;
+    border-right: 1px solid #78500c;
+    padding-right: 10px;
+    display: inline-block;
+    float: left;
+    padding-top: 9px;
+}
+
+#chat-history-panel-body .search {
+    width: calc(50% - 4px);
+    display: inline-block;
+    padding-left: 10px;
+}
+
+#chat-history-panel-body .notes .title {
+    border-top: 1px solid #79500c;
+    border-bottom: 1px solid #79500c;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#chat-history-panel-body .notes .title h5 {
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+#chat-history-panel-body .notes .title>span {
+    float: right;
+    margin-top: 4px;
+    font-size: 16px;
+}
+
+#chat-history-panel-body .notes .title h5 span {
+    color: #78500C;
+    position: relative;
+    top: 3px;
+    margin-left: 4px;
+    margin-right: 7px;
+    font-size: 14px;
+    font-family: 'Montserrat Bold';
+}
+
+#chat-history-panel-body .notes {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+#chat-history-panel-body .notes .title h5 span+img {
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#chat-history-panel-body .notes h6 {
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 8px;
+    font-family: 'Montserrat Medium';
+}
+
+#chat-history-panel-body .notes span.name {
+    color: #79500c;
+    font-weight: bold;
+    display: block;
+}
+
+#chat-history-panel-body .notes span.date {
+    color: #000;
+    font-weight: bold;
+    font-family: 'Montserrat Medium';
+    font-size: 12px;
+    position: relative;
+}
+
+#chat-history-panel-body .notes p {
+    color: #000;
+    margin-top: 5px;
+}
+
+#calendar-panel-body .schedule-appointment h5 {
+    color: #000;
+    font-weight: bold;
+}
+
+#calendar-panel-body .schedule-appointment h5 span {
+    color: #79500c;
+}
+
+#calendar-panel-body .schedule-appointment table td {
+    color: #79500c;
+    font-weight: bold;
+    padding: 6px 4px;
+}
+
+#calendar-panel-body .schedule-appointment table td input[type="text"] {
+    border: 1px solid #78500c;
+    border-radius: 3px;
+    padding: 4px 1px;
+}
+
+select#month1,
+select#day1,
+select#time1 {
+    border: 1px solid #78500c;
+    padding: 6px 11px;
+    border-radius: 4px;
+    margin-bottom: 7px;
+    color: #78500c;
+}
+
+#schedule-panel-body input[type="text"] {
+    border: 1px solid #78500c;
+    border-radius: 3px;
+    padding: 5px 7px;
+}
+
+#calendar-panel-body .schedule-appointment table td input[type="text"].filled {
+    background: #ffd68f;
+    color: #79500c;
+}
+
+#calendar-panel-body .schedule-appointment table td input[type="text"].filled.red {
+    background: #fb4a34;
+    color: #fff;
+}
+
+#calendar-panel-body .soon {
+    display: none;
+    background: #fb4a34;
+    color: #fff;
+    font-size: 16px;
+    padding: 4px 6px;
+    margin-bottom: 10px;
+}
+
+#chat-history-panel-body .notes .chat-panel-header-left-body p,
+#chat-history-panel-body .notes .chat-panel-header-left-body h6 {
+    color: #fff;
+}
+
+#chat-history-panel-body .notes .chat-panel-messages-body h5 {
+    color: #000;
+    font-weight: bold;
+}
+
+#chat-history-panel-body .notes .chat-panel-messages-body {
+    display: none;
+    border-top: 1px solid #79500c;
+}
+
+#chat-history-panel-body .notes .live-chat:hover {
+    background: #ffd68f;
+}
+
+.bible-verse .strong.enable {
+    display: table-row;
+}
+
+#bible-body .bible-verse {
+    height: calc(100% - 97px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.bible-verse .strong tr.selectedStrong td {
+    color: #007aff;
+    font-size: 16px;
+}
+
+#strong-verses-body .strong-verses-body-inner span.red {
+    color: #ff0000;
+    display: inline-block;
+    line-height: 0 !important;
+}
+
+.bible-verse .strong tr+tr td:hover {
+    color: #007aff;
+}
+
+.cke_bottom {
+    display: none !important;
+}
+
+#work-area-notes-body .edit-area #userId,
+#work-area-notes-body .edit-area #notesTime {
+    border: 1px solid #ffce79;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+#work-area-notes-body .edit-area {
+    padding-top: 10px;
+}
+
+#work-area-notes-body .edit-area .cke-editor {
+    margin-top: 9px;
+    border: none;
+}
+
+#work-area-notes-body .edit-area .cke-editor .cke_chrome {
+    border: none;
+}
+
+#work-area-notes-body .edit-area .cke-editor .cke_contents {
+    border: 1px solid #ffce7a;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+#work-area-notes-body .edit-area .cke-editor .cke_top {
+    border-bottom: 1px solid #fece79;
+    background: #fece79;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+#work-area-notes-body .filter-area #save-notes {
+    background: #ffd58c;
+    border: none;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    //margin-top: 10px;
+}
+
+#work-area-notes-body .edit-area .filter-area {
+    border-top: 1px solid #78500c;
+    border-bottom: 1px solid #78500c;
+}
+
+#save-notes-date,
+#save-notes-user-id,
+#save-notes-filter-by {
+    background: #78500c;
+    color: #fff;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    margin: 0px 10px;
+    font-family: 'Montserrat Medium';
+}
+
+.save-notes-date-wrapper,
+.save-notes-user-id-wrapper,
+.save-notes-filter-by-wrapper,
+.expand-icon {
+    display: inline-block;
+}
+
+#work-area-notes-body .filter-area .filter-searchbar {
+    width: 30%;
+    display: inline-block;
+    margin: 0;
+}
+
+#work-area-notes-body .filter-area .expand-icon,
+#pdf-body .expand-icon,
+#mp3-body .expand-icon {
+    border-left: 1px solid #78500c;
+    padding-left: 8px;
+    padding-top: 4px;
+    float: right;
+    margin-top: 2px;
+    padding-bottom: 6px;
+}
+
+#work-area-notes-body .filter-area .expand-icon i,
+#pdf-body .expand-icon i,
+#mp3-body .expand-icon i {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    float: right;
+    margin-top: 5px;
+}
+
+#work-area-notes-body .notes-list-wrapper .notes .title h4 {
+    color: #000;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#work-area-notes-body .notes-list-wrapper .notes .title .action-buttons {
+    display: inline-block;
+    float: right;
+}
+
+#work-area-notes-body .filter-area {
+    display: inline-block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+#work-area-notes-body .notes-list-wrapper .notes .title .action-buttons i {
+    color: #000;
+    font-size: 21px;
+    margin-left: 7px;
+    padding: 6px 8px;
+}
+
+#work-area-notes-body .notes-list-wrapper .notes .title .action-buttons i:hover {
+    background: #fece79;
+}
+
+#work-area-notes-body .notes-list-wrapper .notes {
+    margin-bottom: 20px;
+}
+
+#work-area-notes-body .notes-list-wrapper,
+#pdf-body .pdf-verse,
+#mp3-body .mp3-verse {
+    display: none;
+}
+
+#work-area-notes-body .notes-list-wrapper.enable,
+#pdf-body .pdf-verse.enable,
+#mp3-body .mp3-verse.enable {
+    display: block;
+}
+
+.save-notes-user-id-action-list,
+.save-notes-filter-by-action-list {
+    margin-left: 0;
+}
+
+.save-notes-user-id-action-list-body i {
+    float: right;
+    font-size: 17px;
+    display: none;
+}
+
+.save-notes-user-id-action-list-body span:hover i {
+    display: block;
+}
+
+.save-notes-filter-by-action-list-body .search {
+    width: 100%;
+    background: #ffe9c4;
+    border: none;
+    font-style: italic;
+    font-size: 15px;
+    padding: 4px 5px;
+}
+
+.save-notes-filter-by-action-list-body {
+    color: #000;
+}
+
+.save-notes-filter-by-action-list-body .submit {
+    background: #78500c;
+    border: none;
+    color: #fff;
+    padding: 4px 13px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#pdf-body .pdf-verse h4,
+#mp3-body .mp3-verse h4 {
+    color: #79500c;
+}
+
+#pdf-body .pdf-verse h6,
+#mp3-body .mp3-verse h6 {
+    color: #a7a7a7;
+    font-weight: bold;
+}
+
+#pdf-body .pdf-verse table,
+#mp3-body .mp3-verse table {
+    width: 100%;
+}
+
+#pdf-body .pdf-verse i.fa.fa-file-pdf-o {
+    font-size: 22px;
+    color: #79500c;
+    font-weight: bold;
+}
+
+#pdf-body .pdf-verse tr,
+#mp3-body .mp3-verse tr {
+    border-bottom: 1px solid #79500c;
+}
+
+#pdf-body .pdf-verse td,
+#mp3-body .mp3-verse td {
+    padding-bottom: 18px !important;
+    padding-top: 18px !important;
+}
+
+#pdf-body .buttons-inner {
+    width: calc(100% - 40px);
+    display: inline-block;
+}
+
+#mp3-body .buttons-inner {
+    width: calc(100% - 148px);
+    display: inline-block;
+    padding-top: 10px;
+    margin-right: 10px;
+}
+
+#pdf-body .expand-icon,
+#mp3-body .expand-icon {
+    border: none;
+    padding-left: 0;
+    width: 40px;
+    text-align: center;
+}
+
+#pdf-body .expand-icon i,
+#mp3-body .expand-icon i {
+    float: none;
+}
+
+#mp3-body .expand-icon {
+    padding-top: 17px;
+}
+
+#mp3-body .speaker-list select {
+    border: 1px solid #fece79;
+    width: 100%;
+    padding: 8px 7px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#mp3-body .speaker-list {
+    display: none;
+    padding: 10px;
+    border-bottom: 1px solid #79500c;
+}
+
+#mp3-body .speaker {
+    width: 80px;
+    border-left: 1px solid #79500c;
+    padding-left: 8px;
+    display: inline-block;
+}
+
+#mp3-body .speaker a {
+    color: #909090;
+    font-weight: bold;
+}
+
+#volunteer-panel-body .top-part .links a {
+    color: #a6a6a6;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+#volunteer-panel-body .top-part .links a.active {
+    color: #000;
+    font-weight: bold;
+}
+
+#volunteer-panel-body .top-part>span {
+    color: #ff0101;
+    font-weight: bold;
+    float: right;
+}
+
+#volunteer-panel-body .top-part>span span {
+    font-size: 31px;
+    line-height: 0;
+    position: relative;
+    top: 11px;
+}
+
+#volunteer-panel-body .top-part .links {
+    width: calc(100% - 99px);
+    display: inline-block;
+}
+
+.top-part {
+    padding-top: 5px;
+    border-bottom: 1px solid #79500c;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.volunteer-panel-body {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#volunteer-panel-body .main-part,
+#volunteer-panel-body .main-part1 {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+#volunteer-panel-body .main-part .form-group label,
+#volunteer-panel-body .main-part1 .form-group label {
+    color: #000;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+#volunteer-panel-body .main-part .form-group input,
+#volunteer-panel-body .main-part1 .form-group input {
+    border: 1px solid #79500c;
+    border-radius: 5px;
+}
+
+#volunteer-panel-body .main-part .form-group label span,
+#volunteer-panel-body .main-part1 .form-group label span {
+    color: #79500c;
+    font-size: 12px;
+    margin-left: 3px;
+}
+
+#volunteer-panel-body .main-part .form-multi-group .form-group.fixed-small-width input {
+    width: 100%;
+}
+
+#volunteer-panel-body .main-part .form-multi-group .form-group.fixed-small-width {
+    width: 86px;
+}
+
+#volunteer-panel-body .main-part .form-multi-group .form-group {
+    width: calc(50% - 115px);
+    display: inline-block;
+    margin-right: 11px;
+}
+
+#volunteer-panel-body .main-part .form-multi-group .form-group input,
+#volunteer-panel-body .main-part .form-multi-group1 .form-group input,
+#volunteer-panel-body .main-part1 .form-multi-group2 .form-group input,
+#volunteer-panel-body .main-part1 .form-multi-group3 .form-group input {
+    width: 100%;
+}
+
+#volunteer-panel-body .main-part .form-multi-group .form-group.fixed-small-width {
+    width: 86px;
+}
+
+#volunteer-panel-body .main-part .form-multi-group1 .form-group {
+    width: calc(50% - 74px);
+    display: inline-block;
+    margin-right: 11px;
+}
+
+#volunteer-panel-body .main-part .form-multi-group1 .form-group.fixed-small-width {
+    width: 86px;
+}
+
+#volunteer-panel-body .main-part .form-group select {
+    width: 100%;
+    border: 1px solid #79500c;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+#volunteer-panel-body .main-part1 .form-multi-group2 .form-group {
+    width: calc(50% - 74px);
+    display: inline-block;
+    margin-right: 11px;
+}
+
+#volunteer-panel-body .main-part1 .form-multi-group2 .form-group.fixed-small-width {
+    width: 153px;
+}
+
+#volunteer-panel-body .main-part1 .form-group select {
+    width: 100%;
+    border: 1px solid #79500c;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+#volunteer-panel-body .main-part1 .form-multi-group3 .form-group {
+    width: calc(50% - 74px);
+    display: inline-block;
+    margin-right: 11px;
+}
+
+#volunteer-panel-body .main-part1 .form-multi-group3 .form-group.fixed-small-width {
+    width: 142px;
+}
+
+#volunteer-panel-body .button-wrapper button {
+    color: #fff;
+    background: #9f9583;
+    border: none;
+    padding: 4px 16px;
+    border-radius: 5px;
+    float: right;
+}
+
+#volunteer-panel-body .main-part1 {
+    border-top: 1px solid #79500c;
+    margin-top: 10px;
+}
+
+#work-area-body .work-area-pdf h4 i,
+#work-area-body .work-area-mp3 h4 i,
+#work-area-body .work-area-content h4 i {
+    padding: 0;
+    font-size: 23px;
+    line-height: 0.6;
+    color: #000;
+}
+
+#work-area-body .work-area-pdf h4 a,
+#work-area-body .work-area-mp3 h4 a,
+#work-area-body .work-area-content h4 a {
+    float: right;
+    line-height: 0;
+}
+
+.work-area-mp3-contents,
+.work-area-psalms-contents {
+    display: none;
+}
+
+.work-area-pdf-content.enable,
+.work-area-mp3-contents.enable,
+.work-area-psalms-contents.enable {
+    display: block;
+}
+
+#bible-body .bible-verse .mySlides {
+    height: 100%;
+}
+
+#bible-body .bible-verse .mySlides .scroll-div {
+    height: calc(100% - 51px);
+    overflow-y: auto;
+}
+
+#bible-body .bible-verse .mySlides .scroll-div tr.enableTr {
+    display: block !important;
+}
+
+.add-with-action {
+    display: inline-block;
+    position: relative;
+}
+
+.add-with-action:hover .strong-verses-action-list-outer {
+    display: block;
+}
+
+.strong-verses-action-list.new {
+    position: initial;
+    display: block;
+}
+
+.add-with-action .strong-verses-action-list-outer {
+    top: 0;
+    position: absolute;
+    padding-top: 38px;
+    display: none;
+}
+
+#cross-reference-body .cross-reference-body-inner .CR-tableLeft button {
+    width: auto;
+    background: none;
+}
+
+#cross-reference-body .cross-reference-body-inner .CR-tableLeft button span {
+    background: #ffce79;
+    color: #000;
+    padding: 3px 4px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: initial;
+}
+
+#work-area-notes-body .filter-area .user-notes-wrapper {
+    display: inline-block;
+    width: calc(100% - 312px);
+}
+
+#work-area-notes-body .user-notes-wrapper input {
+    border: 1px solid #000;
+    padding: 4px 9px;
+    width: calc(50% - 5px);
+    color: #6d511b;
+    font-family: 'Montserrat Regular';
+    border-radius: 5px;
+    max-width: 125px;
+}
+
+#work-area-notes-body .user-notes-wrapper input#userId {
+    margin-right: 6px;
+    font-family: 'Montserrat Bold';
+}
+
+#work-area-notes-body .filter-area .expand-icon {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#work-area-notes-body .filter-area .expand-icon i {
+    margin-top: 2px;
+}
+
+.save-notes-user-id-action-list {
+    width: 100px;
+    right: 7px;
+}
+
+.save-notes-user-id-wrapper:hover .save-notes-user-id-action-list {
+    display: block;
+}
+
+.save-notes-user-id-wrapper {
+    position: relative;
+}
+
+#chat-history-panel-body .notes span.date:hover .chat-history-date-id-action-list-outer {
+    display: block;
+}
+
+.chat-history-date-id-action-list-outer {
+    top: 0;
+    position: absolute;
+    padding-top: 19px;
+    display: none;
+}
+
+.chat-history-date-id-action-list {
+    position: initial;
+    display: block;
+    width: 206px;
+}
+
+#chat-history-panel-body .conversion table td:hover {
+    background: #ebebeb;
+}
+
+#volunteer-panel-body .choose-avatar {
+    display: inline-block;
+    width: 100%;
+}
+
+#volunteer-panel-body .choose-avatar .width-33 {
+    width: 33.333%;
+    float: left;
+    text-align: center;
+    margin: 5px 0;
+}
+
+#volunteer-panel-body .choose-avatar .width-33 img {
+    border: 1px solid #ddd;
+    padding: 7% 7%;
+    border-radius: 5px;
+    max-width: 100%;
+    width: auto;
+}
+
+#volunteer-panel-body .pagination .paginate span {
+    color: #8e8e8e;
+    border: 1px solid #8e8e8e;
+    padding: 6px 9px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#volunteer-panel-body .pagination .paginate span:hover {
+    background: #ffd07f;
+    color: #000;
+}
+
+#volunteer-panel-body .avatar {
+    padding: 10px;
+    border-bottom: 1px solid #79500c;
+    margin-bottom: 5px;
+}
+
+#volunteer-panel-body .avatar span {
+    font-size: 14px;
+    font-family: 'Montserrat Regular';
+    color: #000;
+    margin-left: 9px;
+}
+
+#volunteer-panel-body .pagination {
+    text-align: right;
+    display: inline-block;
+    width: 100%;
+    padding: 10px 10px;
+}
+
+#volunteer-panel-body .details p {
+    font-family: 'Montserrat Regular';
+    font-size: 12px;
+    color: #000;
+    margin-bottom: 0 !important;
+}
+
+#volunteer-panel-body .details {
+    padding: 10px;
+    border-bottom: 1px solid #79500c;
+}
+
+#volunteer-panel-body .comfort>div {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+#volunteer-panel-body .comfort>div span {
+    margin-left: 10px;
+}
+
+#volunteer-panel-body .comfort {
+    padding: 10px 10px;
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #79500c;
+}
+
+#volunteer-panel-body .data table {
+    width: 100%;
+}
+
+#volunteer-panel-body .data {
+    padding: 10px 10px;
+}
+
+#volunteer-panel-body .data table td {
+    padding: 4px 4px;
+    font-family: 'Montserrat Regular';
+    font-size: 12px;
+}
+
+#barna-panel-body .bible-searchbar-wrapper {
+    border-bottom: 0;
+    padding: 0;
+}
+
+#barna-panel-body table {
+    width: 100%;
+}
+
+#barna-panel-body table td {
+    font-family: 'Montserrat SemiBold';
+    color: #000;
+    padding: 5px 5px;
+}
+
+#barna-panel-body table td img {
+    border: 1px solid #ddd;
+    padding: 4px;
+}
+
+#barna-panel-body table td+td {
+    text-align: right;
+}
+
+#analytics-panel-body .analytics-left {
+    width: 50%;
+    float: left;
+}
+
+#analytics-panel-body .analytics-right {
+    width: 50%;
+    float: left;
+}
+
+#analytics-panel-body .analytics-left span.dot {
+    width: 10px;
+    color: #ddd;
+    height: 10px;
+    display: inline-block;
+    border-radius: 100%;
+}
+
+#analytics-panel-body .analytics-left td+td+td {
+    color: #fff;
+    width: 30px;
+    text-align: center;
+    height: 30px;
+}
+
+#analytics-panel-body .analytics-left table {
+    width: 100%;
+}
+
+#analytics-panel-body .analytics-left td:first-child {
+    text-align: center;
+}
+
+#analytics-panel-body .analytics-left td {
+    font-family: 'Montserrat Medium';
+    color: #000;
+    padding: 8px 0;
+}
+
+#analytics-panel-body .analytics-right .highcharts-container {
+    margin: 0 auto;
+}
+
+.highcharts-credits {
+    display: none;
+}
+
+#analytics-panel-body .analytics-left {
+    width: 50%;
+    float: left;
+}
+
+#analytics-panel-body {
+    padding: 0;
+}
+
+#analytics-panel-body .analytics-left table tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+#analytics-panel-body .analytics-left table tr>td:first-child {
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+.chart-panel-body h5 {
+    font-family: 'Montserrat SemiBold';
+    padding: 10px 10px;
+    color: #000;
+}
+
+.tab-body .tab {
+    display: none;
+    padding: 10px;
+}
+
+.tab-main h6 {
+    font-family: 'Montserrat Medium';
+    font-size: 14px;
+    color: #9e9d9d;
+    display: inline-block;
+    padding: 5px 11px;
+    cursor: pointer;
+}
+
+.tab-main h6.active {
+    color: #000;
+}
+
+.tab-main h6.active span {
+    border-bottom: 1px solid #ffce79;
+    padding-bottom: 5px;
+}
+
+.chat-flagged-panel-body .flag-text {
+    font-size: 30px;
+    font-family: 'Montserrat Medium';
+    color: #000;
+    display: inline-block;
+    margin-right: 24px;
+}
+
+.chat-flagged-panel-body .flag-text span {
+    color: #ff6767;
+    margin-right: 11px;
+}
+
+.tab-main {
+    padding-top: 5px;
+}
+
+.bearer-panel-body .tab-main,
+.chat-stats-panel-body .tab-main {
+    border-bottom: 1px solid #78500c;
+}
+
+.bearer-panel-body select,
+.bearer-panel-body input {
+    border: 1px solid #78500c;
+    padding: 5px 9px;
+    border-radius: 5px;
+    font-family: 'Montserrat Medium';
+    font-size: 14px;
+    color: #000;
+}
+
+.bearer-panel-body .top .right {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.bearer-panel-body .top .right h6 {
+    display: inline-block;
+    font-size: 14px;
+    font-family: 'Montserrat Medium';
+    color: #000;
+    margin-right: 6px;
+}
+
+.bearer-panel-body .second table,
+.chat-stats-panel-body .second table {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.bearer-panel-body .second table th,
+.chat-stats-panel-body .second table th {
+    font-family: 'Montserrat Medium';
+    color: #000;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-top: 1px solid #d2d2d2;
+    border-bottom: 1px solid #d2d2d2;
+}
+
+.bearer-panel-body .second table td,
+.chat-stats-panel-body .second table td {
+    font-family: 'Montserrat Regular';
+    font-size: 14px;
+    color: #000;
+    padding: 10px 10px;
+    border-bottom: 1px solid #d2d2d2;
+}
+
+.number-sign {
+    color: #ffce79;
+    font-family: 'Montserrat Bold';
+    margin: 0px 7px;
+}
+
+.percent-sign {
+    color: #c2c2c2;
+    font-family: 'Montserrat Bold';
+}
+
+.bearer-panel-body .top {
+    margin-top: 5px;
+}
+
+.chat-stats-panel-body .left {
+    width: 60%;
+}
+
+.chat-stats-panel-body .right {
+    float: left;
+    width: 40%;
+    border-left: 1px solid #78500c;
+}
+
+.chat-stats-panel-body .right h6 {
+    font-family: 'Montserrat Medium';
+    color: #000;
+    margin-top: 6px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.chat-stats-panel-body table .sortby {
+    font-family: 'Montserrat Medium';
+    font-size: 14px;
+}
+
+.chat-stats-panel-body table .sortby i {
+    margin-left: 8px;
+    font-size: 18px;
+}
+
+.chat-stats-panel-body table .sortboth i {
+    margin: 0 4px;
+    font-size: 22px;
+    color: #79510e;
+}
+
+.chat-stats-panel-body .right .second table td {
+    padding: 3px 10px;
+    border: 0;
+    font-size: 12px;
+}
+
+.flag-panel-body .search-area .form-group {
+    display: inline-block;
+    margin: 5px 10px;
+}
+
+.flag-panel-body .search-area .form-group label {
+    display: block;
+    margin-bottom: 3px;
+    font-family: 'Montserrat Medium';
+    font-size: 14px;
+    color: #000;
+}
+
+.flag-panel-body .search-area .form-group span {
+    font-family: 'Montserrat Medium';
+    font-size: 14px;
+    color: #000;
+}
+
+.flag-panel-body .search-area .form-group select {
+    width: 120px;
+    padding: 5px 5px;
+    border-radius: 5px;
+}
+
+.flag-panel-body .search-area .form-group span select {
+    margin-left: 5px;
+}
+
+.flag-panel-body .result table {
+    width: 100%;
+}
+
+.flag-panel-body .result table th {
+    font-family: 'Montserrat Medium';
+    font-size: 14px;
+    color: #000;
+    padding: 10px 8px;
+    border-top: 1px solid #d2d2d2;
+    border-bottom: 1px solid #d2d2d2;
+}
+
+.flag-panel-body .result table td {
+    font-family: 'Montserrat Regular';
+    font-size: 14px;
+    color: #000;
+    padding: 10px 8px;
+}
+
+.flag-panel-body .result table tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+.flag-panel-body .result {
+    padding: 15px 10px;
+}
+
+.flag-panel-body .result table td.light {
+    color: #78500c;
+}
+
+.flag-panel-body .result table td.dark {
+    color: #8a8a8a;
+}
+
+.flag-panel-body .result table td.light img {
+    width: 15px;
+    margin-right: 4px;
+}
+
+.flag-panel-body .result .key-terms h6 {
+    font-family: 'Montserrat Medium';
+    font-size: 14px;
+    display: inline-block;
+    color: #000;
+}
+
+.flag-panel-body .result .key-terms span.time {
+    font-family: 'Montserrat Medium';
+    font-size: 14px;
+    color: #78500c;
+    margin: 0 15px;
+}
+
+.flag-panel-body .result .key-terms .bible-searchbar-wrapper {
+    max-width: 300px;
+    width: 100%;
+    display: inline-block;
+    border: 0;
+}
+
+.flag-panel-body .result .key-terms .bible-searchbar input {
+    padding: 7px 10px;
+}
+
+.flag-chat-history-panel-body .result h6 {
+    font-family: 'Montserrat Regular';
+    font-size: 14px;
+    color: #000;
+    width: calc(100% - 50px);
+    float: left;
+    margin-top: 6px;
+}
+
+.flag-chat-history-panel-body .result h6 span {
+    color: #ff0000;
+    margin-right: 10px;
+}
+
+.flag-chat-history-panel-body .result .icon {
+    width: 50px;
+    display: inline-block;
+    text-align: right;
+    margin-top: 4px;
+}
+
+.flag-chat-history-panel-body .result {
+    display: inline-block;
+    width: 100%;
+    background: #f4f4f4;
+    padding: 5px 10px;
+}
+
+.flag-chat-history-panel-body .result .icon i {
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+.flag-chat-history-panel-body .notes {
+    padding: 10px;
+    padding-top: 0;
+}

@@ -1,0 +1,95 @@
+<!-- <div class="grid-stack-item calendar-panel-grid" id="calendar-panel-grid" data-gs-height="5" data-gs-min-height="3" data-gs-min-width="2" data-gs-width="4" data-gs-x="4" data-gs-y="4">
+    <div class="grid-stack-item-content">
+        <div id="calendar-panel-wrapper" class="calendar-panel-wrapper" data-id="calendar-panel-wrapper">
+            <div class="calendar-panel-header" ondblclick="expandCollapse('calendar-panel');">
+                <div class="calendar-panel-header-left">
+                    <img src="/assets/dist/img/icons/chat-queue-head-icon.png">
+                    <span>Calendar</span>
+                </div>
+                <div class="calendar-panel-header-right">
+                    <a (click)="toggleDisplayDiv()" id="calender-panel-collapse-btn"><img src="/assets/dist/img/icons/appointment.png"></a>
+                    <a href="javascript:void(0)" (click)="toggleclose()" id="calendar-panel-close-btn"><i
+                            class="fa fa-close"></i></a>
+                </div>
+            </div>
+            <form *ngIf="!isSuccessful" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+                <div class="calendar-panel-body" id="calendar-panel-body">
+                    <div class="soon">
+                        <i class="fa fa-check" aria-hidden="true"></i>Appointment soon Today at 9:00am
+                    </div>
+                    <div class="schedule-calender">
+                        <ejs-calendar id="firstcalendar" #ejCalendar (change)="ScheduleDate($event)">
+
+                        </ejs-calendar>
+                        <div class="mark">
+                            <h5 class="current"><span></span> Current Date</h5>
+                            <h5 class="chat-1"><span></span> 1 Chat</h5>
+                            <h5 class="appointment"><span></span>2 or more Chats</h5>
+                        </div>
+                    </div>
+                    <div class="schedule-appointment schedule-appointment1">
+
+                        <h5><span>
+                                <p style="text-indent: 70px">{{todayString | date:'MMMM dd'}}</p>
+                            </span></h5>
+
+                        <table *ngFor="let column of UserRoomList">
+
+                            <tr>
+                                <td>TIME: {{column.schedule_time}}</td>
+                                <td> <input type="text" [(value)]="column.schedule_date"></td>
+
+                            </tr>
+
+                        </table>
+                    </div>
+                    <div class="schedule-appointment schedule-appointment2 gridster-item-content" [hidden]="isShowDiv">
+                        <h5><i class="fa fa-arrow-left" aria-hidden="true"></i> Set an Appointment:</h5>
+                        <div class="appointment">
+                            <div class="left">
+                                <div class="time">
+
+                                    <select class="form-control" id="schedule_time" required [(ngModel)]="form.schedule_time" name="schedule_time">
+                                        <option *ngFor="let time of timing" [value]="time+ampm">{{time}}</option>
+                                    </select>
+                                    <select id="ampm" style="width: 100%;">
+                                        <option ([ngModel])="a" *ngFor="let a of ampm">
+                                            {{a}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="final-appointment">
+
+                            <input hidden [(ngModel)]="form.schedule_date" name="schedule_date" [(value)]="scheduledate">
+                            <h5 class="date">{{todayString | date:'dd MMMM yyyy'}}</h5>
+                            <h3 class="time">{{todayString | date:'h a'}}</h3>
+                        </div>
+                        <div class="prefer">
+                            <div class="name-block">
+                                <label for="schedule_name">Name:</label>
+                                <input type="text" [(ngModel)]="form.schedule_name" name="schedule_name" placeholder="Enter Name" maxlength="5">
+                            </div>
+                            <div class="email-block">
+                                <label for="schedule_email">Email:</label>
+                                <input class="form-control" name="schedule_email" [(ngModel)]="form.schedule_email" type="email" placeholder="Enter Email ">
+                            </div>
+                            <div class="email-block ">
+                                <label for="comments ">Comments:</label>
+                                <input type="text" name="comments" [(ngModel)]="form.comments" placeholder="search" required>
+
+                            </div>
+                            <div class="right gridster-item-content">
+                                <button type="submit" class="confirm">Confirm</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div> -->

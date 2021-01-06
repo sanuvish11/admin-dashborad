@@ -1,0 +1,149 @@
+<div class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide" id="pdf-grid" data-gs-x="5" data-gs-y="0" data-gs-width="5" data-gs-height="9" data-gs-auto-position="yes" data-gs-id="pdf-grid">
+    <div class="grid-stack-item-content ui-draggable-handle">
+
+
+        <!-- Personal Verse Favs Master Div -->
+        <div class="pdf-wrapper" id="pdf-wrapper">
+
+            <!-- Personal Favs Header-->
+            <div class="pdf-header" ondblclick="$('#pdf-body').toggle()">
+                <div class="pdf-header-left">
+                    <img src="/assets/dist/img/icons/pdf-icon.png">
+                    <span>Pdf's</span>
+                </div>
+                <div class="pdf-header-right">
+                    <a class="pdf-dot-menu" href="javascript:void(0)" onclick="$('#pdf-add').toggle();"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
+                    <a href="javascript:void(0)" (click)="toggleclose()" id="pdf-close-btn"><i class="fa fa-close"></i></a>
+                </div>
+            </div>
+
+            <div class="pdf-body" id="pdf-body">
+                <div class="buttons">
+                    <div class="buttons-inner">
+                        <button class="ot" onclick="$('#pdf-ot').toggle();">OT</button>
+                        <button class="nt" onclick="openTestamentPdf('nt')">NT</button>
+                    </div>
+                    <div class="expand-icon">
+                        <a href="javascript:void(0)" onclick="$('#pdf-ot').toggle();"><i class="fa fa-angle-down"></i></a>
+                    </div>
+                </div>
+                <div class="testament" id="pdf-ot">
+                    <h5>New Testament</h5>
+                    <table>
+                        <tbody onclick="$('#pdf-tab').toggle();">
+                            <tr>
+                                <td>Mat</td>
+                                <td>Mar</td>
+                                <td>Luk</td>
+                                <td>Jhn</td>
+                                <td>Act</td>
+                                <td>1Co</td>
+                                <td>2Co</td>
+                                <td>Gal</td>
+                                <td>Eph</td>
+                                <td>Phl</td>
+                            </tr>
+                            <tr>
+                                <td>Col</td>
+                                <td>1Th</td>
+                                <td>2Th</td>
+                                <td>1Ti</td>
+                                <td>2Ti</td>
+                                <td>Tit</td>
+                                <td>Phm</td>
+                                <td>Heb</td>
+                                <td>Jas</td>
+                                <td>1Pe</td>
+                            </tr>
+                            <tr>
+                                <td>2Pe</td>
+                                <td>1Jo</td>
+                                <td>2Jo</td>
+                                <td>3Jo</td>
+                                <td>Jde</td>
+                                <td>Rev</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="chapter" id="pdf-tab">
+                    <h5><i class="fa fa-angle-left" aria-hidden="true"></i> Galatians</h5>
+                    <table>
+                        <tbody onclick="$('#pdf-tab2').toggle();">
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pdf-searchbar-wrapper">
+                    <div class="pdf-searchbar">
+                        <input width="100%" type="text" placeholder="Search...">
+                        <i href="#" class="fa fa-search"></i>
+                    </div>
+                </div>
+                <div class="pdf-verse" id="pdf-tab2">
+                    <div class="table-responsive">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="CR-tableLeft">
+                                        <i class="fa fa-file-pdf-o"></i>
+                                        <div class="actionDiv">
+                                            <span class="add" id="pdf-add">Add</span>
+                                            <div class="pdf-verse-action-list">
+                                                <div class="pdf-verse-action-list-head">
+                                                    <h5>Add To<i class="fa fa-close"></i></h5>
+                                                </div>
+                                                <div class="pdf-verse-action-list-body">
+                                                    <span>Work Area</span>
+                                                    <span>Journey</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="CR-tableRight">
+                                        <h4>Galatians 5:6 - Faith Working by Love</h4>
+                                        <h6>C H Spurgeon</h6>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="CR-tableLeft">
+                                        <i class="fa fa-file-pdf-o"></i>
+                                        <div class="actionDiv">
+                                            <span class="add" id="pdf-add2">Add</span>
+                                            <div class="pdf-verse-action-list">
+                                                <div class="pdf-verse-action-list-head">
+                                                    <h5>Add To<i class="fa fa-close"></i></h5>
+                                                </div>
+                                                <div class="pdf-verse-action-list-body">
+                                                    <span>Work Area</span>
+                                                    <span>Journey</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="CR-tableRight">
+                                        <h4>Galatians 5:6 - Faith Working by Love</h4>
+                                        <h6>C H Spurgeon</h6>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: none;"></div>
+</div>

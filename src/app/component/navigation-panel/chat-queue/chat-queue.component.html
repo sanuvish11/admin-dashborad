@@ -1,0 +1,205 @@
+<div id="chat-queue-panel-wrapper" class="chat-queue-panel-wrapper" data-id="chat-queue-panel-wrapper">
+    <div class="chat-queue-panel-header" ondblclick="$('#chat-queue-panel-body').toggle()">
+        <div class="chat-queue-panel-header-left">
+            <img src="/assets/dist/img/icons/chat-queue-head-icon.png">
+            <span>Chat Queue</span>
+        </div>
+        <div class="chat-queue-panel-header-right">
+            <a href="javascript:expandCollapse('chat-queue-panel')" onclick="$('#chat-queue-panel-body,#chat-queue-panel').toggle()" id="chat-queue-panel-collapse-btn"><i class="fa fa-angle-right"></i></a>
+            <a href="javascript:void(0)" (click)="toggleclosebtn()" id="chat-queue-panel-close-btn"><i class="fa fa-close"></i></a>
+        </div>
+
+    </div>
+    <div class="chat-queue-panel-body" id="chat-queue-panel-body" style="display: block;">
+        <div class="body-header-wrapper">
+            <div class="inQueue-wrapper"><button class="inQueue" (click)="toggleChatTabs('IQ')"  [ngClass]="{'ActiveTab' : InQueue}"><h5> In-Queue: <span>{{UserRoomList?.length}}</span> </h5></button></div>
+            <div class="ActiveLabel-wrapper"><button class="inQueue" (click)="toggleChatTabs('AAC')" [ngClass]="{'ActiveTab' : AllActiveChats}" ><h5> Active: <span>{{AllActiveChatsData?.length}}</span> </h5></button></div>
+            <div class="ActiveLabel-wrapper"><button class="inQueue" (click)="toggleChatTabs('ACL')" [ngClass]="{'ActiveTab' : AllOnlineUsersTab}" ><h5> All Chats: <span>{{AllOnlineUsersData?.length}}</span> </h5></button></div>
+
+        </div>
+        <div>
+            <div class="chat-queue" id="InQueue" *ngIf="InQueue" style="display: block;">
+                <div class="chat-queue-data" (click)="onSelect(user.id)" *ngFor="let user of UserRoomList;let i= index">
+                    <div class="title-wrapper">
+                        <div class="name">
+                            <h5>{{i +1 }} {{user.USER_NAME}} </h5>
+                        </div>
+
+                        <div class="time">
+                            <h6>1 min ago</h6>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h6>No hope at this point.</h6>
+                    </div>
+                    <div class="full-detail">
+                        <h6>Tom 399</h6><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</span></div>
+                </div>
+
+            </div>
+            <div class="chat-queue" id="ActiveChats" *ngIf="AllActiveChats" style="display: block;">
+                <div class="chat-queue-data" (click)="onSelect(user.id)" *ngFor="let user of AllActiveChatsData;let i= index">
+                    <div class="title-wrapper">
+                        <div class="name">
+                            <h5>{{i +1 }} {{user.USER_NAME}} </h5>
+                        </div>
+
+                        <div class="time">
+                            <h6>1 min ago</h6>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h6>No hope at this point.</h6>
+                    </div>
+                    <div class="full-detail">
+                        <h6>Tom 399</h6><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</span></div>
+                </div>
+
+            </div>
+            <div class="chat-queue" id="AllChats" *ngIf="AllOnlineUsersTab" style="display: block;">
+                <div class="chat-queue-data"  *ngFor="let user of AllOnlineUsersData;let i= index">
+                    <span class="dot" *ngIf="user.CHAT_FLAG_STATUS != 0"></span>
+                    <div class="title-wrapper">                       
+                        <div class="name" >                            <h5>  
+                                {{i +1 }} {{user.USER_NAME}} </h5>
+                        </div>
+                        <div class="time">
+                            <h6>1 min ago</h6>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h6>No hope at this point.</h6>
+                    </div>
+                    <div class="full-detail">
+                        <h6>Tom 399</h6><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</span></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div id="chat-queue-panel-wrapper" class="chat-queue-panel-wrapper" data-id="chat-queue-panel-wrapper" style="height: 100%; min-height: 100%;">
+    <div class="chat-queue-panel-header" ondblclick="$('#chat-queue-panel-body').toggle()">
+        <div class="chat-queue-panel-header-left">
+            <img src="dist/img/icons/chat-queue-head-icon.png">
+            <span>Chat Queue</span>
+        </div>
+        <div class="chat-queue-panel-header-right">
+            <a href="javascript:expandCollapse('chat-queue-panel')" id="chat-queue-panel-collapse-btn"><i class="fa fa-angle-right"></i></a>
+            <a href="javascript:void(0)" onclick="togglePanel('chat-queue-panel-grid')" id="chat-queue-panel-close-btn"><i class="fa fa-close"></i></a>
+        </div>
+    </div>
+    <div class="chat-queue-panel-body" id="chat-queue-panel-body" style="display: block;">
+        <div class="body-header-wrapper">
+            <div class="inQueue-wrapper"><button class="inQueue"><h5> In-Queue: <span>7</span> </h5></button></div>
+            <div class="ActiveLabel-wrapper"><button class="ActiveLabel"><h5> Active: <span>29</span> </h5></button></div>
+        </div>
+        <div class="chat-queue">
+            <div class="chat-queue-data">
+                <div class="title-wrapper">
+                    <div class="name">
+                        <h5>1 Tom399</h5>
+                    </div>
+                    <div class="time">
+                        <h6>1 min ago</h6>
+                    </div>
+                </div>
+                <div class="description">
+                    <h6>No hope at this point.</h6>
+                </div>
+                <div class="full-detail">
+                    <h6>Tom 399</h6><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</span></div>
+            </div>
+            <div class="chat-queue-data">
+                <div class="title-wrapper">
+                    <div class="name">
+                        <h5>2 Ero33</h5>
+                    </div>
+                    <div class="time">
+                        <h6>1 min ago</h6>
+                    </div>
+                </div>
+                <div class="description">
+                    <h6>To personal, will discuss in chat</h6>
+                </div>
+                <div class="full-detail">
+                    <h6>Sars</h6><span>Two nights ago.</span></div>
+            </div>
+            <div class="chat-queue-data">
+                <div class="title-wrapper">
+                    <div class="name">
+                        <h5>1 Par4</h5>
+                    </div>
+                    <div class="time">
+                        <h6>3 min ago</h6>
+                    </div>
+                </div>
+                <div class="description">
+                    <h6>Just need to talk</h6>
+                </div>
+                <div class="full-detail">
+                    <h6>1 Par4</h6><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</span></div>
+            </div>
+            <div class="chat-queue-data">
+                <div class="title-wrapper">
+                    <div class="name">
+                        <h5>Artemus</h5>
+                    </div>
+                    <div class="time">
+                        <h6>7 min ago</h6>
+                    </div>
+                </div>
+                <div class="description">
+                    <h6>Alienated, broken before my God.</h6>
+                </div>
+                <div class="full-detail">
+                    <h6>Artemus</h6><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</span></div>
+            </div>
+            <div class="chat-queue-data">
+                <div class="title-wrapper">
+                    <div class="name">
+                        <h5>CBY72</h5>
+                    </div>
+                    <div class="time">
+                        <h6>8 min ago</h6>
+                    </div>
+                </div>
+                <div class="description">
+                    <h6>I can't find rest.</h6>
+                </div>
+                <div class="full-detail">
+                    <h6>CBY72</h6><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</span></div>
+            </div>
+            <div class="chat-queue-data">
+                <div class="title-wrapper">
+                    <div class="name">
+                        <h5>RobRi</h5>
+                    </div>
+                    <div class="time">
+                        <h6>9 min ago</h6>
+                    </div>
+                </div>
+                <div class="description">
+                    <h6>Just out of character.</h6>
+                </div>
+                <div class="full-detail">
+                    <h6>RobRi</h6><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</span></div>
+            </div>
+            <div class="chat-queue-data">
+                <div class="title-wrapper">
+                    <div class="name">
+                        <h5>Cisco7</h5>
+                    </div>
+                    <div class="time">
+                        <h6>11 min ago</h6>
+                    </div>
+                </div>
+                <div class="description">
+                    <h6>Loss of so much.</h6>
+                </div>
+                <div class="full-detail">
+                    <h6>Cisco7</h6><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</span></div>
+            </div>
+        </div>
+    </div>
+</div> -->

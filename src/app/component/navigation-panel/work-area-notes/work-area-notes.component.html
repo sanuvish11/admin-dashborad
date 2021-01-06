@@ -1,0 +1,101 @@
+
+
+<div class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide" id="work-area-notes-grid" data-gs-x="0" data-gs-y="0" data-gs-width="6" data-gs-height="5" data-gs-auto-position="yes" data-gs-id="work-area-notes-grid">
+    <div class="grid-stack-item-content ui-draggable-handle">
+
+
+        <!-- PDF's master Div -->
+        <div class="work-area-notes-wrapper" id="work-area-notes-wrapper" style="height: 100%; min-height: 100%;">
+
+
+            <!-- PDF Header-->
+            <div class="work-area-notes-header" ondblclick="$('#work-area-notes-body').toggle()">
+                <div class="work-area-notes-header-left">
+                    <img src="/assets/dist/img/icons/work-area-notes-icon.png">
+                    <span>Work Area Notes</span>
+                </div>
+
+                <div class="work-area-notes-header-right">
+                    <a href="javascript:void(0)" onclick="$('#work-area-notes-body').toggle()" id="work-area-notes-collapse-btn"><i class="fa fa-angle-down"></i></a>
+                    <a href="javascript:void(0)" (click)="toggleclose()" id="work-area-notes-close-btn"><i
+                            class="fa fa-close"></i></a>
+                </div>
+
+            </div>
+
+
+            <!-- PDF panel Body-->
+
+            <div class="work-area-notes-body not-draggable" id="work-area-notes-body" style="display: block;">
+                <form name="form" (ngSubmit)="onSubmit()" #f="ngForm" novalidate>
+                    <angular-editor class="gridster-item-content" id="Notes" name="Notes" [(ngModel)]="form.Notes" [config]="config">
+                    </angular-editor>
+                    
+
+                    <div class="filter-area  gridster-item-content">
+                        <div class="user-notes-wrapper">
+                         
+                            <input type="text" name="UserName" [(ngModel)]="form.UserName" id="UserName" placeholder=" user name" required #UserName="ngModel">
+                            <input type="text" name="Date_Time" [(value)]="todaysDataTime" readonly  id="Date_Time" [(ngModel)]="form.Date_Time" required>
+                            <!-- <input type="text" name="father_id" value="{{father_id}}" readonly  id="father_id" [(ngModel)]="form.father_id" required> -->
+
+                        </div>
+
+                        <div class="save-notes-date-wrapper">
+                            <button id="save-notes-date">Date &amp; Time</button>
+                        </div>
+                        <div class="save-notes-user-id-wrapper">
+
+                            <button id="save-notes-user-id">My Users</button>
+                            <div class="save-notes-user-id-action-list">
+
+                                <div class="save-notes-user-id-action-list-body">
+                                    <span>User ID
+                                        <!-- <i class="fa fa-trash-o"></i> -->
+                                    </span>
+                                    <span>User ID
+                                        <!-- <i class="fa fa-trash-o"></i> -->
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" id="save-notes">Save</button>
+                        <div class="expand-icon">
+                            <a href="javascript:void(0)" onclick="$('#work-area-note').toggle()"><i
+                                    class="fa fa-angle-down"></i></a>
+                        </div>
+                    </div>{{message}}
+                    
+                    <div class="notes-list-wrapper enable" id="work-area-note" *ngFor="let work of worklist">
+                        <div class="notes" >
+                            
+                            <div class="title">
+
+                                <!-- <h3>{{work.id}}</h3> -->
+                                <h4 class="gridster-item-content"> {{work.UserName}}</h4>
+                                <span>{{work.Date_Time}}</span>
+                               
+                                <div class="action-buttons ">
+                                    <i class="fa fa-edit"  (click)="!updateWorkAreaNotes() "></i>
+                                    
+                                    <!-- <button (click)="deleteworknote() "></button> -->
+
+                                    <i class="fa fa-trash-o " (click)="deleteworknote(work.id) "></i>
+                                </div>
+                            </div>
+                            <div class="details">
+                                <div [innerHTML]="work.Notes"></div>
+                                <!-- <textarea style="text-decoration: none; border: none;  width: 100%;"  value="{{work.Notes}}"></textarea> -->
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se " style="z-index: 90; display: none; "></div>
+</div>

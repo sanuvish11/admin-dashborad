@@ -1,0 +1,372 @@
+
+<div class="grid-stack-item-content">
+
+
+    <!-- Personal Verse Favs Master Div -->
+    <div class="bible-wrapper" id="bible-wrapper">
+
+        <!-- Personal Favs Header-->
+        <div class="bible-header" ondblclick="$('#bible-body').toggle()">
+            <div class="bible-header-left">
+                <img src="/assets/dist/img/icons/bible-head-icon.png">
+                <span>Bible</span>
+            </div>
+            <div class="bible-header-right">
+                <!-- <a class="bible-dot-menu" href="javascript:void(0)" onclick="toggleActionButton('personal-favs-table-time')"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a> -->
+                <a href="javascript:void(0)"(click)="toggleOtNt()" id="bible-close-btn"><img
+                        src="/assets/dist/img/icons/bible-testament-icon.png"></a>
+                <a href="javascript:void(0)" (click)="togglecloseb()" id="bible-close-btn"><i
+                        class="fa fa-close"></i></a>
+            </div>
+        </div>
+        <div class="bible-body" id="bible-body" >
+            <div class="buttons" *ngIf="!collpsemenu" [hidden]="collapsed"[hidden]="number1" >
+                <button class="ot" name="ot" (click)="toggleTestament(1)">OT</button>
+                <button class="nt" (click)="toggleTestament(2)">NT</button>
+            </div>
+
+            <div class="testament gridster-item-content" [hidden]="number1" [hidden]="!oldTestament">
+                <h5 >Old Testament</h5>
+                <div>
+                    <table class="gridster-item-content"  (click)="toogelehide()">
+                        <tr >
+                            <td name="gen" value="gen" (click)="toggleDisplayDiv1('Gen')">Gen</td>
+                            <td name="gen" value="exo" (click)="toggleDisplayDiv1('Exo')">Exo</td>
+                            <td name="gen" value="lev" (click)="toggleDisplayDiv1('Lev')">Lev</td>
+                            <td>Num</td>
+                            <td>Deu</td>
+                            <td>Jos</td>
+                            <td>Jud</td>
+                            <td>Ruth</td>
+                            <td>1Sa</td>
+                            <td>2Sam</td>
+
+                        </tr>
+                        <tr>
+                            <td>1Ki</td>
+                            <td>2Kin</td>
+                            <td>1Ch</td>
+                            <td>2Ch</td>
+
+                            <td>Est</td>
+                            <td>Job</td>
+
+                            <td>Neh</td>
+                            <td>Psa</td>
+                            <td>Pro</td>
+                            <td>Ecc</td>
+                        </tr>
+                        <tr>
+                            <td>Sos</td>
+                            <td>Isa</td>
+                            <td>Jer</td>
+                            <td>Lam</td>
+                            <td>Eze</td>
+                            <td>Dan</td>
+                            <td>Hos</td>
+                            <td>Joe</td>
+                            <td>Amo</td>
+                            <td>Oba</td>
+                        </tr>
+                        <tr>
+                            <td>Jon</td>
+                            <td>Mic</td>
+                            <td>Nah</td>
+                            <td>Hab</td>
+                            <td>Zep</td>
+                            <td>Hag</td>
+                            <td>Zec</td>
+                            <td>Mal</td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+
+            <div class="testament gridster-item-content" [hidden]="!newTestament" id="collpse-ot-nt">
+                <h5>New Testament</h5>
+                <div>
+                    <table class="gridster-item-content">
+                        <tr>
+                            <td value="mat" (click)="toggleDisplayDiv1('mat')">Mat</td>
+                            <td value="Mar" (click)="toggleDisplayDiv1('Mar')">Mar</td>
+                            <td>Luk</td>
+                            <td>Jhn</td>
+                            <td>Act</td>
+                            <td>1Co</td>
+                            <td>2Co</td>
+                            <td>Gal</td>
+                            <td>Eph</td>
+                            <td>Phl</td>
+                        </tr>
+                        <tr>
+                            <td>Col</td>
+                            <td>1Th</td>
+                            <td>2Th</td>
+                            <td>1Ti</td>
+                            <td>2Ti</td>
+                            <td>Tit</td>
+                            <td>Phm</td>
+                            <td>Heb</td>
+                            <td>Jas</td>
+                            <td>1Pe</td>
+                        </tr>
+                        <tr>
+                            <td>2Pe</td>
+                            <td>1Jo</td>
+                            <td>2Jo</td>
+                            <td>3Jo</td>
+                            <td>Jde</td>
+                            <td>Rev</td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+
+            <div class="chapter gridster-item-content"[hidden]="!number"  (click)="toogelheader()"   >
+                <h5><i class="fa fa-angle-left"   aria-hidden="true"></i> {{book}}</h5>
+                <table >
+                    <tr >
+                        <td (click)="getBibele('1')">1</td>
+                        <td (click)="getBibele('2')">2</td>
+                        <td (click)="getBibele('3')">3</td>
+                        <td (click)="getBibele('4')">4</td>
+                        <td (click)="getBibele('5')">5</td>
+                        <td (click)="getBibele('6')">6</td>
+                        <td (click)="getBibele('7')">7</td>
+                        <td (click)="getBibele('8')">8</td>
+                        <td (click)="getBibele('9')">9</td>
+                        <td (click)="getBibele('10')">10</td>
+                        <td (click)="getBibele('11')">11</td>
+                        <td (click)="getBibele('12')">12</td>
+                        <td (click)="getBibele('13')">13</td>
+                        <td (click)="getBibele('14')">14</td>
+                        <td (click)="getBibele('15')">15</td>
+                        <td (click)="getBibele('16')">16</td>
+                        <td (click)="getBibele('17')">17</td>
+                    </tr>
+                    <tr>
+                        <td (click)="getBibele('18')">18</td>
+                        <td (click)="getBibele('19')">19</td>
+                        <td (click)="getBibele('20')">20</td>
+                        <td (click)="getBibele('21')">21</td>
+                        <td (click)="getBibele('22')">22</td>
+                        <td (click)="getBibele('23')">23</td>
+                        <td (click)="getBibele('24')">24</td>
+                        <td (click)="getBibele('25')">25</td>
+                        <td (click)="getBibele('26')">26</td>
+                        <td (click)="getBibele('27')">27</td>
+                        <td (click)="getBibele('28')">28</td>
+                        <td (click)="getBibele('29')">29</td>
+                        <td (click)="getBibele('30')">30</td>
+                        <td (click)="getBibele('31')">31</td>
+                        <td (click)="getBibele('32')">32</td>
+                        <td (click)="getBibele('33')">33</td>
+                        <td (click)="getBibele('34')">34</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="bible-searchbar-wrapper gridster-item-content">
+                <div class="bible-searchbar">
+                    <input width="100%" type="text" [(ngModel)]="searchQuery" placeholder=" Search... ">
+                    <i (click)="search()"  class="fa fa-search "></i>
+                </div>
+                <div class="select-wrapper">
+                    <div class="custom-select-div ">
+                        <label>
+                            <select [(ngModel)]="version" value="{{version}}">
+                                <option value="NASB">NASB</option>
+                                <option value="ESV">ESV</option>
+                                <option value="NIV">NIV</option>
+                                <option value="KJV">KJV</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="bible-verse">
+                <div class="mySlides">
+                    <div class="navigation-wrapper">
+                        <div class="navigation gridster-item-content" id="isShowDiv2">
+                            <div class="navigation-inner gridster-item-content ">
+                                <i class="fa fa-angle-double-left double " aria-hidden="true " (click)="pervious(chapter)"
+                                    (click)="getBibele(chapter)"></i>
+                                <i class="fa fa-angle-left gridster-item-content " aria-hidden="true "
+                                    (click)="pervious()" (click)="getBibele(chapter)"></i>
+                                <h6>{{ book }} {{ chapter }}</h6>
+                                <h6>{{ selectedVerse }} </h6>
+                                <i class="fa fa-angle-right gridster-item-content " aria-hidden="true " (click)="next()"
+                                    (click)="getBibele(chapter)"></i>
+                                <i class="fa fa-angle-double-right double " aria-hidden="true " (click)="next()"
+                                    (click)="getBibele(chapter)"></i>
+                            </div>
+                        </div>
+                        <a class="bible-navigation-dot-menu" href="javascript:void(0) " (click)="toggleShow()"
+                            type="checkbox"><i class="fa fa-ellipsis-v" aria-hidden="true "></i></a>
+                    </div>
+                    <div class=" div1 ">
+                        <div [hidden]="!collapse">
+                            <div class="transaltion">
+                                <h6>Translation Total Count 38x:</h6>
+                                <label><span>lust</span> (31x),<span>lust</span> (31x),<span>lust</span>
+                                    (31x),<span>lust</span> (31x)</label>
+                            </div>
+                            <div class="usage ">
+                                <h6>Bible Usage:</h6>
+                                <label>desire, craving, longing, desire for what is forbidden, lust</label>
+                            </div>
+                            <style>
+                                .div1 {
+                                    overflow-y: scroll;
+                                    height: 200px;
+                                }
+                            </style>
+                            <div class="table-responsive">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td class=" CR-tableLeft" id="stronge-cross-hide">
+                                                <h5>{{selectedVerse}}</h5>
+                                                <div class="actionDiv ">
+                                                    <span class="s" id="s1" (click)="updateToggle();">&lt;&lt;</span>
+                                                    <span class="cr "
+                                                        onclick="crossRefBtn( 'cross-reference-wrapper') ">CR</span>
+                                                    <span class="add gridster-item-content"
+                                                        onclick="$('#add-bible').toggle()">Add</span>
+                                                    <div class="bible-verse-action-list ">
+                                                        <div class="bible-verse-action-list-head " id="add-bible">
+                                                            <h5>Add To<i class="fa fa-close"></i></h5>
+                                                        </div>
+                                                        <div class="bible-verse-action-list-body ">
+                                                            <span>Work Area</span>
+                                                            <span>Journey</span>
+                                                            <span>Personal Favs</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                      
+                                            <td class="CR-tableRight ">
+                                                <p>
+                                                    {{selectedVerseMessage}}
+                                                </p>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="strong enable" id="strong-1">
+                                            <td colspan="2">
+                                                <table>
+                                                    <tbody>
+
+                                                        <tr>
+                                                            <td>English</td>
+                                                            <td onclick="showStrongVerses()">Value</td>
+                                                        </tr>
+                                                        <tr *ngFor="let item of sts">
+                                                            <td>{{item.value}}</td>
+                                                            <td (click)="getStrong(item.strong)">
+                                                                {{item.strong}}</td>
+                                                        </tr>
+                                                        <tr *ngFor="let item of strongsList">
+                                                            <td>{{item.meaning}}</td>
+                                                            <td (click)="getStrong(item.code)">
+                                                                {{item.code}}</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                        <div class="table-responsive" [hidden]='hideVerses'>
+                            <table>
+                                <tbody>
+
+                                    <tr *ngFor="let item of BibleVerses, let i= index">
+                                        <td class=" CR-tableLeft ">
+                                            <h5 (click)="getStrong(item.verse)">{{item.verse}}</h5>
+                                            <div class="actionDiv " *ngIf="isShown">
+                                                <span class="s " id="s1 " (click)="toggleStrong(i) ">S</span>
+                                                <span class="cr "
+                                                    onclick="crossRefBtn( 'cross-reference-wrapper') ">CR</span>
+                                                <span class="add ">Add</span>
+                                                <div class="bible-verse-action-list ">
+                                                    <div class="bible-verse-action-list-head ">
+                                                        <h5>Add To<i class="fa fa-close "></i></h5>
+                                                    </div>
+                                                    <div class="bible-verse-action-list-body ">
+                                                        <span>Work Area</span>
+                                                        <span>Journey</span>
+                                                        <span>Personal Favs</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="CR-tableRight ">
+                                            <p>
+                                                {{item.text}}
+                                            </p>
+                                        </td>
+
+
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table-responsive" [hidden]="hideSearch">
+                            <table>
+                                <tbody>
+                                    <tr *ngFor="let item of optResults, let i= index">
+                                        <td class=" CR-tableLeft ">
+                                            <h5>{{item.key}}</h5>
+                                            <div class="actionDiv " *ngIf="isShown">
+                                                <span class="s " id="s1 " (click)="toggleStrong(i) ">S</span>
+                                                <span class="cr "
+                                                    onclick="crossRefBtn( 'cross-reference-wrapper') ">CR</span>
+                                                <span class="add ">Add</span>
+                                                <div class="bible-verse-action-list ">
+                                                    <div class="bible-verse-action-list-head ">
+                                                        <h5>Add To<i class="fa fa-close "></i></h5>
+                                                    </div>
+                                                    <div class="bible-verse-action-list-body ">
+                                                        <span>Work Area</span>
+                                                        <span>Journey</span>
+                                                        <span>Personal Favs</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <!-- <td class="CR-tableRight ">
+                                            <p *ngFor="let verse of BibleVerses">
+                                                {{verse.text}}
+                                            </p>
+                                        </td> -->
+
+                                        <td class="CR-tableRight ">
+                                            <p>
+                                                {{ item.preview}}
+                                            </p>
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,80 @@
+/*********************/
+/* Chat Queue Box */
+/********************/
+
+#chat-queue-panel-grid {
+	min-width: 359px;
+}
+#chat-queue-panel-grid.grid-stack-item[data-gs-height="2"] {
+    height: 105px;
+}
+.chat-queue-panel-wrapper,.chat-schedule-panel-wrapper,.chat-history-panel-wrapper,.calendar-panel-wrapper,.schedule-panel-wrapper,.flag-chat-history-panel-wrapper {
+    position: relative;
+    width: 100%;
+    border: 2px solid #78500c;
+min-width: 339px;
+    border-radius: 4px;
+    background-color: white;
+	height: 100%;
+
+}
+.chat-queue-panel-header, .chat-schedule-panel-header, .chat-history-panel-header, .calendar-panel-header, .schedule-panel-header, .flag-chat-history-panel-header{
+    position: relative;
+    background-color: #ffce7a;
+    width: 100%;
+    border-bottom: 2px solid #78500c;
+}
+
+.chat-queue-panel-header:after,.chat-schedule-panel-header:after,.chat-history-panel-header:after,.calendar-panel-header:after,.schedule-panel-header:after,.flag-chat-history-panel-header:after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.chat-queue-panel-header-left,.chat-schedule-panel-header-left, .chat-history-panel-header-left, .calendar-panel-header-left, .schedule-panel-header-left, .flag-chat-history-panel-header-left{
+    position: relative;
+    padding: 10px 10px ;
+    font-size: 16px;
+    font-family: "Montserrat SemiBold";
+    color: black;
+    float: left;
+    left: 0;
+
+}
+
+.chat-queue-panel-header-right,.chat-schedule-panel-header-right,.chat-history-panel-header-right,.calendar-panel-header-right,.schedule-panel-header-right,.flag-chat-history-panel-header-right{
+    position: relative;
+    padding: 10px 10px ;
+    font-size: 16px;
+    font-family: "Montserrat SemiBold";
+    color: black;
+    float: right;
+    right:0 ;
+}
+
+.chat-queue-panel-header-right a,.chat-schedule-panel-header-right a,.chat-history-panel-header-right a,.calendar-panel-header-right a,.schedule-panel-header-right a, .flag-chat-history-panel-header-right a{
+    padding: 0 10px ;
+
+}
+
+#chat-queue-panel-collapse-btn,#chat-schedule-panel-collapse-btn,#chat-history-panel-collapse-btn,#calendar-panel-collapse-btn {
+    border-right: 1px solid #78500c;
+    border-left: 1px solid #78500c;
+}
+
+#chat-queue-panel-body {
+    padding: 10px 0;
+	height: calc(100% - 45px);
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color:green;
+    border-radius: 50%;
+    display: flex;
+  }
+  .ActiveTab{
+    background-color: #f9d5d5;
+}
+

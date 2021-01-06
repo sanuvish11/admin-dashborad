@@ -1,0 +1,197 @@
+<div class="mp3-wrapper" id="mp3-wrapper">
+
+    <!-- Personal Favs Header-->
+    <div class="mp3-header" ondblclick="$('#mp3-body').toggle();">
+        <div class="mp3-header-left">
+            <img src="/assets/dist/img/icons/workarea-sound-icon.png">
+            <span>MP3's</span>
+        </div>
+        <div class="mp3-header-right">
+            <a class="mp3-dot-menu" href="javascript:void(0)" onclick="toggleAction('mp3-body')"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
+            <a (click)="toggleclose()" class="gridster-item-content"><i class="fa fa-close"></i></a>
+        </div>
+    </div>
+
+    <div class="mp3-body" id="mp3-body">
+        <div class="mp3-searchbar-wrapper">
+            <div class="mp3-searchbar">
+                <input width="100%" type="text" placeholder="Search...">
+                <i href="#" class="fa fa-search"></i>
+            </div>
+        </div>
+        <div class="buttons">
+            <div class="buttons-inner">
+                <button class="ot" onclick="$('#mp3-ot').toggle();">OT</button>
+                <button class="nt" onclick="openTestamentMp3('nt')">NT</button>
+            </div>
+            <div class="speaker">
+                <a href="javascript:void(0)" onclick="$('#mp3-body .speaker-list').toggle();">Speaker</a>
+            </div>
+            <div class="expand-icon">
+                <a href="javascript:void(0)" onclick="$('#toggleMp3VerseList').toggle();"><i class="fa fa-angle-down"></i></a>
+            </div>
+        </div>
+        <div class="speaker-list">
+            <select>
+                <option>Show Speaker</option>
+                <option>Speaker 1</option>
+                <option>Speaker 1</option>
+            </select>
+            <select>
+                <option>Begg, Alistir</option>
+                <option>Begg, Alistir</option>
+                <option>Begg, Alistir</option>
+            </select>
+        </div>
+        <div class="testament">
+            <h5>New Testament</h5>
+            <table id="mp3-ot">
+                <tbody>
+                    <tr onclick="$('#mp3-ott').toggle();">
+                        <td>Mat</td>
+                        <td>Mar</td>
+                        <td>Luk</td>
+                        <td>Jhn</td>
+                        <td>Act</td>
+                        <td>1Co</td>
+                        <td>2Co</td>
+                        <td>Gal</td>
+                        <td>Eph</td>
+                        <td>Phl</td>
+                    </tr>
+                    <tr>
+                        <td>Col</td>
+                        <td>1Th</td>
+                        <td>2Th</td>
+                        <td>1Ti</td>
+                        <td>2Ti</td>
+                        <td>Tit</td>
+                        <td>Phm</td>
+                        <td>Heb</td>
+                        <td>Jas</td>
+                        <td>1Pe</td>
+                    </tr>
+                    <tr>
+                        <td>2Pe</td>
+                        <td>1Jo</td>
+                        <td>2Jo</td>
+                        <td>3Jo</td>
+                        <td>Jde</td>
+                        <td>Rev</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="chapter" id="mp3-ott">
+            <h5><i class="fa fa-angle-left" aria-hidden="true"></i> Galatians</h5>
+            <table>
+                <tbody onclick="$('#toggleMp3VerseList').toggle();">
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mp3-verse" id="toggleMp3VerseList">
+            <div class="table-responsive">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="CR-tableLeft">
+                                <div class="actionDiv">
+                                    <span class="add">Add</span>
+                                    <div class="mp3-verse-action-list">
+                                        <div class="mp3-verse-action-list-head">
+                                            <h5>Add To<i class="fa fa-close"></i></h5>
+                                        </div>
+                                        <div class="mp3-verse-action-list-body">
+                                            <span>Work Area</span>
+                                            <span>Journey</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="CR-tableRight">
+                                <h4>Subject to None, Servant of All (Pt 1) - Galatians 5</h4>
+                                <h6>Brian Borgman</h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="CR-tableLeft">
+                                <div class="actionDiv">
+                                    <span class="add">Add</span>
+                                    <div class="mp3-verse-action-list">
+                                        <div class="mp3-verse-action-list-head">
+                                            <h5>Add To<i class="fa fa-close"></i></h5>
+                                        </div>
+                                        <div class="mp3-verse-action-list-body">
+                                            <span>Work Area</span>
+                                            <span>Journey</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="CR-tableRight">
+                                <h4>Subject to None, Servant of All (Pt 1) - Galatians 5</h4>
+                                <h6>Brian Borgman</h6>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            <div class="testament">
+                <h5>New Testament</h5>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Mat</td>
+                            <td>Mar</td>
+                            <td>Luk</td>
+                            <td>Jhn</td>
+                            <td>Act</td>
+                            <td>1Co</td>
+                            <td>2Co</td>
+                            <td>Gal</td>
+                            <td>Eph</td>
+                            <td>Phl</td>
+                        </tr>
+                        <tr>
+                            <td>Col</td>
+                            <td>1Th</td>
+                            <td>2Th</td>
+                            <td>1Ti</td>
+                            <td>2Ti</td>
+                            <td>Tit</td>
+                            <td>Phm</td>
+                            <td>Heb</td>
+                            <td>Jas</td>
+                            <td>1Pe</td>
+                        </tr>
+                        <tr>
+                            <td>2Pe</td>
+                            <td>1Jo</td>
+                            <td>2Jo</td>
+                            <td>3Jo</td>
+                            <td>Jde</td>
+                            <td>Rev</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
