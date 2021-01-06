@@ -14,7 +14,7 @@ export class UploadFileService {
   pushFileToStorage(file: File): Observable<HttpEvent<{}>> {
     const formdata: FormData = new FormData();
     formdata.append('file', file);
-    const req = new HttpRequest('POST', 'http://ec2-3-23-105-251.us-east-2.compute.amazonaws.com:8080/api/auth/upload', formdata, {
+    const req = new HttpRequest('POST', 'http://ec2-3-139-227-180.us-east-2.compute.amazonaws.com:8080/api/auth/upload', formdata, {
       reportProgress: true,
       responseType: 'text'
     });

@@ -22,7 +22,7 @@ export class ChatHistoryComponent implements OnInit {
     let body = {
       "ROOM_ID_FK": this.room
     };
-    this.http.post("http://ec2-3-23-105-251.us-east-2.compute.amazonaws.com:8080/api/auth/chatdetail", body, this.httpOptions).subscribe(data => {
+    this.http.post("http://ec2-3-139-227-180.us-east-2.compute.amazonaws.com:8080/api/auth/chatdetail", body, this.httpOptions).subscribe(data => {
       this.singleChatData = data;
       console.log(data);
       console.log(this.singleChatData);

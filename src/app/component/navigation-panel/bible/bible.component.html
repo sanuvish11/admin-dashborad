@@ -1,4 +1,3 @@
-
 <div class="grid-stack-item-content">
 
 
@@ -13,23 +12,23 @@
             </div>
             <div class="bible-header-right">
                 <!-- <a class="bible-dot-menu" href="javascript:void(0)" onclick="toggleActionButton('personal-favs-table-time')"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a> -->
-                <a href="javascript:void(0)"(click)="toggleOtNt()" id="bible-close-btn"><img
+                <a href="javascript:void(0)" (click)="toggleOtNt()" id="bible-close-btn"><img
                         src="/assets/dist/img/icons/bible-testament-icon.png"></a>
                 <a href="javascript:void(0)" (click)="togglecloseb()" id="bible-close-btn"><i
                         class="fa fa-close"></i></a>
             </div>
         </div>
-        <div class="bible-body" id="bible-body" >
-            <div class="buttons" *ngIf="!collpsemenu" [hidden]="collapsed"[hidden]="number1" >
+        <div class="bible-body" id="bible-body">
+            <div class="buttons" *ngIf="!collpsemenu" [hidden]="collapsed" [hidden]="number1">
                 <button class="ot" name="ot" (click)="toggleTestament(1)">OT</button>
                 <button class="nt" (click)="toggleTestament(2)">NT</button>
             </div>
 
             <div class="testament gridster-item-content" [hidden]="number1" [hidden]="!oldTestament">
-                <h5 >Old Testament</h5>
+                <h5>Old Testament</h5>
                 <div>
-                    <table class="gridster-item-content"  (click)="toogelehide()">
-                        <tr >
+                    <table class="gridster-item-content" (click)="toogelehide()">
+                        <tr>
                             <td name="gen" value="gen" (click)="toggleDisplayDiv1('Gen')">Gen</td>
                             <td name="gen" value="exo" (click)="toggleDisplayDiv1('Exo')">Exo</td>
                             <td name="gen" value="lev" (click)="toggleDisplayDiv1('Lev')">Lev</td>
@@ -124,10 +123,10 @@
                 </div>
             </div>
 
-            <div class="chapter gridster-item-content"[hidden]="!number"  (click)="toogelheader()"   >
-                <h5><i class="fa fa-angle-left"   aria-hidden="true"></i> {{book}}</h5>
-                <table >
-                    <tr >
+            <div class="chapter gridster-item-content" [hidden]="!number" (click)="toogelheader()">
+                <h5><i class="fa fa-angle-left" aria-hidden="true"></i> {{book}}</h5>
+                <table>
+                    <tr>
                         <td (click)="getBibele('1')">1</td>
                         <td (click)="getBibele('2')">2</td>
                         <td (click)="getBibele('3')">3</td>
@@ -170,7 +169,7 @@
             <div class="bible-searchbar-wrapper gridster-item-content">
                 <div class="bible-searchbar">
                     <input width="100%" type="text" [(ngModel)]="searchQuery" placeholder=" Search... ">
-                    <i (click)="search()"  class="fa fa-search "></i>
+                    <i (click)="search()" class="fa fa-search "></i>
                 </div>
                 <div class="select-wrapper">
                     <div class="custom-select-div ">
@@ -191,8 +190,8 @@
                     <div class="navigation-wrapper">
                         <div class="navigation gridster-item-content" id="isShowDiv2">
                             <div class="navigation-inner gridster-item-content ">
-                                <i class="fa fa-angle-double-left double " aria-hidden="true " (click)="pervious(chapter)"
-                                    (click)="getBibele(chapter)"></i>
+                                <i class="fa fa-angle-double-left double " aria-hidden="true "
+                                    (click)="pervious(chapter)" (click)="getBibele(chapter)"></i>
                                 <i class="fa fa-angle-left gridster-item-content " aria-hidden="true "
                                     (click)="pervious()" (click)="getBibele(chapter)"></i>
                                 <h6>{{ book }} {{ chapter }}</h6>
@@ -232,7 +231,7 @@
                                                 <div class="actionDiv ">
                                                     <span class="s" id="s1" (click)="updateToggle();">&lt;&lt;</span>
                                                     <span class="cr "
-                                                        onclick="crossRefBtn( 'cross-reference-wrapper') ">CR</span>
+                                                        onclick="crossRefBtn('cross-reference-wrapper') ">CR</span>
                                                     <span class="add gridster-item-content"
                                                         onclick="$('#add-bible').toggle()">Add</span>
                                                     <div class="bible-verse-action-list ">
@@ -247,7 +246,7 @@
                                                     </div>
                                                 </div>
                                             </td>
-                                      
+
                                             <td class="CR-tableRight ">
                                                 <p>
                                                     {{selectedVerseMessage}}
@@ -266,14 +265,15 @@
                                                         </tr>
                                                         <tr *ngFor="let item of sts">
                                                             <td>{{item.value}}</td>
-                                                            <td (click)="getStrong(item.strong)">
-                                                                {{item.strong}}</td>
+                                                            <td (click)="onSelect(item)">
+                                                                {{item.strong}} </td>
+                                                                <!-- {{item.code}} -->
                                                         </tr>
                                                         <tr *ngFor="let item of strongsList">
-                                                            <td>{{item.meaning}}</td>
-                                                            <td (click)="getStrong(item.code)">
+                                                            <td>{{item.word}}</td>
+                                                            <td (click)="getStrong(item.vesre)">
                                                                 {{item.code}}</td>
-                                                        </tr>
+                                                            </tr>
                                                     </tbody>
                                                 </table>
                                             </td>
@@ -289,7 +289,8 @@
 
                                     <tr *ngFor="let item of BibleVerses, let i= index">
                                         <td class=" CR-tableLeft ">
-                                            <h5 (click)="getStrong(item.verse)">{{item.verse}}</h5>
+                                            <h5 >{{item.verse}}</h5>
+                                            <!-- (click)="getStrong(item.verse)" -->
                                             <div class="actionDiv " *ngIf="isShown">
                                                 <span class="s " id="s1 " (click)="toggleStrong(i) ">S</span>
                                                 <span class="cr "
@@ -312,10 +313,8 @@
                                                 {{item.text}}
                                             </p>
                                         </td>
-
-
+                                        
                                     </tr>
-
                                 </tbody>
                             </table>
                         </div>

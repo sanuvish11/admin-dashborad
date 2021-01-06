@@ -16,7 +16,7 @@ export class BibleComponent implements OnInit {
   chapternext: number = +1;
   isbible = true;
   strongs = false;
-  strongsList :any;
+  strongsList: any;
   versesList = [];
   sts = new Array();
   selectedVerse: string = "";
@@ -40,12 +40,9 @@ export class BibleComponent implements OnInit {
   searchResults: any;
   preResult: any;
   optResults = new Array();
-
   BibleVerses: any
   number: boolean = false;
-
   number1: boolean = false;
-
   hideVerses: boolean = true;
   hideSearch: boolean = true;
   i: any;
@@ -77,13 +74,10 @@ export class BibleComponent implements OnInit {
     this.number1 = false
 
   }
-
-
   toogelheader() {
     this.number1 = !this.number1;
     this.number1 = true
     this.number = false;
-
   }
   toggleDisplayDiv() {
     this.isShowDiv = this.isShowDiv;
@@ -95,22 +89,15 @@ export class BibleComponent implements OnInit {
     this.oldTestament = false;
 
   }
-
-
-
   toggleSearch(tab: number) {
     console.log(tab + "   " + this.hideVerses + "  " + this.hideSearch);
     if (tab === 1) {
       this.hideVerses = true;
       this.hideSearch = false;
-
     } else if (tab === 2) {
       this.hideVerses = false;
       this.hideSearch = true;
-
     }
-
-
     console.log(tab + "   " + this.hideVerses + "  " + this.hideSearch);
   }
   toggleDisplayDiv1(bookNAme: any) {
@@ -122,11 +109,25 @@ export class BibleComponent implements OnInit {
     this.isShowDiv2 = !this.isShowDiv2;
   }
   value: any;
+  isShown: boolean = false; // hidden by default
+  toggleShow() {
+    this.isShown = !this.isShown;
+  }
+
+  next(): void {
+    this.chapter++;
+  }
+  pervious(): void {
+    if (this.chapter >= 1) {
+      this.chapter--;
+    }
+
+  }
 
   getStrong(verse: any) {
     this.verse = verse;
     this.apiService.getStrong(this.verse).subscribe((data) => {
-      this.strongsList=data;
+      this.strongsList = data;
       console.log(data)
 
     })
@@ -153,8 +154,6 @@ export class BibleComponent implements OnInit {
 
       this.hideVerses = true;
       this.hideSearch = false;
-
-      console.log(" Search  " + this.hideVerses + "  " + this.hideSearch);
     });
   }
 
@@ -168,14 +167,12 @@ export class BibleComponent implements OnInit {
 
     let query = this.optResults[index].key;
 
-    //console.log(index + " " + query);
     this.sts = this.strongsList.filter(function (element: any) {
       return element.verse == query;
     });
-
     this.selectedVerse = query;
     this.selectedVerseMessage = this.optResults[index].preview;
-    //console.log({"sts": this.sts});
+
     this.collapse = true;
   }
 
@@ -202,22 +199,7 @@ export class BibleComponent implements OnInit {
     })
   }
 
-  isShown: boolean = false; // hidden by default
-  toggleShow() {
-    this.isShown = !this.isShown;
-  }
 
-  next(): void {
-    this.chapter++;
-  }
-  pervious(): void {
-    if (this.chapter >= 1) {
-      this.chapter--;
-    }
-
-
-
-  }
 
 }
 

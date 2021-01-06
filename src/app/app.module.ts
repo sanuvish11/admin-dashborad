@@ -43,7 +43,7 @@ import { AngularResizedEventModule } from 'angular-resize-event';
 import { PdfuploadComponent } from './pdfupload/pdfupload.component';
 
 
-const config: SocketIoConfig = { url: 'http://ec2-3-23-105-251.us-east-2.compute.amazonaws.com:8080', options: {} };
+const config: SocketIoConfig = { url: 'http://ec2-3-139-227-180.us-east-2.compute.amazonaws.com:8080', options: {} };
 // const config: SocketIoConfig = { url: 'http://ec2-18-191-219-191.us-east-2.compute.amazonaws.com:8080', options: {} };
 
 @NgModule({

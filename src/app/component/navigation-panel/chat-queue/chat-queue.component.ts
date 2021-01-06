@@ -70,7 +70,7 @@ export class ChatQueueComponent implements OnInit {
   // mycodestarts
 
   updateChatStatus(singleChatData: any){   
-    this.http.post('http://localhost:8080/api/auth/updateChatStatus/' + singleChatData.id,{})
+    this.http.post('http://ec2-3-139-227-180.us-east-2.compute.amazonaws.com:8080/api/auth/updateChatStatus/' + singleChatData.id,{})
     .subscribe(data => {
       console.log(data)
     })
@@ -104,13 +104,13 @@ export class ChatQueueComponent implements OnInit {
   }
 
   GetAllActiveChats(){
-    this.http.get('http://localhost:8080/api/auth/GetAllActiveChats').subscribe(data=>{
+    this.http.get('http://ec2-3-139-227-180.us-east-2.compute.amazonaws.com:8080/api/auth/GetAllActiveChats').subscribe(data=>{
       this.AllActiveChatsData = data
     })
   }
 
   GetAllChats(){
-    this.http.get('http://localhost:8080/api/auth/GetAllChats').subscribe(allsuers => {
+    this.http.get('http://ec2-3-139-227-180.us-east-2.compute.amazonaws.com:8080/api/auth/GetAllChats').subscribe(allsuers => {
         this.AllOnlineUsersData = allsuers
     })
   }
